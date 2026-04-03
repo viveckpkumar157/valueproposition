@@ -1,0 +1,1505 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Anatomy of Value Propositions</title>
+<style>
+:root {
+  --dark: #111318; --bg: #F7F6F2; --white: #FFFFFF;
+  --olive: #6B7A1E; --olive-pale: #E8EBCF;
+  --teal: #1A8C7A; --teal-pale: #E8F8F5;
+  --amber: #B7770D; --amber-pale: #FFF8E7;
+  --navy: #1F3864; --navy-pale: #EBF0FA;
+  --purple: #6C3483; --purple-pale: #F4ECF7;
+  --red: #C0392B; --red-pale: #FDECEA;
+  --green: #1E8449; --green-pale: #EAFAF1;
+  --gold: #C9A227; --muted: #666666;
+  --text: #1A1A1A;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Calibri', 'Segoe UI', Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; font-size: 15px; }
+
+/* NAV */
+.sidenav { position: fixed; left: 0; top: 0; width: 220px; height: 100vh; background: var(--dark); overflow-y: auto; padding: 20px 0; z-index: 100; }
+.sidenav a { display: block; padding: 6px 20px; color: #ccc; text-decoration: none; font-size: 12px; border-left: 3px solid transparent; }
+.sidenav a:hover { color: var(--gold); border-left-color: var(--gold); }
+.sidenav .nav-part { padding: 10px 20px 4px; color: var(--gold); font-size: 11px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; margin-top: 8px; }
+.sidenav .nav-logo { padding: 16px 20px; font-family: Georgia, serif; font-size: 18px; font-weight: bold; color: var(--white); border-bottom: 1px solid #333; margin-bottom: 8px; }
+.main { margin-left: 220px; }
+
+/* LAYOUT */
+.page-section { padding: 60px 64px; max-width: 900px; }
+.page-section + .page-section { border-top: 1px solid #e0ddd6; }
+
+/* TYPOGRAPHY */
+h1 { font-family: Georgia, serif; font-size: 2.4em; color: var(--text); margin-bottom: 12px; line-height: 1.2; }
+h2 { font-family: Georgia, serif; font-size: 1.6em; color: var(--olive); margin: 36px 0 12px; }
+h3 { font-size: 1.1em; color: var(--navy); font-weight: bold; margin: 24px 0 8px; }
+p { margin-bottom: 14px; font-size: 15px; }
+.lead { font-size: 1.15em; color: #333; font-style: italic; margin-bottom: 24px; border-left: 4px solid var(--olive); padding-left: 16px; }
+.quote-block { background: #FFFDF5; border-left: 6px solid var(--gold); border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold); padding: 20px 24px; margin: 24px 0; font-family: Georgia, serif; font-size: 1.1em; font-style: italic; }
+
+/* CHAPTER HEADER */
+.chapter-header { background: var(--dark); color: var(--white); padding: 48px 64px 40px; border-left: 6px solid var(--olive); }
+.chapter-num { font-size: 11px; font-weight: bold; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+.chapter-title { font-family: Georgia, serif; font-size: 2.6em; line-height: 1.1; margin-bottom: 12px; }
+.chapter-sub { color: var(--gold); font-style: italic; font-size: 1em; }
+
+/* PART DIVIDER */
+.part-divider { background: var(--dark); padding: 80px 64px; text-align: left; border-left: 8px solid var(--olive); }
+.part-label { font-size: 11px; font-weight: bold; color: #888; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+.part-title { font-family: Georgia, serif; font-size: 3em; color: var(--white); line-height: 1.1; }
+
+/* COVER */
+.cover { background: var(--dark); min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 80px 64px; border-left: 8px solid var(--olive); }
+.cover-title { font-family: Georgia, serif; font-size: 4em; color: var(--white); font-weight: bold; margin-bottom: 16px; }
+.cover-sub { font-size: 1.2em; color: var(--gold); font-style: italic; margin-bottom: 40px; }
+.cover-quote { color: var(--gold); font-style: italic; font-size: 1.1em; margin: 12px 0; }
+.cover-divider { height: 2px; background: var(--olive); width: 80px; margin: 32px 0; }
+
+/* CALLOUT */
+.callout { display: flex; margin: 20px 0; border-radius: 2px; overflow: hidden; }
+.callout-bar { width: 6px; flex-shrink: 0; }
+.callout-body { flex: 1; padding: 14px 18px; }
+.callout-label { font-weight: bold; margin-bottom: 4px; font-size: 13px; }
+.callout-text { font-size: 14px; }
+.callout.teal .callout-bar { background: var(--teal); }
+.callout.teal .callout-body { background: var(--teal-pale); }
+.callout.teal .callout-label { color: var(--teal); }
+.callout.olive .callout-bar { background: var(--olive); }
+.callout.olive .callout-body { background: var(--olive-pale); }
+.callout.olive .callout-label { color: var(--olive); }
+.callout.amber .callout-bar { background: var(--amber); }
+.callout.amber .callout-body { background: var(--amber-pale); }
+.callout.amber .callout-label { color: var(--amber); }
+.callout.navy .callout-bar { background: var(--navy); }
+.callout.navy .callout-body { background: var(--navy-pale); }
+.callout.navy .callout-label { color: var(--navy); }
+.callout.red .callout-bar { background: var(--red); }
+.callout.red .callout-body { background: var(--red-pale); }
+.callout.red .callout-label { color: var(--red); }
+.callout.purple .callout-bar { background: var(--purple); }
+.callout.purple .callout-body { background: var(--purple-pale); }
+.callout.purple .callout-label { color: var(--purple); }
+
+/* FRAMEWORK BOX */
+.framework-box { border-radius: 2px; overflow: hidden; margin: 20px 0; }
+.framework-box-header { padding: 12px 16px; font-weight: bold; font-size: 13px; color: var(--white); }
+.framework-box-body { padding: 0; }
+.framework-box-item { padding: 10px 16px; font-size: 14px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+.framework-box-item:last-child { border-bottom: none; }
+.framework-box-item:nth-child(odd) { background: rgba(0,0,0,0.03); }
+
+/* TABLES */
+.data-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+.data-table th { background: var(--navy); color: var(--white); padding: 9px 12px; text-align: left; font-size: 13px; }
+.data-table td { padding: 9px 12px; border-bottom: 1px solid #ddd; vertical-align: top; }
+.data-table tr:nth-child(even) td { background: #F5F5F2; }
+.data-table tr:hover td { background: var(--navy-pale); }
+
+/* EXERCISE BOX */
+.exercise-box { border-radius: 2px; overflow: hidden; margin: 28px 0; }
+.exercise-header { background: var(--olive); padding: 12px 16px; color: var(--white); }
+.exercise-title { font-weight: bold; font-size: 13px; letter-spacing: 0.5px; }
+.exercise-prompt { background: var(--olive-pale); padding: 10px 16px; font-size: 14px; font-style: italic; }
+.exercise-item { padding: 10px 16px 10px 44px; font-size: 14px; border-bottom: 1px solid #E0DDD0; background: var(--white); position: relative; }
+.exercise-item:last-child { border-bottom: none; }
+.exercise-item::before { content: attr(data-n); position: absolute; left: 16px; font-weight: bold; color: var(--olive); }
+
+/* CHAPTER SUMMARY */
+.summary-box { border-radius: 2px; overflow: hidden; margin: 36px 0; }
+.summary-header { background: var(--dark); padding: 12px 16px; }
+.summary-title { font-size: 12px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); }
+.summary-item { padding: 10px 16px 10px 52px; font-size: 14px; border-bottom: 1px solid #E8E5DC; position: relative; }
+.summary-item:nth-child(odd) { background: #F8F8F4; }
+.summary-item:nth-child(even) { background: var(--white); }
+.summary-item::before { content: attr(data-n); position: absolute; left: 16px; width: 24px; height: 24px; background: var(--olive); color: var(--white); border-radius: 50%; font-size: 12px; font-weight: bold; display: flex; align-items: center; justify-content: center; top: 8px; }
+
+/* CASE BOX */
+.case-box { border-radius: 2px; overflow: hidden; margin: 28px 0; }
+.case-header { background: var(--dark); padding: 12px 16px; }
+.case-company { font-family: Georgia, serif; font-size: 1.1em; font-weight: bold; color: var(--white); }
+.case-headline { color: var(--gold); font-size: 13px; font-style: italic; }
+.case-row { display: grid; grid-template-columns: 100px 1fr; border-bottom: 1px solid rgba(0,0,0,0.08); }
+.case-row:last-child { border-bottom: none; }
+.case-label { padding: 10px 12px; font-size: 12px; font-weight: bold; display: flex; align-items: center; }
+.case-value { padding: 10px 14px; font-size: 14px; }
+.case-belt .case-label { background: var(--teal); color: var(--white); }
+.case-belt .case-value { background: var(--teal-pale); }
+.case-pole .case-label { background: var(--navy); color: var(--white); }
+.case-pole .case-value { background: var(--navy-pale); }
+.case-gap .case-label { background: var(--red); color: var(--white); }
+.case-gap .case-value { background: var(--red-pale); color: var(--red); font-style: italic; }
+.case-fix .case-label { background: var(--green); color: var(--white); }
+.case-fix .case-value { background: var(--green-pale); }
+
+/* DIAGRAMS */
+.diagram-container { margin: 28px 0; }
+.diagram-label { font-size: 11px; font-weight: bold; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+
+/* BELT GRID */
+.belt-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-radius: 2px; overflow: hidden; margin: 20px 0; }
+.belt-cell { padding: 16px 14px; }
+.belt-cell.header { padding: 14px; text-align: center; }
+.belt-letter { font-family: Georgia, serif; font-size: 2.2em; font-weight: bold; color: var(--white); text-align: center; display: block; margin-bottom: 4px; }
+.belt-name { font-size: 11px; color: rgba(255,255,255,0.8); text-align: center; font-weight: bold; letter-spacing: 0.5px; }
+.belt-b-h { background: var(--teal); }
+.belt-e-h { background: var(--olive); }
+.belt-l-h { background: var(--navy); }
+.belt-t-h { background: var(--amber); }
+.belt-b { background: var(--teal-pale); border: 1px solid var(--teal); }
+.belt-e { background: var(--olive-pale); border: 1px solid var(--olive); }
+.belt-l { background: var(--navy-pale); border: 1px solid var(--navy); }
+.belt-t { background: var(--amber-pale); border: 1px solid var(--amber); }
+
+/* POLE GRID */
+.pole-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-radius: 2px; overflow: hidden; margin: 20px 0; }
+.pole-cell.header { padding: 14px; text-align: center; }
+.pole-letter { font-family: Georgia, serif; font-size: 2.2em; font-weight: bold; color: var(--white); display: block; text-align: center; }
+.pole-p-h { background: var(--purple); } .pole-p { background: var(--purple-pale); border: 1px solid var(--purple); padding: 12px 14px; font-size: 13px; }
+.pole-o-h { background: var(--amber); } .pole-o { background: var(--amber-pale); border: 1px solid var(--amber); padding: 12px 14px; font-size: 13px; }
+.pole-l-h { background: var(--teal); } .pole-l { background: var(--teal-pale); border: 1px solid var(--teal); padding: 12px 14px; font-size: 13px; }
+.pole-e-h { background: var(--olive); } .pole-e { background: var(--olive-pale); border: 1px solid var(--olive); padding: 12px 14px; font-size: 13px; }
+
+/* STAGE CARD */
+.stage-card { display: grid; grid-template-columns: 64px 1fr; margin: 16px 0; border-radius: 2px; overflow: hidden; border: 1px solid #ddd; }
+.stage-num { display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 2em; font-weight: bold; color: var(--white); }
+.stage-body { padding: 0; }
+.stage-title-row { padding: 8px 14px; }
+.stage-title { font-weight: bold; font-size: 1em; }
+.stage-actor { font-size: 11px; opacity: 0.75; margin-left: 8px; }
+.stage-rows { }
+.stage-row { display: grid; grid-template-columns: 90px 1fr; border-top: 1px solid rgba(0,0,0,0.06); }
+.stage-row-label { padding: 8px 10px; font-size: 11px; font-weight: bold; background: rgba(0,0,0,0.04); display: flex; align-items: flex-start; padding-top: 10px; }
+.stage-row-value { padding: 8px 12px; font-size: 13px; }
+.stage-trap .stage-row-label { color: var(--red); }
+.stage-trap .stage-row-value { color: var(--red); font-style: italic; }
+
+/* CURRENCY CARDS */
+.currency-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin: 20px 0; }
+.currency-card { border-radius: 2px; overflow: hidden; }
+.currency-header { padding: 20px 16px 8px; text-align: center; }
+.currency-name { font-family: Georgia, serif; font-size: 2.4em; font-weight: bold; color: var(--white); }
+.currency-sub { color: rgba(255,255,255,0.7); font-style: italic; font-size: 12px; margin-top: 4px; }
+.currency-body { padding: 14px 16px; font-size: 13px; }
+.currency-examples { padding: 10px 16px; font-size: 12px; font-style: italic; border-top: 1px solid rgba(255,255,255,0.1); }
+
+/* ACTOR CARDS */
+.actor-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin: 20px 0; }
+.actor-card { border-radius: 2px; overflow: hidden; }
+.actor-header { padding: 14px 16px; text-align: center; }
+.actor-name { font-family: Georgia, serif; font-size: 1.2em; font-weight: bold; color: var(--white); }
+.actor-body { }
+.actor-row { padding: 8px 14px; border-top: 1px solid rgba(0,0,0,0.06); }
+.actor-row-label { font-size: 11px; font-weight: bold; margin-bottom: 3px; }
+.actor-row-value { font-size: 13px; }
+
+/* WEAKEST LINK SCORES */
+.wl-scores { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin: 16px 0; }
+.wl-score-card { border-radius: 2px; overflow: hidden; }
+.wl-score-header { padding: 12px; text-align: center; }
+.wl-score-letter { font-family: Georgia, serif; font-size: 2em; font-weight: bold; color: var(--white); }
+.wl-score-val { font-size: 1.4em; font-weight: bold; color: var(--white); }
+.wl-score-body { padding: 10px 12px; font-size: 13px; }
+
+/* LIFECYCLE SVG container */
+.lifecycle-svg { width: 100%; margin: 20px 0; }
+
+/* PRIORITY TABLE */
+.priority-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.priority-table td { padding: 10px 14px; border-bottom: 1px solid #e0ddd6; vertical-align: top; }
+.priority-table td:first-child { font-weight: bold; color: var(--green); width: 180px; background: var(--green-pale); }
+.priority-table tr:last-child td { border-bottom: none; }
+
+/* TOC */
+.toc { padding: 60px 64px; max-width: 900px; }
+.toc-part { background: var(--olive); color: var(--white); padding: 8px 16px; margin: 16px 0 2px; font-size: 12px; font-weight: bold; letter-spacing: 1px; }
+.toc-part-title { display: inline; color: var(--gold); font-style: italic; font-weight: normal; }
+.toc-chapter { padding: 7px 16px; border-bottom: 1px solid #E8E5DC; font-size: 14px; background: var(--white); display: flex; align-items: baseline; }
+.toc-ch-num { color: var(--olive); font-weight: bold; width: 80px; flex-shrink: 0; }
+.toc-ch-title { color: var(--text); }
+.toc-appendix { padding: 7px 16px; background: #F8F8F4; border-bottom: 1px solid #E8E5DC; font-size: 14px; }
+
+@media print {
+  .sidenav { display: none; }
+  .main { margin-left: 0; }
+  .chapter-header, .part-divider { break-before: page; }
+}
+</style>
+</head>
+<body>
+<div style="position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(17,19,24,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(107,122,30,0.3);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:44px;">
+  <a href="index.html" style="display:flex;align-items:center;gap:8px;color:#aaa;font-size:13px;text-decoration:none;">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 13L5 8L10 3" stroke="#aaa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Back to home
+  </a>
+  <span style="font-family:Georgia,serif;font-size:13px;font-weight:bold;color:white;">The Anatomy of <span style="color:#C9A227;">Value Propositions</span></span>
+  <div style="display:flex;gap:16px;align-items:center;">
+    <a href="https://www.linkedin.com/in/consumerproductleader/" target="_blank" style="font-size:12px;color:#888;text-decoration:none;">LinkedIn</a>
+    <a href="http://viveckpkumar.me" target="_blank" style="font-size:12px;color:#888;text-decoration:none;">viveckpkumar.me</a>
+  </div>
+</div>
+
+<nav class="sidenav" style="top:44px;height:calc(100vh - 44px);">
+  <a href="index.html" style="text-decoration:none;"><div class="nav-logo" style="font-size:13px;line-height:1.3;">The Anatomy of<br><span style="color:var(--gold);">Value Propositions</span></div></a>
+  <a href="#cover">Cover</a>
+  <a href="#toc">Contents</a>
+  <a href="#foreword">Foreword</a>
+  <a href="#ch0">Where This Applies</a>
+  <div class="nav-part">Part One - BELT</div>
+  <a href="#ch1">1. Diagnosis First</a>
+  <a href="#ch2">2. B - Behaviour</a>
+  <a href="#ch3">3. E - Enduring</a>
+  <a href="#ch4">4. L - Lock-in</a>
+  <a href="#ch5">5. T - Type</a>
+  <a href="#ch6">6. Segmentation</a>
+  <div class="nav-part">Part Two - POLE</div>
+  <a href="#ch7">7. P - Destination</a>
+  <a href="#ch8">8. O - Belief Moment</a>
+  <a href="#ch9">9. L - Liberation</a>
+  <a href="#ch10">10. E - Retention Arc</a>
+  <div class="nav-part">Part Three</div>
+  <a href="#ch11">11. Value Currency</a>
+  <div class="nav-part">Part Four</div>
+  <a href="#ch12">12. Value Lifecycle</a>
+  <div class="nav-part">Part Five</div>
+  <a href="#ch13">13. Weakest Link</a>
+  <div class="nav-part">Part Six</div>
+  <a href="#ch14">14. Case Studies</a>
+  <div class="nav-part">Appendix</div>
+  <a href="#appendix-a">Quick Reference</a>
+  <a href="#appendix-b">Exercises</a>
+</nav>
+<div class="main" style="padding-top:44px;">
+
+<!-- COVER -->
+<div id="cover" class="cover">
+  <div style="color:#888;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Framework for Product Value Proposition Architecture</div>
+  <div class="cover-title">The Anatomy of<br>Value Propositions</div>
+  <div class="cover-sub">The BELT+POLE Framework</div>
+  <div class="cover-divider"></div>
+  <div class="cover-quote">"Your product does not have one value proposition. It has four."</div>
+  <div class="cover-quote">"Most products fail not because they lack value, but because they design it wrong."</div>
+  <div style="margin-top:48px;color:#666;font-size:13px;">14 Chapters &nbsp;|&nbsp; 6 Case Studies &nbsp;|&nbsp; 13 Exercises &nbsp;|&nbsp; Complete Quick Reference</div>
+</div>
+
+<!-- TOC -->
+<div id="toc" class="toc">
+  <h1>Contents</h1>
+  <p class="lead">The framework has two parts. BELT diagnoses the problem. POLE designs the solution. Everything else builds on those two foundations.</p>
+  <div style="margin-top:24px;">
+    <div class="toc-chapter"><span class="toc-ch-num">Foreword</span><span class="toc-ch-title">The problem this framework solves</span></div>
+    <div class="toc-chapter"><span class="toc-ch-num">Introduction</span><span class="toc-ch-title">Where This Framework Applies: Utility vs Entertainment</span></div>
+    <div class="toc-part">PART ONE <span class="toc-part-title">BELT: Diagnosis Before Design</span></div>
+    <div class="toc-chapter"><span class="toc-ch-num">Chapter 1</span><span class="toc-ch-title">Why Diagnosis Comes First</span></div>
+    <div class="toc-chapter"><span class="toc-ch-num">Chapter 2</span><span class="toc-ch-title">B - Behaviour: What are they doing despite friction?</span></div>
+    <div class="toc-chapter"><span class="toc-ch-num">Chapter 3</span><span class="toc-ch-title">E - Enduring: What outcome do they actually need?</span></div>
+    <div class="toc-chapter"><span class="toc-ch-num">Chapter 4</span><span class="toc-ch-title">L - Lock-in: Why have they not switched?</span></div>
+    <div class="toc-chapter"><span class="toc-ch-num">Chapter 5</span><span class="toc-ch-title">T - Type: Transient or Enabling?</span></div>
+    <div class="toc-chapter"><span class="toc-ch-num">Chapter 6</span><span class="toc-ch-title">Segmentation: The BELT definition</span></div>
+    <div class="toc-part">PART TWO <span class="toc-part-title">POLE: The Four Value Propositions</span></div>
+    <div class="toc-chapter"><span class="toc-ch-num">Chapter 7</span><span class="toc-ch-title">P - The Destination</span></div>
+    <div class="toc-chapter"><span class="toc-ch-num">Chapter 8</span><span class="toc-ch-title">O - The Belief Moment</span></div>
+    <div class="toc-chapter"><span class="toc-ch-num">Chapter 9</span><span class="toc-ch-title">L - Liberation</span></div>
+    <div class="toc-chapter"><span class="toc-ch-num">Chapter 10</span><span class="toc-ch-title">E - The Retention Arc</span></div>
+    <div class="toc-part">PART THREE <span class="toc-part-title">Value Currency</span></div>
+    <div class="toc-chapter"><span class="toc-ch-num">Chapter 11</span><span class="toc-ch-title">Value Currency: Time, Data, Money</span></div>
+    <div class="toc-part">PART FOUR <span class="toc-part-title">Value Lifecycle</span></div>
+    <div class="toc-chapter"><span class="toc-ch-num">Chapter 12</span><span class="toc-ch-title">The Value Lifecycle: Nine Stages, Three Actors</span></div>
+    <div class="toc-part">PART FIVE <span class="toc-part-title">Diagnostics</span></div>
+    <div class="toc-chapter"><span class="toc-ch-num">Chapter 13</span><span class="toc-ch-title">The Weakest Link Audit</span></div>
+    <div class="toc-part">PART SIX <span class="toc-part-title">Applied</span></div>
+    <div class="toc-chapter"><span class="toc-ch-num">Chapter 14</span><span class="toc-ch-title">Six Case Studies</span></div>
+    <div class="toc-appendix"><strong>Appendix A</strong> - Quick Reference</div>
+    <div class="toc-appendix"><strong>Appendix B</strong> - Exercises Workbook</div>
+  </div>
+</div>
+
+<!-- FOREWORD -->
+<div id="foreword" class="chapter-header">
+  <div class="chapter-num">Foreword</div>
+  <div class="chapter-title">The Problem This Framework Solves</div>
+</div>
+<div class="page-section">
+  <p class="lead">Most product teams are not short of ideas. They are short of a clear answer to one question: why will the right customer choose this, stay with it, and get the outcome they came for?</p>
+  <p>This framework is an answer to that question. It has two parts: BELT, which diagnoses the nature of the customer's problem before any design decision is made; and POLE, which engineers four distinct value propositions, each doing a specific job at a specific moment in the customer's journey.</p>
+  <p>The framework was built from a specific observation: most product teams conflate acquisition value with retention value, and conflate both with the outcome the customer actually needs. When those three things are designed separately and deliberately, products improve in ways that feel disproportionate to the effort invested.</p>
+  <div class="quote-block">"Two customers belong to the same segment if they share the same enduring pain and the same lock-in type."</div>
+  <div class="framework-box">
+    <div class="framework-box-header" style="background:var(--navy);">How to Read This Book</div>
+    <div class="framework-box-body">
+      <div class="framework-box-item">Each part builds on the previous. Do not skip BELT to get to POLE. The quality of POLE design is entirely determined by the quality of BELT diagnosis.</div>
+      <div class="framework-box-item">Each chapter ends with a Chapter Summary table and an Exercise. The exercises are most valuable when applied to your current product before reading the solution.</div>
+      <div class="framework-box-item">Case studies in Part Six are fully worked. Read them before your first real diagnostic. They calibrate what "good" looks like.</div>
+      <div class="framework-box-item">The Quick Reference appendix contains the entire framework on two pages. It is designed to be used in meetings, not just read.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- CH0: WHERE THIS APPLIES -->
+<div id="ch0" class="chapter-header">
+  <div class="chapter-num">Introduction</div>
+  <div class="chapter-title">Where This Framework Applies</div>
+  <div class="chapter-sub">Utility products, entertainment products, and the difference that determines everything</div>
+</div>
+<div class="page-section">
+  <p class="lead">Before running any BELT diagnostic, answer one question: is this a utility product or an entertainment product? The answer determines whether the framework applies, how it applies, and where its limits are.</p>
+
+  <h2>The Core Distinction</h2>
+  <p>A utility product solves a specific, recurring problem. The customer uses it because it moves them toward a defined outcome they would pursue even without the product. The product is instrumental. Value is measured in progress.</p>
+  <p>An entertainment product delivers hedonic value. The customer uses it because the experience itself is enjoyable. There is no destination. There is no problem being solved. Value is measured in engagement, not progress.</p>
+  <div class="callout navy"><div class="callout-bar"></div><div class="callout-body"><div class="callout-label">The test</div><div class="callout-text">Ask a loyal customer: "What specific outcome does this product help you achieve?" A utility customer can answer this. An entertainment customer gives you consumption language: "It's entertaining," "I enjoy it," "I always have something to watch." Neither is wrong - but only one is the BELT+POLE customer.</div></div></div>
+
+  <h2>The Spectrum</h2>
+  <p>Utility and entertainment are not binary. Most products sit somewhere on a spectrum, and some products serve both jobs for different segments.</p>
+
+  <div class="diagram-container">
+    <svg viewBox="0 0 760 200" class="lifecycle-svg" xmlns="http://www.w3.org/2000/svg">
+      <!-- Spectrum bar -->
+      <defs>
+        <linearGradient id="specGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#1A8C7A;stop-opacity:1" />
+          <stop offset="50%" style="stop-color:#B7770D;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#C0392B;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <rect x="20" y="60" width="720" height="24" rx="4" fill="url(#specGrad)"/>
+      <text x="20" y="50" font-size="11" font-weight="bold" fill="#1A8C7A" font-family="Arial,sans-serif">Pure Utility</text>
+      <text x="660" y="50" font-size="11" font-weight="bold" fill="#C0392B" font-family="Arial,sans-serif">Pure Entertainment</text>
+      <!-- Products -->
+      <line x1="60" y1="84" x2="60" y2="105" stroke="#1A8C7A" stroke-width="1.5"/>
+      <text x="60" y="118" text-anchor="middle" font-size="10" fill="#333" font-family="Arial,sans-serif">Grammarly</text>
+      <line x1="140" y1="84" x2="140" y2="105" stroke="#1A8C7A" stroke-width="1.5"/>
+      <text x="140" y="118" text-anchor="middle" font-size="10" fill="#333" font-family="Arial,sans-serif">TurboTax</text>
+      <line x1="220" y1="84" x2="220" y2="105" stroke="#1A8C7A" stroke-width="1.5"/>
+      <text x="220" y="118" text-anchor="middle" font-size="10" fill="#333" font-family="Arial,sans-serif">Notion</text>
+      <line x1="310" y1="84" x2="310" y2="105" stroke="#6B7A1E" stroke-width="1.5"/>
+      <text x="310" y="118" text-anchor="middle" font-size="10" fill="#333" font-family="Arial,sans-serif">Strava</text>
+      <line x1="390" y1="84" x2="390" y2="105" stroke="#B7770D" stroke-width="1.5"/>
+      <text x="390" y="118" text-anchor="middle" font-size="10" fill="#333" font-family="Arial,sans-serif">Spotify</text>
+      <line x1="480" y1="84" x2="480" y2="105" stroke="#B7770D" stroke-width="1.5"/>
+      <text x="480" y="118" text-anchor="middle" font-size="10" fill="#333" font-family="Arial,sans-serif">YouTube</text>
+      <line x1="570" y1="84" x2="570" y2="105" stroke="#C0392B" stroke-width="1.5"/>
+      <text x="570" y="118" text-anchor="middle" font-size="10" fill="#333" font-family="Arial,sans-serif">TikTok</text>
+      <line x1="660" y1="84" x2="660" y2="105" stroke="#C0392B" stroke-width="1.5"/>
+      <text x="660" y="118" text-anchor="middle" font-size="10" fill="#333" font-family="Arial,sans-serif">Netflix</text>
+      <!-- Framework applicability -->
+      <rect x="20" y="140" width="400" height="20" rx="2" fill="#E8F8F5" style="stroke:#1A8C7A;stroke-width:1"/>
+      <text x="220" y="154" text-anchor="middle" font-size="10" font-weight="bold" fill="#1A8C7A" font-family="Arial,sans-serif">BELT+POLE applies fully</text>
+      <rect x="420" y="140" width="200" height="20" rx="2" fill="#FFF8E7" style="stroke:#B7770D;stroke-width:1"/>
+      <text x="520" y="154" text-anchor="middle" font-size="10" font-weight="bold" fill="#B7770D" font-family="Arial,sans-serif">Applies partially</text>
+      <rect x="620" y="140" width="120" height="20" rx="2" fill="#FDECEA" style="stroke:#C0392B;stroke-width:1"/>
+      <text x="680" y="154" text-anchor="middle" font-size="10" font-weight="bold" fill="#C0392B" font-family="Arial,sans-serif">Does not apply</text>
+    </svg>
+  </div>
+
+  <h2>What Drives Retention: The Key Difference</h2>
+  <table class="data-table">
+    <tr><th></th><th>Utility product</th><th>Entertainment product</th></tr>
+    <tr><td><strong>Why the customer returns</strong></td><td>Progress toward a specific outcome they care about. The product is instrumental.</td><td>The experience itself is enjoyable. Variable reward loops, content freshness, social validation.</td></tr>
+    <tr><td><strong>What retention looks like</strong></td><td>Customer can describe what they are building. "I am 6 months closer to inbox zero."</td><td>Customer describes consumption. "I always have something to watch." Time passes pleasurably.</td></tr>
+    <tr><td><strong>What churn looks like</strong></td><td>Customer leaves when P is no longer felt, or when E-Accrued becomes invisible.</td><td>Customer leaves when content supply drops, a better feed emerges, or social graph migrates.</td></tr>
+    <tr><td><strong>What the moat is</strong></td><td>Data currency: irreplaceable personal asset built through use. Cannot be transferred.</td><td>Content library, social graph, or algorithmic feed quality. Can often be replicated with investment.</td></tr>
+    <tr><td><strong>BELT+POLE relevance</strong></td><td>High. All four diagnostic questions are meaningful. All four POLE elements can be designed.</td><td>Low. B is weak (no workaround). E is undefined (no destination). L is social, not data. T is transient by nature.</td></tr>
+  </table>
+
+  <h2>Why Entertainment Products Resist This Framework</h2>
+  <p>BELT starts with B - behaviour despite friction. Entertainment customers do not have friction. They are not trying to solve a problem. They are choosing between enjoyable options. There is no workaround to find because there is no obstacle to overcome.</p>
+  <p>E starts with an enduring outcome. Entertainment does not produce a destination. A Netflix user is not accumulating progress toward a life change. They are consuming content. The hundredth show is not more valuable than the first.</p>
+  <div class="callout red"><div class="callout-bar"></div><div class="callout-body"><div class="callout-label">The entertainment trap</div><div class="callout-text">Many product teams build utility products but measure them like entertainment products - maximising session length, daily active users, and content consumption. When utility products optimise for engagement rather than outcome progress, they accidentally build Metric Features. Calm's streak is the most cited example: it optimises sessions opened, not felt calm. The metric is entertainment-native. The product is utility.</div></div></div>
+
+  <h2>The Hybrid Problem: Spotify</h2>
+  <p>Spotify is the most instructive edge case. It sits in the middle of the spectrum because it can be experienced either way by the same person at different moments.</p>
+  <table class="data-table">
+    <tr><th></th><th>Spotify as Utility</th><th>Spotify as Entertainment</th></tr>
+    <tr><td><strong>Segment</strong></td><td>Music lovers who have stopped discovering. Trapped in familiar loops. Care about taste evolution.</td><td>Background music listeners. Want ambient sound while working. Do not care about discovery.</td></tr>
+    <tr><td><strong>P</strong></td><td>"Music finds you before you know you want it. Your taste keeps evolving without effort."</td><td>No specific outcome. Audio fills the space pleasurably.</td></tr>
+    <tr><td><strong>Framework applies?</strong></td><td>Yes. BELT identifies the segment. POLE designs the architecture. E compounds via the taste model.</td><td>Partially. B is weak (no workaround). T is closer to Transient. E architecture has limited depth.</td></tr>
+    <tr><td><strong>Retention driver</strong></td><td>Taste model. Discover Weekly. The accumulated personalisation that no competitor can replicate.</td><td>Content library size. Price. Interface preference. Fragile moat.</td></tr>
+  </table>
+  <div class="callout amber"><div class="callout-bar"></div><div class="callout-body"><div class="callout-label">The Spotify design choice</div><div class="callout-text">Spotify chose to design for the utility segment - the music lover who cares about taste evolution - even though entertainment listeners are a larger share of users. This choice is what produced Discover Weekly. Designing for the utility segment created a moat. Designing for the entertainment segment would have produced a better playlist interface. Only one of those compounds.</div></div></div>
+
+  <h2>Where This Framework Applies</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin:20px 0;">
+    <div>
+      <div style="background:var(--teal);color:white;padding:10px 14px;font-weight:bold;font-size:13px;">Applies fully</div>
+      <div style="background:var(--teal-pale);padding:12px 14px;font-size:13px;border:1px solid var(--teal);">
+        <p style="margin-bottom:8px;">Utility software with an enduring problem, an active switching decision, and repeated use.</p>
+        <p style="color:var(--muted);font-style:italic;font-size:12px;">Fintech, productivity, health tools, professional tools, booking platforms. Grammarly, Notion, Strava, Wise, TurboTax, Superhuman, Rippling.</p>
+      </div>
+    </div>
+    <div>
+      <div style="background:var(--amber);color:white;padding:10px 14px;font-weight:bold;font-size:13px;">Applies partially</div>
+      <div style="background:var(--amber-pale);padding:12px 14px;font-size:13px;border:1px solid var(--amber);">
+        <p style="margin-bottom:8px;">Marketplace products (liquidity dynamics matter alongside value). Network-dominant products (moat is other people, not product capability). Hardware with ecosystem defaults.</p>
+        <p style="color:var(--muted);font-style:italic;font-size:12px;">Airbnb, Uber, LinkedIn, Spotify (entertainment users), Kindle, iPhone.</p>
+      </div>
+    </div>
+    <div>
+      <div style="background:var(--red);color:white;padding:10px 14px;font-weight:bold;font-size:13px;">Does not apply</div>
+      <div style="background:var(--red-pale);padding:12px 14px;font-size:13px;border:1px solid var(--red);">
+        <p style="margin-bottom:8px;">Entertainment products where dopamine loops, content supply, and algorithmic compulsion drive retention. Products adopted purely through ecosystem bundling or distribution default. Genuinely transient products.</p>
+        <p style="color:var(--muted);font-style:italic;font-size:12px;">Netflix, TikTok, Instagram (consumption mode), gaming with no persistent outcome.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>Four Diagnostic Questions Before You Begin</h2>
+  <div class="framework-box">
+    <div class="framework-box-header" style="background:var(--navy);">Is This a Utility Product? Four Questions</div>
+    <div class="framework-box-body">
+      <div class="framework-box-item"><strong>1. Can a loyal customer name a specific outcome?</strong> Not "I enjoy it" - a specific destination. "I am becoming a more confident writer." "My team has no email backlog." If yes: utility framing is valid. If no: question whether BELT will find an enduring problem worth designing for.</div>
+      <div class="framework-box-item"><strong>2. Is there a workaround?</strong> Does the bright-spot customer do something manual, effortful, and specific to solve this problem without your product? If yes: utility signal. If no: the product may be satisfying a want, not solving a problem.</div>
+      <div class="framework-box-item"><strong>3. Does the hundredth use deliver more value than the first?</strong> T question. If yes: the product is Enabling and E architecture can compound. If no: the product is closer to entertainment - each session is equally disposable.</div>
+      <div class="framework-box-item"><strong>4. What would a customer lose by stopping?</strong> Utility: something irreplaceable they built - their data, history, progress. Entertainment: they would miss it, but nothing is lost. The loss test is the sharpest distinction between the two.</div>
+    </div>
+  </div>
+
+  <div class="summary-box">
+    <div class="summary-header"><div class="summary-title">Introduction Summary: Where This Framework Applies</div></div>
+    <div class="summary-item" data-n="1">Utility products solve a specific recurring problem. Entertainment products deliver hedonic value. Only utility products have the properties BELT+POLE is designed to diagnose and design for.</div>
+    <div class="summary-item" data-n="2">The framework applies fully to utility products, partially to marketplaces and network-dominant products, and not at all to pure entertainment products.</div>
+    <div class="summary-item" data-n="3">The most dangerous position: building a utility product but measuring it with entertainment metrics. Session length and DAU are entertainment metrics. P-state confirmation and E-Accrued are utility metrics.</div>
+    <div class="summary-item" data-n="4">Spotify is the instructive hybrid: the utility segment (taste evolution) produces the moat (Discover Weekly). The entertainment segment (background listening) produces fragile retention. Spotify chose to design for the utility segment. That choice is Discover Weekly.</div>
+    <div class="summary-item" data-n="5">Four diagnostic questions before you begin: Can a loyal customer name a specific outcome? Is there a workaround? Does the hundredth use deliver more value? What would they lose by stopping?</div>
+  </div>
+</div>
+
+<!-- PART ONE -->
+<div class="part-divider">
+  <div class="part-label">Part One</div>
+  <div class="part-title">BELT: Diagnosis Before Design</div>
+  <div style="margin-top:20px;color:#aaa;font-size:15px;max-width:600px;">The most common product design mistake is solving the wrong problem well. BELT is the diagnostic engine that prevents this. It forces four specific questions before any design decision is made.</div>
+</div>
+
+<!-- BELT OVERVIEW DIAGRAM -->
+<div class="page-section">
+  <div class="diagram-container">
+    <div class="diagram-label">The BELT Sequence</div>
+    <svg viewBox="0 0 800 160" class="lifecycle-svg" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#999"/>
+        </marker>
+      </defs>
+      <rect x="0" y="20" width="170" height="120" rx="3" fill="#1A8C7A"/>
+      <text x="85" y="62" text-anchor="middle" font-family="Georgia,serif" font-size="36" font-weight="bold" fill="white">B</text>
+      <text x="85" y="82" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.8)" font-family="Arial,sans-serif">Behaviour</text>
+      <text x="85" y="98" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif">What workaround?</text>
+      <text x="85" y="112" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif">FUD score.</text>
+      <line x1="170" y1="80" x2="205" y2="80" stroke="#999" stroke-width="2" marker-end="url(#arr)"/>
+      <rect x="210" y="20" width="170" height="120" rx="3" fill="#6B7A1E"/>
+      <text x="295" y="62" text-anchor="middle" font-family="Georgia,serif" font-size="36" font-weight="bold" fill="white">E</text>
+      <text x="295" y="82" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.8)" font-family="Arial,sans-serif">Enduring</text>
+      <text x="295" y="98" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif">Life Change, not</text>
+      <text x="295" y="112" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif">Feature level.</text>
+      <line x1="380" y1="80" x2="415" y2="80" stroke="#999" stroke-width="2" marker-end="url(#arr)"/>
+      <rect x="420" y="20" width="170" height="120" rx="3" fill="#1F3864"/>
+      <text x="505" y="62" text-anchor="middle" font-family="Georgia,serif" font-size="36" font-weight="bold" fill="white">L</text>
+      <text x="505" y="82" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.8)" font-family="Arial,sans-serif">Lock-in</text>
+      <text x="505" y="98" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif">Switching Cost /</text>
+      <text x="505" y="112" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif">Search / Inertia</text>
+      <line x1="590" y1="80" x2="625" y2="80" stroke="#999" stroke-width="2" marker-end="url(#arr)"/>
+      <rect x="630" y="20" width="170" height="120" rx="3" fill="#B7770D"/>
+      <text x="715" y="62" text-anchor="middle" font-family="Georgia,serif" font-size="36" font-weight="bold" fill="white">T</text>
+      <text x="715" y="82" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.8)" font-family="Arial,sans-serif">Type</text>
+      <text x="715" y="98" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif">Transient or</text>
+      <text x="715" y="112" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif">Enabling?</text>
+    </svg>
+  </div>
+  <p style="font-size:13px;color:var(--muted);font-style:italic;">BELT is a sequence. Each question builds on the previous. Answering out of order produces unreliable results.</p>
+</div>
+
+<!-- CH1 -->
+<div id="ch1" class="chapter-header">
+  <div class="chapter-num">Chapter 1</div>
+  <div class="chapter-title">Why Diagnosis Comes First</div>
+  <div class="chapter-sub">The cost of designing before understanding</div>
+</div>
+<div class="page-section">
+  <p class="lead">Every product failure contains the same mistake: the team designed a solution before they understood the problem. BELT exists to prevent that mistake.</p>
+  <h2>The Design-Before-Diagnosis Trap</h2>
+  <p>When a product team identifies a market, they almost immediately begin designing. The instinct is understandable: design is energising, tangible, and creates momentum. But design without diagnosis produces a specific failure pattern.</p>
+  <p>The product is built for a problem the team assumed, not one they diagnosed. Features are added to solve adjacent problems. The roadmap grows. The product becomes harder to explain. Retention plateaus. The team adds more features. Nothing changes.</p>
+  <div class="callout teal"><div class="callout-bar"></div><div class="callout-body"><div class="callout-label">The core insight</div><div class="callout-text">Before you design a single feature, you must answer four questions about the customer's problem. BELT is the sequence of those four questions.</div></div></div>
+  <h2>The Four BELT Questions</h2>
+  <table class="data-table">
+    <tr><th>Question</th><th>What it surfaces</th></tr>
+    <tr><td><strong>B</strong> - What are they doing despite friction?</td><td>The bright-spot customer who has already built a workaround. The most reliable signal of real demand.</td></tr>
+    <tr><td><strong>E</strong> - What outcome do they actually need?</td><td>The specific life change the customer is trying to produce. Not a feature. A destination.</td></tr>
+    <tr><td><strong>L</strong> - Why have they not switched?</td><td>The specific barrier between the customer's current situation and your product. Defines what L must remove.</td></tr>
+    <tr><td><strong>T</strong> - Transient or Enabling?</td><td>Whether depth value can compound. Determines whether an E architecture is possible at all.</td></tr>
+  </table>
+  <div class="case-box">
+    <div class="case-header"><div class="case-company">Robinhood</div><div class="case-headline">Wrong diagnosis, wrong product, wrong features</div></div>
+    <div class="case-row case-belt"><div class="case-label">BELT</div><div class="case-value">B: paper-trading on Reddit spreadsheets. E: financial confidence, not access. L: belief barrier ("what if I pick wrong?"), not commissions. T: Enabling if P is confidence. Transient if P is trade execution. Robinhood built for the wrong T.</div></div>
+    <div class="case-row case-gap"><div class="case-label">The gap</div><div class="case-value">The founding obstacle thesis was wrong. "The barrier is commissions." Actual barrier: financial confidence. Every gamification feature was directionally correct for "make more trades" and wrong for "build confidence." The wrong thesis is not a small mistake - it is the architecture.</div></div>
+    <div class="case-row case-fix"><div class="case-label">Fix</div><div class="case-value">Correct the obstacle thesis first. Everything downstream changes. Do not redesign features before redesigning the diagnosis.</div></div>
+  </div>
+  <div class="summary-box">
+    <div class="summary-header"><div class="summary-title">Chapter Summary: Why Diagnosis Comes First</div></div>
+    <div class="summary-item" data-n="1">Design without diagnosis produces a product built for an assumed problem, not a confirmed one.</div>
+    <div class="summary-item" data-n="2">BELT is a sequence of four questions. Each builds on the previous.</div>
+    <div class="summary-item" data-n="3">B confirms demand. E names the destination. L identifies the barrier. T determines whether depth value is possible.</div>
+    <div class="summary-item" data-n="4">The cost of a wrong diagnosis compounds with every feature built on it. Robinhood is the clearest example.</div>
+  </div>
+</div>
+
+<!-- CH2 -->
+<div id="ch2" class="chapter-header">
+  <div class="chapter-num">Chapter 2</div>
+  <div class="chapter-title">B - Behaviour</div>
+  <div class="chapter-sub">What are they doing despite friction?</div>
+</div>
+<div class="page-section">
+  <p class="lead">The most reliable signal of real demand is not a survey. It is a person who has already built their own solution to the problem you are trying to solve.</p>
+  <h2>The Bright Spot Method</h2>
+  <p>Before any product exists, some customers solve the problem themselves. They log food in Notes apps. They record Loom-like videos in Zoom and share the link. They build finance spreadsheets that track their portfolio in ways apps do not. These are bright spots.</p>
+  <div class="callout teal"><div class="callout-bar"></div><div class="callout-body"><div class="callout-label">B asks</div><div class="callout-text">"What are they doing despite the friction of doing it manually?" The answer defines your most valuable early customer.</div></div></div>
+  <div class="framework-box">
+    <div class="framework-box-header" style="background:var(--teal);">The Bright Spot Interview - Three Questions</div>
+    <div class="framework-box-body">
+      <div class="framework-box-item">"Walk me through the last time you dealt with [the problem]. What did you actually do?"</div>
+      <div class="framework-box-item">"What tools or workarounds are you currently using?" (Never ask if they have a workaround - ask what their workaround is.)</div>
+      <div class="framework-box-item">"What would you lose if you had to stop using that workaround tomorrow?" This is the most important question. The answer reveals the E architecture in embryonic form.</div>
+    </div>
+  </div>
+  <h2>The FUD Score</h2>
+  <p>Score the intensity of the problem using three dimensions. Each scores 1-3. Maximum score: 27. Products with FUD below 9 rarely sustain motivation long enough for E to compound.</p>
+  <div class="diagram-container">
+    <svg viewBox="0 0 720 130" class="lifecycle-svg" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="220" height="130" rx="3" fill="#1F3864"/>
+      <text x="110" y="34" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="white">F</text>
+      <text x="110" y="52" text-anchor="middle" font-size="12" fill="rgba(255,255,255,0.85)" font-family="Arial,sans-serif">Frequency</text>
+      <text x="110" y="72" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.65)" font-family="Arial,sans-serif">1 = annual</text>
+      <text x="110" y="88" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.65)" font-family="Arial,sans-serif">2 = weekly</text>
+      <text x="110" y="104" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.65)" font-family="Arial,sans-serif">3 = daily</text>
+      <text x="240" y="70" text-anchor="middle" font-size="22" fill="#999">x</text>
+      <rect x="260" y="0" width="200" height="130" rx="3" fill="#6B7A1E"/>
+      <text x="360" y="34" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="white">U</text>
+      <text x="360" y="52" text-anchor="middle" font-size="12" fill="rgba(255,255,255,0.85)" font-family="Arial,sans-serif">Urgency</text>
+      <text x="360" y="72" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.65)" font-family="Arial,sans-serif">1 = inconvenient</text>
+      <text x="360" y="88" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.65)" font-family="Arial,sans-serif">2 = frustrating</text>
+      <text x="360" y="104" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.65)" font-family="Arial,sans-serif">3 = blocking</text>
+      <text x="472" y="70" text-anchor="middle" font-size="22" fill="#999">x</text>
+      <rect x="490" y="0" width="230" height="130" rx="3" fill="#1A8C7A"/>
+      <text x="605" y="34" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="white">D</text>
+      <text x="605" y="52" text-anchor="middle" font-size="12" fill="rgba(255,255,255,0.85)" font-family="Arial,sans-serif">Distinctness</text>
+      <text x="605" y="72" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.65)" font-family="Arial,sans-serif">1 = generic</text>
+      <text x="605" y="88" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.65)" font-family="Arial,sans-serif">2 = partially solved</text>
+      <text x="605" y="104" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.65)" font-family="Arial,sans-serif">3 = uniquely underserved</text>
+    </svg>
+    <p style="font-size:12px;color:var(--muted);margin-top:6px;">Score = F x U x D. Max: 27. Above 18: strong structural demand. Below 9: reconsider the problem.</p>
+  </div>
+  <div class="exercise-box">
+    <div class="exercise-header"><div class="exercise-title">Exercise: Finding Your Bright Spots</div></div>
+    <div class="exercise-prompt">Apply to your current product or a product you are building.</div>
+    <div class="exercise-item" data-n="1">Describe the specific workaround your most valuable early customers were using before your product existed.</div>
+    <div class="exercise-item" data-n="2">Score the workaround on FUD. Calculate the product.</div>
+    <div class="exercise-item" data-n="3">What would those customers lose if they had to abandon your product tomorrow? Is that loss the moat you designed - or a happy accident?</div>
+  </div>
+  <div class="summary-box">
+    <div class="summary-header"><div class="summary-title">Chapter Summary: B - Behaviour</div></div>
+    <div class="summary-item" data-n="1">Bright spots are customers who solved the problem with a workaround. Most reliable signal of real demand.</div>
+    <div class="summary-item" data-n="2">Three interview questions. The third ("what would you lose?") is the most important.</div>
+    <div class="summary-item" data-n="3">FUD score = Frequency x Urgency x Distinctness. Above 18: structural demand. Below 9: insufficient motivation.</div>
+  </div>
+</div>
+
+<!-- CH3 -->
+<div id="ch3" class="chapter-header">
+  <div class="chapter-num">Chapter 3</div>
+  <div class="chapter-title">E - Enduring</div>
+  <div class="chapter-sub">What outcome do they actually need?</div>
+</div>
+<div class="page-section">
+  <p class="lead">Most products are designed at feature level. The Enduring question forces the team to name the specific life change the customer is trying to produce. Everything downstream depends on getting this right.</p>
+  <h2>Three Levels of Problem Definition</h2>
+  <table class="data-table">
+    <tr><th>Level</th><th>Description</th><th>Example (fitness)</th></tr>
+    <tr><td><strong>Feature</strong></td><td>What the product does.</td><td>"Log your calories."</td></tr>
+    <tr><td><strong>Outcome</strong></td><td>What the customer achieves.</td><td>"Lose 10kg in 12 weeks."</td></tr>
+    <tr><td><strong>Life Change</strong></td><td>How the customer's life is different.</td><td>"Understand your body so tracking becomes unnecessary."</td></tr>
+  </table>
+  <div class="callout olive"><div class="callout-bar"></div><div class="callout-body"><div class="callout-label">P Statement Template</div><div class="callout-text">"For [specific segment], [product] delivers [specific outcome], so [life is different in this specific way]." Test: could this appear in a feature list? If yes, rewrite at Life Change level.</div></div></div>
+  <h2>P Statement Examples</h2>
+  <table class="data-table">
+    <tr><th>Product</th><th>Wrong P (Feature level)</th><th>Right P (Life Change level)</th></tr>
+    <tr><td>MyFitnessPal</td><td>"Track your calories."</td><td>"For adults who have tried and failed through willpower alone, MFP delivers insight into how food choices affect how they feel - so tracking becomes unnecessary."</td></tr>
+    <tr><td>Strava</td><td>"Track your runs and rides."</td><td>"For endurance athletes who train consistently, Strava delivers visible proof that fitness is compounding - so effort has meaning beyond completion."</td></tr>
+    <tr><td>Robinhood</td><td>"Commission-free trading."</td><td>"For young adults building financial confidence, Robinhood delivers a first real investment from knowledge, not impulse."</td></tr>
+  </table>
+  <div class="exercise-box">
+    <div class="exercise-header"><div class="exercise-title">Exercise: Writing Your P Statement</div></div>
+    <div class="exercise-prompt">Most product teams have never written P at Life Change level.</div>
+    <div class="exercise-item" data-n="1">Write your current P statement exactly as it appears in your documentation.</div>
+    <div class="exercise-item" data-n="2">Apply the three tests: Feature list? Specific segment? Life change?</div>
+    <div class="exercise-item" data-n="3">Rewrite using the template: "For [segment], [product] delivers [outcome], so [life changes in this specific way]."</div>
+    <div class="exercise-item" data-n="4">Show both versions to a customer. Which would they tell a friend?</div>
+  </div>
+  <div class="summary-box">
+    <div class="summary-header"><div class="summary-title">Chapter Summary: E - Enduring</div></div>
+    <div class="summary-item" data-n="1">Three levels: Feature, Outcome, Life Change. P must be at Life Change level.</div>
+    <div class="summary-item" data-n="2">If P could appear in a feature list, it is at the wrong altitude.</div>
+    <div class="summary-item" data-n="3">Enduring vs Transient: not all problems sustain motivation. E architecture only works for enduring problems.</div>
+  </div>
+</div>
+
+<!-- CH4 -->
+<div id="ch4" class="chapter-header">
+  <div class="chapter-num">Chapter 4</div>
+  <div class="chapter-title">L - Lock-in</div>
+  <div class="chapter-sub">Why have they not switched?</div>
+</div>
+<div class="page-section">
+  <p class="lead">Every customer who has not yet adopted your product is paying some cost to stay where they are. L names that cost and removes it.</p>
+  <h2>Three Lock-in Types</h2>
+  <div class="diagram-container">
+    <svg viewBox="0 0 720 140" class="lifecycle-svg" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="10" width="226" height="120" rx="3" fill="#1A8C7A"/>
+      <text x="113" y="46" text-anchor="middle" font-family="Georgia,serif" font-size="15" font-weight="bold" fill="white">Switching Cost</text>
+      <text x="113" y="66" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.8)" font-family="Arial,sans-serif">Prior investment in a competitor.</text>
+      <text x="113" y="82" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.8)" font-family="Arial,sans-serif">History, data, integrations.</text>
+      <text x="113" y="100" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.65)" font-family="Arial,sans-serif">Fix: migration. Import. Prove</text>
+      <text x="113" y="116" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.65)" font-family="Arial,sans-serif">nothing is lost.</text>
+      <rect x="247" y="10" width="226" height="120" rx="3" fill="#B7770D"/>
+      <text x="360" y="46" text-anchor="middle" font-family="Georgia,serif" font-size="15" font-weight="bold" fill="white">Search Cost</text>
+      <text x="360" y="66" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.8)" font-family="Arial,sans-serif">Trapped by uncertainty.</text>
+      <text x="360" y="82" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.8)" font-family="Arial,sans-serif">Evaluation anxiety, not migration.</text>
+      <text x="360" y="100" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.65)" font-family="Arial,sans-serif">Fix: preview. Free trial.</text>
+      <text x="360" y="116" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.65)" font-family="Arial,sans-serif">Show outcome before commitment.</text>
+      <rect x="494" y="10" width="226" height="120" rx="3" fill="#6B7A1E"/>
+      <text x="607" y="46" text-anchor="middle" font-family="Georgia,serif" font-size="15" font-weight="bold" fill="white">Inertia</text>
+      <text x="607" y="66" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.8)" font-family="Arial,sans-serif">Never started. Belief barrier.</text>
+      <text x="607" y="82" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.8)" font-family="Arial,sans-serif">"I am not the kind of person..."</text>
+      <text x="607" y="100" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.65)" font-family="Arial,sans-serif">Fix: zero-commitment first step.</text>
+      <text x="607" y="116" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.65)" font-family="Arial,sans-serif">No goal required to start.</text>
+    </svg>
+  </div>
+  <table class="data-table">
+    <tr><th>Lock-in type</th><th>What L must do</th><th>What L must not do</th></tr>
+    <tr><td><strong>Switching Cost</strong></td><td>Make migration effortless. Import history. Prove nothing is lost.</td><td>"Easy to get started." That is not the barrier.</td></tr>
+    <tr><td><strong>Search Cost</strong></td><td>Show the outcome before commitment. Remove evaluation risk.</td><td>Migration tools. There is nothing to migrate.</td></tr>
+    <tr><td><strong>Inertia</strong></td><td>Reduce the first step to near-zero. No commitment before value.</td><td>Onboarding requiring belief, goals, or commitment.</td></tr>
+  </table>
+  <div class="summary-box">
+    <div class="summary-header"><div class="summary-title">Chapter Summary: L - Lock-in</div></div>
+    <div class="summary-item" data-n="1">Three types: Switching Cost, Search Cost, Inertia. Each requires a different liberation design.</div>
+    <div class="summary-item" data-n="2">The wrong liberation design leaves the barrier intact. Generic ease of use is not L.</div>
+    <div class="summary-item" data-n="3">Most common mistake: onboarding reduces general friction instead of removing the specific barrier.</div>
+  </div>
+</div>
+
+<!-- CH5 -->
+<div id="ch5" class="chapter-header">
+  <div class="chapter-num">Chapter 5</div>
+  <div class="chapter-title">T - Type</div>
+  <div class="chapter-sub">Transient or Enabling?</div>
+</div>
+<div class="page-section">
+  <p class="lead">T is the most consequential question in the diagnostic. The answer determines whether an E architecture is possible at all.</p>
+  <table class="data-table">
+    <tr><th>Transient</th><th>Enabling</th></tr>
+    <tr><td>The hundredth use delivers the same value as the first.</td><td>The hundredth use is more valuable than the first.</td></tr>
+    <tr><td>No data accumulates. No moat forms.</td><td>Personal data, history, or patterns accumulate with each use.</td></tr>
+    <tr><td>Retention relies on P-Salience, not depth value.</td><td>Retention compounds. Leaving means losing something irreplaceable.</td></tr>
+    <tr><td>Wise for a tourist: one transfer, no history.</td><td>Wise for an expat: 24 months of multi-currency infrastructure.</td></tr>
+  </table>
+  <div class="callout navy"><div class="callout-bar"></div><div class="callout-body"><div class="callout-label">The T test</div><div class="callout-text">"If a customer stopped using the product for six months and came back, would the product know them? Would the 601st session feel different from the first?" If yes: Enabling. If no: Transient.</div></div></div>
+  <div class="summary-box">
+    <div class="summary-header"><div class="summary-title">Chapter Summary: T - Type</div></div>
+    <div class="summary-item" data-n="1">Enabling: the hundredth use is more valuable than the first. Transient: every session delivers the same value.</div>
+    <div class="summary-item" data-n="2">Building E architecture on a Transient product is wasted investment.</div>
+    <div class="summary-item" data-n="3">Cyclical and episodic Enabling products require deliberate Stage 8 (Reinforcement) design - Wrapped, Year in Sport.</div>
+  </div>
+</div>
+
+<!-- CH6 -->
+<div id="ch6" class="chapter-header">
+  <div class="chapter-num">Chapter 6</div>
+  <div class="chapter-title">Segmentation</div>
+  <div class="chapter-sub">The BELT definition</div>
+</div>
+<div class="page-section">
+  <p class="lead">BELT produces a different kind of segmentation - diagnostic rather than demographic, and therefore directly actionable.</p>
+  <div class="quote-block">"Two customers belong to the same segment if they share the same enduring pain and the same lock-in type."</div>
+  <h2>Wise: Two Segments, One Product</h2>
+  <table class="data-table">
+    <tr><th></th><th>Wise for Expats</th><th>Wise for Tourists</th></tr>
+    <tr><td><strong>Enduring pain?</strong></td><td>Yes. Monthly transfers. Ongoing multi-currency need.</td><td>No. One-time transfer. Transient.</td></tr>
+    <tr><td><strong>Lock-in type?</strong></td><td>Switching Cost. 24 months of history and infrastructure.</td><td>None. No prior investment.</td></tr>
+    <tr><td><strong>T - Type?</strong></td><td>Enabling. History compounds with every transfer.</td><td>Transient. Hundredth transfer = first transfer.</td></tr>
+    <tr><td><strong>E architecture?</strong></td><td>Yes. Build the compounding layer.</td><td>No. Design for P-Salience at next transfer moment.</td></tr>
+  </table>
+  <div class="summary-box">
+    <div class="summary-header"><div class="summary-title">Chapter Summary: Segmentation</div></div>
+    <div class="summary-item" data-n="1">"Two customers are in the same segment if they share the same enduring pain and the same lock-in type."</div>
+    <div class="summary-item" data-n="2">Same product, different segments, different designs. Wise expat and Wise tourist require completely different P, L, and E.</div>
+    <div class="summary-item" data-n="3">If BELT answers diverge within your candidate segment, you have two segments. Split before designing.</div>
+  </div>
+</div>
+
+<!-- PART TWO -->
+<div class="part-divider">
+  <div class="part-label">Part Two</div>
+  <div class="part-title">POLE: The Four Value Propositions</div>
+  <div style="margin-top:20px;color:#aaa;font-size:15px;max-width:600px;">BELT tells you what to design. POLE tells you how. Four distinct value propositions, each doing a specific job at a specific moment in the customer journey.</div>
+</div>
+
+<div class="page-section">
+  <div class="diagram-container">
+    <div class="diagram-label">POLE Architecture</div>
+    <div class="pole-grid">
+      <div class="pole-cell header pole-p-h"><span class="pole-letter">P</span><div style="font-size:11px;color:rgba(255,255,255,0.8);margin-top:4px;">The Destination</div></div>
+      <div class="pole-cell header pole-o-h"><span class="pole-letter">O</span><div style="font-size:11px;color:rgba(255,255,255,0.8);margin-top:4px;">The Belief Moment</div></div>
+      <div class="pole-cell header pole-l-h"><span class="pole-letter">L</span><div style="font-size:11px;color:rgba(255,255,255,0.8);margin-top:4px;">Liberation</div></div>
+      <div class="pole-cell header pole-e-h"><span class="pole-letter">E</span><div style="font-size:11px;color:rgba(255,255,255,0.8);margin-top:4px;">Retention Arc</div></div>
+      <div class="pole-p">Specific life change after sustained use. Ongoing / Terminal / Intermittent.</div>
+      <div class="pole-o">Breaks scepticism in session 1. Understandable before. Verifiable after.</div>
+      <div class="pole-l">Removes the specific barrier from the BELT L diagnosis.</div>
+      <div class="pole-e">5-step ladder. E-Delivered per session. E-Accrued across sessions.</div>
+      <div class="pole-p" style="color:#999;font-style:italic;">Failure: P at Feature level cascades into wrong O, wrong L, wrong E.</div>
+      <div class="pole-o" style="color:#999;font-style:italic;">Failure: O fires too late, wrong segment, or never.</div>
+      <div class="pole-l" style="color:#999;font-style:italic;">Failure: removes wrong barrier, creates new friction.</div>
+      <div class="pole-e" style="color:#999;font-style:italic;">Failure: Metric Features dominate. E-Accrued invisible.</div>
+    </div>
+  </div>
+</div>
+
+<!-- CH7 -->
+<div id="ch7" class="chapter-header">
+  <div class="chapter-num">Chapter 7</div>
+  <div class="chapter-title">P - The Destination</div>
+  <div class="chapter-sub">The 12-month outcome</div>
+</div>
+<div class="page-section">
+  <p class="lead">P is not a tagline. It is the specific outcome the customer experiences after sustained use. It is the destination that every other POLE element is moving the customer toward.</p>
+  <h2>P and Outcome Types</h2>
+  <table class="data-table">
+    <tr><th>Type</th><th>Definition</th><th>Example</th></tr>
+    <tr><td><strong>Ongoing</strong></td><td>P delivered in every session. Customer renews because each session is worth having.</td><td>Spotify: music finds you before you know you want it. Every session is P-state confirmation.</td></tr>
+    <tr><td><strong>Terminal</strong></td><td>P delivered once. Customer achieves a specific outcome and the relationship transitions.</td><td>Hinge: deleted the app. TurboTax: refund arrived. Atlys: visa in hand before deadline.</td></tr>
+    <tr><td><strong>Intermittent</strong></td><td>P recurs at natural intervals. Customer returns when the condition returns.</td><td>Hipcamp: every campsite matches what was described - each trip.</td></tr>
+  </table>
+  <div class="quote-block">"Kingfisher had a tagline. IndiGo had a system." <br><span style="font-size:13px;color:#999;">The difference between perception as a strategy and delivery as a strategy.</span></div>
+  <h2>The HOW Challenge</h2>
+  <div class="framework-box">
+    <div class="framework-box-header" style="background:var(--purple);">The HOW Audit</div>
+    <div class="framework-box-body">
+      <div class="framework-box-item"><strong>Step 1:</strong> Write the assumed HOW. "Every product in this market assumed value = [mechanism]."</div>
+      <div class="framework-box-item"><strong>Step 2:</strong> Challenge it. "What if value is actually [different mechanism]?"</div>
+      <div class="framework-box-item"><strong>Step 3:</strong> Ask what if that's wrong. Surface the assumed mechanism and test whether your product also assumes it.</div>
+      <div class="framework-box-item"><strong>Spotify:</strong> Every platform assumed "music = something you find." Spotify: "what if music finds you?" This HOW challenge reframes P, O, and E simultaneously.</div>
+      <div class="framework-box-item"><strong>Better.com:</strong> Every lender assumed "value = lowest rate." Better: "what if value is certainty and speed, not the rate?" Same category, different HOW.</div>
+    </div>
+  </div>
+  <div class="summary-box">
+    <div class="summary-header"><div class="summary-title">Chapter Summary: P - The Destination</div></div>
+    <div class="summary-item" data-n="1">P is the specific life change after enough use. Not a tagline. Not a feature description.</div>
+    <div class="summary-item" data-n="2">Three types: Ongoing, Terminal, Intermittent.</div>
+    <div class="summary-item" data-n="3">P at Feature level cascades: wrong O, wrong L, wrong E.</div>
+    <div class="summary-item" data-n="4">HOW audit: challenge the assumed mechanism in your market before writing P.</div>
+  </div>
+</div>
+
+<!-- CH8 -->
+<div id="ch8" class="chapter-header">
+  <div class="chapter-num">Chapter 8</div>
+  <div class="chapter-title">O - The Belief Moment</div>
+  <div class="chapter-sub">Understandable before first use. Verifiable after first use.</div>
+</div>
+<div class="page-section">
+  <p class="lead">O is the moment a new customer first believes that P is possible. It must fire in session 1. If it does not, the customer leaves before E can begin.</p>
+  <h2>O and the Obstacle Thesis</h2>
+  <p>The obstacle thesis names the specific reason the customer has not already solved the problem. O must break exactly the belief the obstacle thesis identifies.</p>
+  <div class="callout amber"><div class="callout-bar"></div><div class="callout-body"><div class="callout-label">Obstacle Thesis to O</div><div class="callout-text">The obstacle thesis names the belief. O breaks it. If you cannot trace O back to the obstacle thesis, O is not designed - it is a default.</div></div></div>
+  <h2>Three O Failure Modes</h2>
+  <div class="framework-box">
+    <div class="framework-box-header" style="background:var(--amber);">O Failure Modes</div>
+    <div class="framework-box-body">
+      <div class="framework-box-item"><strong>O fires too late:</strong> belief-breaking moment exists but takes too long. Day 7 retention low even when Month 3 is strong. Fix: move O to session 1.</div>
+      <div class="framework-box-item"><strong>O fires for the wrong segment:</strong> designed for early adopters, not for the segment now being acquired. Fix: redesign O for the current acquisition segment.</div>
+      <div class="framework-box-item"><strong>O never fires:</strong> no belief-breaking moment exists. Users explore and leave. Fix: name the specific belief on arrival. Design one moment that breaks it.</div>
+    </div>
+  </div>
+  <div class="summary-box">
+    <div class="summary-header"><div class="summary-title">Chapter Summary: O - The Belief Moment</div></div>
+    <div class="summary-item" data-n="1">O breaks the sceptical belief on arrival. Must fire in session 1.</div>
+    <div class="summary-item" data-n="2">Understandable before first use. Verifiable after first use.</div>
+    <div class="summary-item" data-n="3">Derived from the obstacle thesis. Cannot be traced to obstacle = not designed.</div>
+    <div class="summary-item" data-n="4">Three failure modes: too late, wrong segment, never fires.</div>
+  </div>
+</div>
+
+<!-- CH9 -->
+<div id="ch9" class="chapter-header">
+  <div class="chapter-num">Chapter 9</div>
+  <div class="chapter-title">L - Liberation</div>
+  <div class="chapter-sub">Removes the old barrier. Enables adoption without rebuild.</div>
+</div>
+<div class="page-section">
+  <p class="lead">L is not easy onboarding. It is the deliberate removal of the specific barrier keeping this segment out. Generic ease of use is not L.</p>
+  <table class="data-table">
+    <tr><th>Lock-in type</th><th>What L must do</th><th>Example</th></tr>
+    <tr><td><strong>Switching Cost</strong></td><td>Import. Data portability. "Your history comes with you."</td><td>Spotify imports Apple Music playlists. Taste model begins learning from existing history.</td></tr>
+    <tr><td><strong>Search Cost</strong></td><td>Show the outcome before commitment. Reverse trial.</td><td>Warby Parker home try-on. TurboTax shows refund before filing.</td></tr>
+    <tr><td><strong>Inertia</strong></td><td>Eliminate the first-step requirement. Zero-commitment start.</td><td>"Log one meal. No calorie target required." MFP's current onboarding asks for a goal in session 1 - exactly the wrong design.</td></tr>
+  </table>
+  <div class="summary-box">
+    <div class="summary-header"><div class="summary-title">Chapter Summary: L - Liberation</div></div>
+    <div class="summary-item" data-n="1">L traces directly to the lock-in type from BELT diagnosis.</div>
+    <div class="summary-item" data-n="2">Three types produce three different liberation designs.</div>
+    <div class="summary-item" data-n="3">Type 1 Convergence: O and L fire in the same moment. Type 2: same session, sequential.</div>
+  </div>
+</div>
+
+<!-- CH10 -->
+<div id="ch10" class="chapter-header">
+  <div class="chapter-num">Chapter 10</div>
+  <div class="chapter-title">E - The Retention Arc</div>
+  <div class="chapter-sub">The 5-step E Design Ladder</div>
+</div>
+<div class="page-section">
+  <p class="lead">E is not "the retention features." E is the architecture that makes leaving increasingly costly - by ensuring each session deposits value that did not exist before.</p>
+  <h2>E-Delivered and E-Accrued</h2>
+  <table class="data-table">
+    <tr><th></th><th>E-Delivered (per session)</th><th>E-Accrued (across sessions)</th></tr>
+    <tr><td><strong>What it is</strong></td><td>Functional VP + Experience VP in each session.</td><td>The data asset the customer has built. The moat.</td></tr>
+    <tr><td><strong>What it drives</strong></td><td>Day 1 to Day 30 retention.</td><td>Month 3+ retention and renewal.</td></tr>
+    <tr><td><strong>Failure</strong></td><td>Sessions feel adequate but customer cannot describe what they achieved.</td><td>Moat exists but is invisible. Switching cost felt only when leaving.</td></tr>
+  </table>
+  <div class="callout red"><div class="callout-bar"></div><div class="callout-body"><div class="callout-label">Critical dependency</div><div class="callout-text">Most teams invest in E-Accrued before E-Delivered is working. The moat forms over a gap that churns customers before they reach it.</div></div></div>
+  <h2>The 5-Step E Design Ladder</h2>
+  <div class="diagram-container">
+    <svg viewBox="0 0 720 340" class="lifecycle-svg" xmlns="http://www.w3.org/2000/svg">
+      <defs><marker id="arrd" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#6B7A1E"/></marker></defs>
+      <line x1="60" y1="30" x2="60" y2="320" stroke="#ddd" stroke-width="2"/>
+      <g transform="translate(0,20)">
+        <rect x="0" y="0" width="44" height="44" rx="2" fill="#1A8C7A"/>
+        <text x="22" y="28" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="bold" fill="white">1</text>
+        <line x1="44" y1="22" x2="80" y2="22" stroke="#1A8C7A" stroke-width="2" marker-end="url(#arrd)" stroke-dasharray="none"/>
+        <rect x="80" y="4" width="620" height="36" rx="2" fill="#E8F8F5" style="stroke:#1A8C7A;stroke-width:1"/>
+        <text x="96" y="17" font-size="12" font-weight="bold" fill="#1A8C7A" font-family="Arial,sans-serif">Decompose P into components</text>
+        <text x="96" y="32" font-size="11" fill="#333" font-family="Arial,sans-serif">What specific things must be true in each session for P-state to hold?</text>
+      </g>
+      <g transform="translate(0,82)">
+        <rect x="0" y="0" width="44" height="44" rx="2" fill="#6B7A1E"/>
+        <text x="22" y="28" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="bold" fill="white">2</text>
+        <line x1="44" y1="22" x2="80" y2="22" stroke="#6B7A1E" stroke-width="2" marker-end="url(#arrd)"/>
+        <rect x="80" y="4" width="620" height="36" rx="2" fill="#E8EBCF" style="stroke:#6B7A1E;stroke-width:1"/>
+        <text x="96" y="17" font-size="12" font-weight="bold" fill="#6B7A1E" font-family="Arial,sans-serif">Set the Functional VP floor</text>
+        <text x="96" y="32" font-size="11" fill="#333" font-family="Arial,sans-serif">Minimum threshold per component. Below this, P-state resets.</text>
+      </g>
+      <g transform="translate(0,144)">
+        <rect x="0" y="0" width="44" height="44" rx="2" fill="#B7770D"/>
+        <text x="22" y="28" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="bold" fill="white">3</text>
+        <line x1="44" y1="22" x2="80" y2="22" stroke="#B7770D" stroke-width="2" marker-end="url(#arrd)"/>
+        <rect x="80" y="4" width="620" height="36" rx="2" fill="#FFF8E7" style="stroke:#B7770D;stroke-width:1"/>
+        <text x="96" y="17" font-size="12" font-weight="bold" fill="#B7770D" font-family="Arial,sans-serif">Derive Experience VP from the obstacle thesis</text>
+        <text x="96" y="32" font-size="11" fill="#333" font-family="Arial,sans-serif">Which dimension - Speed, Relevance, Clarity, Control - is load-bearing?</text>
+      </g>
+      <g transform="translate(0,206)">
+        <rect x="0" y="0" width="44" height="44" rx="2" fill="#6C3483"/>
+        <text x="22" y="28" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="bold" fill="white">4</text>
+        <line x1="44" y1="22" x2="80" y2="22" stroke="#6C3483" stroke-width="2" marker-end="url(#arrd)"/>
+        <rect x="80" y="4" width="620" height="36" rx="2" fill="#F4ECF7" style="stroke:#6C3483;stroke-width:1"/>
+        <text x="96" y="17" font-size="12" font-weight="bold" fill="#6C3483" font-family="Arial,sans-serif">Identify the Referral VP moment</text>
+        <text x="96" y="32" font-size="11" fill="#333" font-family="Arial,sans-serif">When has P been realised at or above expectation? Make sharing effortless at that moment.</text>
+      </g>
+      <g transform="translate(0,268)">
+        <rect x="0" y="0" width="44" height="44" rx="2" fill="#1F3864"/>
+        <text x="22" y="28" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="bold" fill="white">5</text>
+        <line x1="44" y1="22" x2="80" y2="22" stroke="#1F3864" stroke-width="2" marker-end="url(#arrd)"/>
+        <rect x="80" y="4" width="620" height="36" rx="2" fill="#EBF0FA" style="stroke:#1F3864;stroke-width:1"/>
+        <text x="96" y="17" font-size="12" font-weight="bold" fill="#1F3864" font-family="Arial,sans-serif">E-P Alignment - Cut Metric Features</text>
+        <text x="96" y="32" font-size="11" fill="#333" font-family="Arial,sans-serif">For every feature: does it trace to Step 1 via the obstacle thesis? If not, cut it.</text>
+      </g>
+    </svg>
+  </div>
+  <h2>Metric Features vs Micro-P</h2>
+  <table class="data-table">
+    <tr><th>Micro-P (passes Step 5)</th><th>Metric Feature (fails Step 5)</th></tr>
+    <tr><td>"You caught 34 errors this week, down from 51." - Grammarly</td><td>"Your profile is 80% complete."</td></tr>
+    <tr><td>"Your pace improved 12% over 8 weeks." - Strava</td><td>"You completed your 10th ride!"</td></tr>
+    <tr><td>"Discover Weekly accuracy up - 7 tracks saved vs 2 last week." - Spotify</td><td>"You have listened 200 hours this year."</td></tr>
+    <tr><td>"First sentence understood without translating." - Duolingo</td><td>"You finished your first lesson!"</td></tr>
+  </table>
+  <h2>Three Advanced Diagnostics</h2>
+  <div class="framework-box">
+    <div class="framework-box-header" style="background:var(--navy);">HOW Audit (pre-POLE)</div>
+    <div class="framework-box-body">
+      <div class="framework-box-item">Surface the assumed mechanism. Ask: how is value created in the current system? Then: what if that's wrong?</div>
+      <div class="framework-box-item"><strong>Example:</strong> Robinhood assumed the mechanism was access (zero commissions). HOW Audit: the real mechanism should be confidence formation. Every E feature built on the access mechanism compounds the wrong HOW.</div>
+    </div>
+  </div>
+  <div class="framework-box" style="margin-top:12px;">
+    <div class="framework-box-header" style="background:var(--navy);">POLE Tension Test (within POLE)</div>
+    <div class="framework-box-body">
+      <div class="framework-box-item">For each POLE element: can you write two genuinely different plausible answers?</div>
+      <div class="framework-box-item">If no: the BELT framing is too shallow. Return to diagnosis before proceeding.</div>
+      <div class="framework-box-item"><em>"Shallow problems have obvious solutions. Deep problems have competing correct solutions."</em></div>
+    </div>
+  </div>
+  <div class="framework-box" style="margin-top:12px;">
+    <div class="framework-box-header" style="background:var(--navy);">System Effects Check (post-POLE)</div>
+    <div class="framework-box-body">
+      <div class="framework-box-item">"If we are right about POLE, what new problems does this create?"</div>
+      <div class="framework-box-item">Stopping rule: good design only if Tension, Leverage, and Testability all pass.</div>
+      <div class="framework-box-item"><strong>Example:</strong> Spotify's E design creates a new problem - podcast users get a degraded music taste model. The podcast section undermines the HOW. System Effects Check surfaces this.</div>
+    </div>
+  </div>
+  <div class="exercise-box">
+    <div class="exercise-header"><div class="exercise-title">Exercise: E Design - Run the Ladder</div></div>
+    <div class="exercise-prompt">Apply to your current product. This exercise often reveals that your strongest-performing features are Metric Features.</div>
+    <div class="exercise-item" data-n="1">Decompose your P into 3-5 components. What must be true in each session?</div>
+    <div class="exercise-item" data-n="2">Set the floor for each component.</div>
+    <div class="exercise-item" data-n="3">Name the load-bearing Experience VP dimension. Which one addresses the obstacle thesis?</div>
+    <div class="exercise-item" data-n="4">Apply Step 5 to your three highest-engagement features. Can each be traced to Step 1 in two steps?</div>
+  </div>
+  <div class="summary-box">
+    <div class="summary-header"><div class="summary-title">Chapter Summary: E - The Retention Arc</div></div>
+    <div class="summary-item" data-n="1">E-Delivered must work before E-Accrued can form. Invest in the right order.</div>
+    <div class="summary-item" data-n="2">5-step ladder: decompose P, set floor, derive Experience VP, Referral VP moment, cut Metric Features.</div>
+    <div class="summary-item" data-n="3">Micro-P carries customers across the Valley of Death. Task completion does not.</div>
+    <div class="summary-item" data-n="4">Three advanced diagnostics: HOW Audit, POLE Tension Test, System Effects Check.</div>
+    <div class="summary-item" data-n="5">Referral VP fires when P is realised. Three types: Financial, Social, Personal. Three actors: Generator, Distributor, Receiver.</div>
+  </div>
+</div>
+
+<!-- PART THREE -->
+<div class="part-divider">
+  <div class="part-label">Part Three</div>
+  <div class="part-title">Value Currency</div>
+</div>
+
+<!-- CH11 -->
+<div id="ch11" class="chapter-header">
+  <div class="chapter-num">Chapter 11</div>
+  <div class="chapter-title">Value Currency: Time, Data, Money</div>
+  <div class="chapter-sub">What accumulates. What forms the moat.</div>
+</div>
+<div class="page-section">
+  <p class="lead">Every product accumulates at least one currency. The moat only forms when the customer can feel what they have built. If the moat is invisible, it does not protect.</p>
+  <div class="currency-cards">
+    <div class="currency-card">
+      <div class="currency-header" style="background:var(--navy);">
+        <div class="currency-name">Time</div>
+        <div class="currency-sub">The seed.</div>
+      </div>
+      <div class="currency-body" style="background:var(--navy-pale);">Sessions invested. Weakest alone - a competitor can buy it back with a discount. Only becomes load-bearing when it enables Data to form.</div>
+      <div class="currency-examples" style="background:var(--navy-pale);color:var(--muted);border-top:1px solid #d0d8e8;">Spotify streams. Strava logs. Duolingo days practiced.</div>
+    </div>
+    <div class="currency-card">
+      <div class="currency-header" style="background:var(--teal);">
+        <div class="currency-name">Data</div>
+        <div class="currency-sub">The moat.</div>
+      </div>
+      <div class="currency-body" style="background:var(--teal-pale);">Irreplaceable personalisation built from the customer's own behaviour. Cannot be transferred. The competitor cannot replicate it without the customer's entire history.</div>
+      <div class="currency-examples" style="background:var(--teal-pale);color:var(--muted);border-top:1px solid #c0e8e0;">Spotify taste model. Notion knowledge graph. Superhuman triage patterns.</div>
+    </div>
+    <div class="currency-card">
+      <div class="currency-header" style="background:var(--olive);">
+        <div class="currency-name">Money</div>
+        <div class="currency-sub">The lock.</div>
+      </div>
+      <div class="currency-body" style="background:var(--olive-pale);">Activates last. The customer pays to protect what has been built - the data asset they cannot rebuild elsewhere. Not a paywall; protection for the moat they have created.</div>
+      <div class="currency-examples" style="background:var(--olive-pale);color:var(--muted);border-top:1px solid #cdd8a0;">Spotify Premium. Notion team plan. LinkedIn Recruiter.</div>
+    </div>
+  </div>
+  <h2>The Sequence Is Not Universal</h2>
+  <p>Most products progress Time to Data to Money. But the starting currency depends on what the customer deposits first.</p>
+  <div class="diagram-container">
+    <svg viewBox="0 0 720 200" class="lifecycle-svg" xmlns="http://www.w3.org/2000/svg">
+      <defs><marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#999"/></marker></defs>
+      <!-- Spotify row -->
+      <rect x="0" y="10" width="80" height="36" rx="2" fill="#1A8C7A"/>
+      <text x="40" y="32" text-anchor="middle" font-size="13" font-weight="bold" fill="white" font-family="Arial,sans-serif">Spotify</text>
+      <rect x="100" y="10" width="160" height="36" rx="2" fill="#1F3864"/>
+      <text x="180" y="28" text-anchor="middle" font-size="12" font-weight="bold" fill="white" font-family="Arial,sans-serif">Time</text>
+      <text x="180" y="42" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif">streams seed taste model</text>
+      <line x1="260" y1="28" x2="276" y2="28" stroke="#999" stroke-width="1.5" marker-end="url(#arr2)"/>
+      <rect x="280" y="10" width="160" height="36" rx="2" fill="#1A8C7A"/>
+      <text x="360" y="28" text-anchor="middle" font-size="12" font-weight="bold" fill="white" font-family="Arial,sans-serif">Data</text>
+      <text x="360" y="42" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif">taste model = moat</text>
+      <line x1="440" y1="28" x2="456" y2="28" stroke="#999" stroke-width="1.5" marker-end="url(#arr2)"/>
+      <rect x="460" y="10" width="160" height="36" rx="2" fill="#6B7A1E"/>
+      <text x="540" y="28" text-anchor="middle" font-size="12" font-weight="bold" fill="white" font-family="Arial,sans-serif">Money</text>
+      <text x="540" y="42" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif">Premium protects model</text>
+      <!-- LinkedIn row -->
+      <rect x="0" y="62" width="80" height="36" rx="2" fill="#1F3864"/>
+      <text x="40" y="84" text-anchor="middle" font-size="13" font-weight="bold" fill="white" font-family="Arial,sans-serif">LinkedIn</text>
+      <rect x="100" y="62" width="160" height="36" rx="2" fill="#1A8C7A"/>
+      <text x="180" y="80" text-anchor="middle" font-size="12" font-weight="bold" fill="white" font-family="Arial,sans-serif">Data</text>
+      <text x="180" y="94" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif">profile = immediate deposit</text>
+      <line x1="260" y1="80" x2="276" y2="80" stroke="#999" stroke-width="1.5" marker-end="url(#arr2)"/>
+      <rect x="280" y="62" width="160" height="36" rx="2" fill="#1F3864" opacity="0.7"/>
+      <text x="360" y="80" text-anchor="middle" font-size="12" font-weight="bold" fill="white" font-family="Arial,sans-serif">Time</text>
+      <text x="360" y="94" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif">connections deepen</text>
+      <line x1="440" y1="80" x2="456" y2="80" stroke="#999" stroke-width="1.5" marker-end="url(#arr2)"/>
+      <rect x="460" y="62" width="160" height="36" rx="2" fill="#6B7A1E"/>
+      <text x="540" y="80" text-anchor="middle" font-size="12" font-weight="bold" fill="white" font-family="Arial,sans-serif">Money</text>
+      <text x="540" y="94" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif">Recruiter after data has value</text>
+      <!-- Robinhood row -->
+      <rect x="0" y="114" width="80" height="36" rx="2" fill="#C0392B"/>
+      <text x="40" y="136" text-anchor="middle" font-size="13" font-weight="bold" fill="white" font-family="Arial,sans-serif">Robinhood</text>
+      <rect x="100" y="114" width="160" height="36" rx="2" fill="#6B7A1E"/>
+      <text x="180" y="132" text-anchor="middle" font-size="12" font-weight="bold" fill="white" font-family="Arial,sans-serif">Money</text>
+      <text x="180" y="146" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif">first deposit = stake</text>
+      <line x1="260" y1="132" x2="276" y2="132" stroke="#999" stroke-width="1.5" marker-end="url(#arr2)"/>
+      <rect x="280" y="114" width="160" height="36" rx="2" fill="#1A8C7A"/>
+      <text x="360" y="132" text-anchor="middle" font-size="12" font-weight="bold" fill="white" font-family="Arial,sans-serif">Data</text>
+      <text x="360" y="146" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif">portfolio history</text>
+      <line x1="440" y1="132" x2="456" y2="132" stroke="#999" stroke-width="1.5" marker-end="url(#arr2)"/>
+      <rect x="460" y="114" width="160" height="36" rx="2" fill="#1F3864" opacity="0.7"/>
+      <text x="540" y="132" text-anchor="middle" font-size="12" font-weight="bold" fill="white" font-family="Arial,sans-serif">Time</text>
+      <text x="540" y="146" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif">account history = cost</text>
+      <text x="0" y="168" font-size="10" fill="#999" font-family="Arial,sans-serif">Starts with Time</text>
+      <text x="0" y="182" font-size="10" fill="#1A8C7A" font-weight="bold" font-family="Arial,sans-serif">Starts with Data</text>
+      <text x="120" y="182" font-size="10" fill="#C0392B" font-weight="bold" font-family="Arial,sans-serif">Starts with Money</text>
+    </svg>
+  </div>
+  <div class="summary-box">
+    <div class="summary-header"><div class="summary-title">Chapter Summary: Value Currency</div></div>
+    <div class="summary-item" data-n="1">Three currencies: Time (seed), Data (moat), Money (lock). Direction always toward the moat.</div>
+    <div class="summary-item" data-n="2">Sequence is product-specific. LinkedIn starts with Data. Robinhood starts with Money.</div>
+    <div class="summary-item" data-n="3">The moat only protects when the customer can feel it. Invisible moats do not retain.</div>
+    <div class="summary-item" data-n="4">Three failure modes: Stuck at Time, Data Invisible, Premature Money.</div>
+  </div>
+</div>
+
+<!-- PART FOUR -->
+<div class="part-divider">
+  <div class="part-label">Part Four</div>
+  <div class="part-title">Value Lifecycle</div>
+</div>
+
+<!-- CH12 -->
+<div id="ch12" class="chapter-header">
+  <div class="chapter-num">Chapter 12</div>
+  <div class="chapter-title">The Value Lifecycle</div>
+  <div class="chapter-sub">Nine stages. Three actors. Design for all of them.</div>
+</div>
+<div class="page-section">
+  <p class="lead">Value does not stop at delivery. It must be perceived, received, realised, reinforced, and captured to complete the cycle. Most products design for Stages 1-4 and leave everything else to chance.</p>
+  <h2>Three Actors</h2>
+  <div class="actor-cards">
+    <div class="actor-card">
+      <div class="actor-header" style="background:var(--teal);"><div class="actor-name">Value Generator</div></div>
+      <div class="actor-body">
+        <div class="actor-row" style="background:var(--teal-pale);">
+          <div class="actor-row-label" style="color:var(--teal);">Who</div>
+          <div class="actor-row-value">The company. Creates, promises, delivers, reinforces, and captures value.</div>
+        </div>
+        <div class="actor-row" style="background:white;">
+          <div class="actor-row-label" style="color:var(--teal);">Stages</div>
+          <div class="actor-row-value">Owns 1, 2, 4, 8 (shared), 9.</div>
+        </div>
+        <div class="actor-row" style="background:var(--teal-pale);">
+          <div class="actor-row-label" style="color:var(--red);">Failure</div>
+          <div class="actor-row-value" style="color:var(--red);font-style:italic;">Asks for capture before realisation.</div>
+        </div>
+      </div>
+    </div>
+    <div class="actor-card">
+      <div class="actor-header" style="background:var(--purple);"><div class="actor-name">Value Distributor</div></div>
+      <div class="actor-body">
+        <div class="actor-row" style="background:var(--purple-pale);">
+          <div class="actor-row-label" style="color:var(--purple);">Who</div>
+          <div class="actor-row-value">The channel. Not always a person - often the product itself. Wrapped. The weekly email. The push notification.</div>
+        </div>
+        <div class="actor-row" style="background:white;">
+          <div class="actor-row-label" style="color:var(--purple);">Stages</div>
+          <div class="actor-row-value">Owns 5. Co-owns 8.</div>
+        </div>
+        <div class="actor-row" style="background:var(--purple-pale);">
+          <div class="actor-row-label" style="color:var(--red);">Failure</div>
+          <div class="actor-row-value" style="color:var(--red);font-style:italic;">Distributes at wrong moment or wrong channel.</div>
+        </div>
+      </div>
+    </div>
+    <div class="actor-card">
+      <div class="actor-header" style="background:var(--amber);"><div class="actor-name">Value Receiver</div></div>
+      <div class="actor-body">
+        <div class="actor-row" style="background:var(--amber-pale);">
+          <div class="actor-row-label" style="color:var(--amber);">Who</div>
+          <div class="actor-row-value">Perceives, experiences, realises, and responds. The referral loop begins here.</div>
+        </div>
+        <div class="actor-row" style="background:white;">
+          <div class="actor-row-label" style="color:var(--amber);">Stages</div>
+          <div class="actor-row-value">Owns 3, 6, 7. Reaction at Stage 7 determines whether Stage 8 is needed.</div>
+        </div>
+        <div class="actor-row" style="background:var(--amber-pale);">
+          <div class="actor-row-label" style="color:var(--red);">Failure</div>
+          <div class="actor-row-value" style="color:var(--red);font-style:italic;">Receives value but cannot articulate what they got.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2>The Nine Stages</h2>
+  <div class="diagram-container">
+    <svg viewBox="0 0 820 200" class="lifecycle-svg" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arrL" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#999"/></marker>
+        <marker id="arrLb" markerWidth="7" markerHeight="7" refX="2" refY="3" orient="auto-start-reverse"><path d="M0,3 L7,0 L7,6 z" fill="#999"/></marker>
+      </defs>
+      <!-- Row 1: stages 1-5 -->
+      <line x1="10" y1="64" x2="800" y2="64" stroke="#e0ddd6" stroke-width="2"/>
+      <g id="s1"><rect x="5" y="44" width="74" height="40" rx="3" fill="#1A8C7A"/><text x="42" y="60" text-anchor="middle" font-size="11" font-weight="bold" fill="white" font-family="Arial,sans-serif">1</text><text x="42" y="74" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.85)" font-family="Arial,sans-serif">Creation</text></g>
+      <line x1="79" y1="64" x2="87" y2="64" stroke="#ccc" stroke-width="1.5" marker-end="url(#arrL)"/>
+      <g id="s2"><rect x="88" y="44" width="74" height="40" rx="3" fill="#1A8C7A"/><text x="125" y="60" text-anchor="middle" font-size="11" font-weight="bold" fill="white" font-family="Arial,sans-serif">2</text><text x="125" y="74" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.85)" font-family="Arial,sans-serif">Promise</text></g>
+      <line x1="162" y1="64" x2="170" y2="64" stroke="#ccc" stroke-width="1.5" marker-end="url(#arrL)"/>
+      <g id="s3"><rect x="171" y="44" width="74" height="40" rx="3" fill="#B7770D"/><text x="208" y="60" text-anchor="middle" font-size="11" font-weight="bold" fill="white" font-family="Arial,sans-serif">3</text><text x="208" y="74" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.85)" font-family="Arial,sans-serif">Perception</text></g>
+      <line x1="245" y1="64" x2="253" y2="64" stroke="#ccc" stroke-width="1.5" marker-end="url(#arrL)"/>
+      <g id="s4"><rect x="254" y="44" width="74" height="40" rx="3" fill="#1A8C7A"/><text x="291" y="60" text-anchor="middle" font-size="11" font-weight="bold" fill="white" font-family="Arial,sans-serif">4</text><text x="291" y="74" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.85)" font-family="Arial,sans-serif">Delivery</text></g>
+      <line x1="328" y1="64" x2="336" y2="64" stroke="#ccc" stroke-width="1.5" marker-end="url(#arrL)"/>
+      <g id="s5"><rect x="337" y="44" width="74" height="40" rx="3" fill="#6C3483"/><text x="374" y="60" text-anchor="middle" font-size="11" font-weight="bold" fill="white" font-family="Arial,sans-serif">5</text><text x="374" y="74" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.85)" font-family="Arial,sans-serif">Distribution</text></g>
+      <!-- Arrow down from 5 -->
+      <line x1="374" y1="84" x2="374" y2="115" stroke="#ccc" stroke-width="1.5" marker-end="url(#arrL)"/>
+      <!-- Row 2: stages 6-9 (right to left) -->
+      <line x1="10" y1="148" x2="450" y2="148" stroke="#e0ddd6" stroke-width="2"/>
+      <g id="s6"><rect x="337" y="128" width="74" height="40" rx="3" fill="#B7770D"/><text x="374" y="144" text-anchor="middle" font-size="11" font-weight="bold" fill="white" font-family="Arial,sans-serif">6</text><text x="374" y="158" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.85)" font-family="Arial,sans-serif">Reception</text></g>
+      <line x1="337" y1="148" x2="329" y2="148" stroke="#ccc" stroke-width="1.5" marker-end="url(#arrLb)"/>
+      <g id="s7"><rect x="254" y="128" width="74" height="40" rx="3" fill="#B7770D"/><text x="291" y="144" text-anchor="middle" font-size="11" font-weight="bold" fill="white" font-family="Arial,sans-serif">7</text><text x="291" y="158" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.85)" font-family="Arial,sans-serif">Realisation</text></g>
+      <line x1="254" y1="148" x2="246" y2="148" stroke="#ccc" stroke-width="1.5" marker-end="url(#arrLb)"/>
+      <g id="s8"><rect x="171" y="128" width="74" height="40" rx="3" fill="#6B7A1E"/><text x="208" y="144" text-anchor="middle" font-size="11" font-weight="bold" fill="white" font-family="Arial,sans-serif">8</text><text x="208" y="158" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.85)" font-family="Arial,sans-serif">Reinforcement</text></g>
+      <line x1="171" y1="148" x2="163" y2="148" stroke="#ccc" stroke-width="1.5" marker-end="url(#arrLb)"/>
+      <g id="s9"><rect x="88" y="128" width="74" height="40" rx="3" fill="#1A8C7A"/><text x="125" y="144" text-anchor="middle" font-size="11" font-weight="bold" fill="white" font-family="Arial,sans-serif">9</text><text x="125" y="158" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.85)" font-family="Arial,sans-serif">Capture</text></g>
+      <!-- Legend -->
+      <rect x="480" y="40" width="14" height="14" rx="2" fill="#1A8C7A"/><text x="500" y="52" font-size="11" fill="#333" font-family="Arial,sans-serif">Generator</text>
+      <rect x="480" y="62" width="14" height="14" rx="2" fill="#6C3483"/><text x="500" y="74" font-size="11" fill="#333" font-family="Arial,sans-serif">Distributor</text>
+      <rect x="480" y="84" width="14" height="14" rx="2" fill="#B7770D"/><text x="500" y="96" font-size="11" fill="#333" font-family="Arial,sans-serif">Receiver</text>
+      <rect x="480" y="106" width="14" height="14" rx="2" fill="#6B7A1E"/><text x="500" y="118" font-size="11" fill="#333" font-family="Arial,sans-serif">Generator + Distributor</text>
+      <text x="480" y="155" font-size="11" fill="#999" font-family="Arial,sans-serif" font-style="italic">Stage 8 is the highest-leverage</text>
+      <text x="480" y="170" font-size="11" fill="#999" font-family="Arial,sans-serif" font-style="italic">gap in most roadmaps.</text>
+    </svg>
+  </div>
+  <h2>Value Promise = Four Promises</h2>
+  <p>Stage 2 is not just P. Each POLE element makes a different promise at a different moment in the lifecycle.</p>
+  <div class="pole-grid">
+    <div class="pole-cell header pole-p-h"><span class="pole-letter">P</span><div style="font-size:10px;color:rgba(255,255,255,0.8);margin-top:4px;">Destination Promise</div></div>
+    <div class="pole-cell header pole-o-h"><span class="pole-letter">O</span><div style="font-size:10px;color:rgba(255,255,255,0.8);margin-top:4px;">Belief Promise</div></div>
+    <div class="pole-cell header pole-l-h"><span class="pole-letter">L</span><div style="font-size:10px;color:rgba(255,255,255,0.8);margin-top:4px;">Switching Promise</div></div>
+    <div class="pole-cell header pole-e-h"><span class="pole-letter">E</span><div style="font-size:10px;color:rgba(255,255,255,0.8);margin-top:4px;">Compounding Promise</div></div>
+    <div class="pole-p"><em>"Your life will be different in this specific way."</em><br><br>Made before adoption. Evaluated at realisation.</div>
+    <div class="pole-o"><em>"You will believe this is possible in session one."</em><br><br>Delivered in the first session. Verified immediately.</div>
+    <div class="pole-l"><em>"The barrier that stopped you before is gone."</em><br><br>Delivered at adoption. Removes the specific obstacle.</div>
+    <div class="pole-e"><em>"This gets better every time you use it."</em><br><br>Earned over time. Tested at Month 3.</div>
+  </div>
+  <div class="summary-box">
+    <div class="summary-header"><div class="summary-title">Chapter Summary: The Value Lifecycle</div></div>
+    <div class="summary-item" data-n="1">Nine stages. Three actors. Each stage has a primary owner.</div>
+    <div class="summary-item" data-n="2">Stage 8 (Reinforcement) is the highest-leverage gap in most roadmaps.</div>
+    <div class="summary-item" data-n="3">Value Promise (Stage 2) is four promises - P, O, L, E - not one.</div>
+    <div class="summary-item" data-n="4">Capture (Stage 9) must follow Realisation (Stage 7). Capture before Realisation is a paywall.</div>
+  </div>
+</div>
+
+<!-- PART FIVE -->
+<div class="part-divider">
+  <div class="part-label">Part Five</div>
+  <div class="part-title">Diagnostics</div>
+</div>
+
+<!-- CH13 -->
+<div id="ch13" class="chapter-header">
+  <div class="chapter-num">Chapter 13</div>
+  <div class="chapter-title">The Weakest Link Audit</div>
+  <div class="chapter-sub">One weak element caps everything else</div>
+</div>
+<div class="page-section">
+  <p class="lead">POLE elements compound each other. A strong E cannot compensate for a weak P. The weakest link determines the ceiling of the entire product.</p>
+  <h2>The Audit</h2>
+  <p>Score each POLE element on two dimensions. Clarity: can a customer state this element clearly without prompting? Credibility: do customers believe it based on actual experience?</p>
+  <table class="data-table">
+    <tr><th>Score</th><th>What it means</th></tr>
+    <tr><td><strong style="color:var(--green);">High (H)</strong></td><td>Most customers can state it clearly and believe it from experience.</td></tr>
+    <tr><td><strong style="color:var(--amber);">Medium (M)</strong></td><td>Some customers can state it. Credibility is partial or inconsistent.</td></tr>
+    <tr><td><strong style="color:var(--red);">Low (L)</strong></td><td>Most customers cannot articulate it, or do not believe it from experience.</td></tr>
+  </table>
+  <div class="callout red"><div class="callout-bar"></div><div class="callout-body"><div class="callout-label">The rule</div><div class="callout-text">The element with the lowest combined score is the Weakest Link. It is your only priority. Never fix H elements when an L exists.</div></div></div>
+  <h2>Fix Sequence: P First. Always.</h2>
+  <div class="framework-box">
+    <div class="framework-box-header" style="background:var(--navy);">Fix Order</div>
+    <div class="framework-box-body">
+      <div class="framework-box-item"><strong>P is L:</strong> fix P before anything else. O cannot fire for a clear belief when P is undefined. L cannot remove the right barrier when P is wrong. E has nothing to compound.</div>
+      <div class="framework-box-item"><strong>O is L:</strong> fix after P is confirmed.</div>
+      <div class="framework-box-item"><strong>L is L:</strong> fix after O is confirmed.</div>
+      <div class="framework-box-item"><strong>E is L:</strong> fix last. E failure is almost always a symptom of weak P, not a root cause.</div>
+    </div>
+  </div>
+  <h2>LinkedIn: A Worked Example</h2>
+  <p>900 million users. The Weakest Link is not where most product teams would look.</p>
+  <div class="wl-scores">
+    <div class="wl-score-card">
+      <div class="wl-score-header" style="background:var(--red);"><div class="wl-score-letter">P</div><div class="wl-score-val">L</div></div>
+      <div class="wl-score-body" style="background:var(--red-pale);">P at Feature level: "professional networking." No specific outcome for any specific segment. Cannot complete "I use LinkedIn because..." in outcome terms.</div>
+    </div>
+    <div class="wl-score-card">
+      <div class="wl-score-header" style="background:var(--red);"><div class="wl-score-letter">O</div><div class="wl-score-val">L</div></div>
+      <div class="wl-score-body" style="background:var(--red-pale);">Session 1: scroll feed, see strangers' content. No moment where a career goal feels closer. O cannot fire because P is undefined.</div>
+    </div>
+    <div class="wl-score-card">
+      <div class="wl-score-header" style="background:var(--green);"><div class="wl-score-letter">L</div><div class="wl-score-val">H</div></div>
+      <div class="wl-score-body" style="background:var(--green-pale);">Your professional network was already on LinkedIn. Adoption required zero rebuild. L is High - but inherited from network effects, not designed.</div>
+    </div>
+    <div class="wl-score-card">
+      <div class="wl-score-header" style="background:var(--amber);"><div class="wl-score-letter">E</div><div class="wl-score-val">M</div></div>
+      <div class="wl-score-body" style="background:var(--amber-pale);">Feed, messaging, and content exist. E-Accrued is weak: no Data currency beyond connection count. No personalisation moat.</div>
+    </div>
+  </div>
+  <div class="callout navy"><div class="callout-bar"></div><div class="callout-body"><div class="callout-label">The LinkedIn lesson</div><div class="callout-text">L is High (network lock-in is genuine) but L without P means the product retains without convincing. That is a ceiling, not a foundation. Fix: write P at a specific segment level. "For professionals actively seeking their next role, LinkedIn delivers..." Everything else follows.</div></div></div>
+  <div class="summary-box">
+    <div class="summary-header"><div class="summary-title">Chapter Summary: The Weakest Link Audit</div></div>
+    <div class="summary-item" data-n="1">Score each POLE element H/M/L on Clarity and Credibility. Lowest score = Weakest Link.</div>
+    <div class="summary-item" data-n="2">Fix order: P first, then O, then L, then E.</div>
+    <div class="summary-item" data-n="3">L is High without P is a ceiling, not a foundation (LinkedIn).</div>
+    <div class="summary-item" data-n="4">E failure is almost always a symptom of weak P, not a root cause.</div>
+  </div>
+</div>
+
+<!-- PART SIX -->
+<div class="part-divider">
+  <div class="part-label">Part Six</div>
+  <div class="part-title">Applied: Six Products</div>
+</div>
+
+<!-- CH14 -->
+<div id="ch14" class="chapter-header">
+  <div class="chapter-num">Chapter 14</div>
+  <div class="chapter-title">Six Case Studies</div>
+  <div class="chapter-sub">Good. Can be great.</div>
+</div>
+<div class="page-section">
+  <p class="lead">Six real products. The framework applied in full. Each case surfaces something the product's own team almost certainly knows is a gap - and shows what a targeted fix would produce.</p>
+
+  <h2>MyFitnessPal</h2>
+  <p style="color:var(--muted);font-style:italic;margin-bottom:12px;">P at feature level. The insight layer was always there. Nobody built it.</p>
+  <div class="belt-grid">
+    <div class="belt-cell header belt-b-h"><span class="belt-letter">B</span><div class="belt-name">Behaviour</div></div>
+    <div class="belt-cell header belt-e-h"><span class="belt-letter">E</span><div class="belt-name">Enduring</div></div>
+    <div class="belt-cell header belt-l-h"><span class="belt-letter">L</span><div class="belt-name">Lock-in</div></div>
+    <div class="belt-cell header belt-t-h"><span class="belt-letter">T</span><div class="belt-name">Type</div></div>
+    <div class="belt-cell belt-b" style="font-size:13px;">Adults log food obsessively in Notes apps, paper notebooks. The workaround is elaborate and self-sustaining. FUD: high.</div>
+    <div class="belt-cell belt-e" style="font-size:13px;">To understand how food choices affect how they feel - not to hit a calorie number. Gap: eating and understanding the consequence.</div>
+    <div class="belt-cell belt-l" style="font-size:13px;">Activation Inertia. Barrier is belief: "I am not the kind of person who sticks to this." No prior investment in a competitor.</div>
+    <div class="belt-cell belt-t" style="font-size:13px;">Enabling. Each logged meal contributes to a personal data model. Hundredth log is more valuable than the first.</div>
+  </div>
+  <table class="data-table" style="margin-top:12px;">
+    <tr><th style="width:50%;background:var(--red);">Current POLE (wrong)</th><th style="width:50%;background:var(--green);">Corrected POLE</th></tr>
+    <tr><td style="background:var(--red-pale);color:var(--red);font-style:italic;">"Track your calories." P at Feature level. Logging is the mechanism, not the outcome.</td><td style="background:var(--green-pale);">P: "For adults who tried and failed through willpower, MFP delivers insight into how food choices affect how they feel - so tracking becomes unnecessary."</td></tr>
+    <tr><td style="background:var(--red-pale);color:var(--red);font-style:italic;">O: calorie goal set in onboarding. P confirmed when you log under target. Fires for the mechanism.</td><td style="background:var(--green-pale);">O: Day 7 insight: "You consistently eat 400 more calories on days you skip breakfast." First insight only this product could produce.</td></tr>
+    <tr><td style="background:var(--red-pale);color:var(--red);font-style:italic;">L: requires calorie target, weight goal, commitment before any value is felt.</td><td style="background:var(--green-pale);">L: "Log one meal. No calorie target required." Zero-commitment first action. Type 1 Convergence with O.</td></tr>
+  </table>
+  <div class="callout red"><div class="callout-bar"></div><div class="callout-body"><div class="callout-label">Weakest Link: P</div><div class="callout-text">Noom charged $60/month for the insight layer MFP left on the table. The differentiation was available. The obstacle thesis was wrong.</div></div></div>
+  <table class="priority-table">
+    <tr><td>1. Rewrite P</td><td>"For adults who have tried and failed to change their relationship with food, MFP delivers insight into how food choices affect how they feel." One sentence. Everything downstream follows.</td></tr>
+    <tr><td>2. Redesign O</td><td>Remove calorie target from onboarding. Replace with: "Log one meal. We will show you a pattern in 7 days."</td></tr>
+    <tr><td>3. Redesign Stage 8</td><td>"You have identified 5 patterns about your body that no other app has." Referral fires at realisation, not at a streak milestone.</td></tr>
+  </table>
+
+  <h2 style="margin-top:40px;">Loom</h2>
+  <p style="color:var(--muted);font-style:italic;margin-bottom:12px;">O fires for the sender. It never fires for the recipient. The real barrier is on the receiving end.</p>
+  <div class="callout amber"><div class="callout-bar"></div><div class="callout-body"><div class="callout-label">Weakest Link: O (for the wrong actor)</div><div class="callout-text">The most interesting Weakest Link in the six: O exists and fires - but for the sender, not the receiver. The product has optimised the wrong side of the interaction. Until the recipient's O fires, async culture does not spread.</div></div></div>
+  <table class="priority-table">
+    <tr><td>1. Redesign O for recipient</td><td>"This 90-second Loom replaced a meeting that would have taken 47 minutes to schedule." The recipient's belief breaks: async communication can replace synchronous.</td></tr>
+    <tr><td>2. Rewrite P for the team</td><td>P at team level: "For distributed teams drowning in coordination overhead, Loom delivers the right context without scheduling a meeting."</td></tr>
+    <tr><td>3. Build Stage 8</td><td>"Your team sent 43 Looms this month. 24 meetings replaced." Makes the cultural shift visible. A team that has shifted to async cannot easily shift back.</td></tr>
+  </table>
+
+  <h2 style="margin-top:40px;">Strava</h2>
+  <p style="color:var(--muted);font-style:italic;margin-bottom:12px;">The moat is enormous. The customer cannot see it. Stage 8 does not exist.</p>
+  <table class="data-table">
+    <tr><th>The situation</th><th>The gap</th></tr>
+    <tr><td>4 years of activity data. Personal records on 67 segments. A running community of 340 followers. T is strongly Enabling.</td><td>The product never shows "4,200km since 2019." Users consider switching to Garmin Connect without realising what they would give up. Data Invisible failure mode.</td></tr>
+    <tr><td>Felt switching cost: near-zero. Actual switching cost: very high.</td><td>Stage 8 (Reinforcement) does not exist. Designed for delivery. Neglected reinforcement.</td></tr>
+  </table>
+  <table class="priority-table">
+    <tr><td>1. Build Stage 8</td><td>Annual Year in Sport: "4,200km. 67 PRs. 12 races. Your pace improved 18% since 2021." Visible before renewal and before competitive alternatives appear.</td></tr>
+    <tr><td>2. Redesign O</td><td>First time Strava surfaces a trend the athlete could not see unaided: "12% improvement in average pace over 8 weeks." Not first activity synced.</td></tr>
+    <tr><td>3. Make moat tangible</td><td>"If you moved to Garmin Connect, you would start from zero on 67 segments and lose your local leaderboard position." Surface the cost of leaving at the renewal moment.</td></tr>
+  </table>
+
+  <h2 style="margin-top:40px;">Robinhood</h2>
+  <p style="color:var(--muted);font-style:italic;margin-bottom:12px;">The obstacle thesis was wrong. Every feature built on it was wrong - regardless of execution quality.</p>
+  <div class="callout red"><div class="callout-bar"></div><div class="callout-body"><div class="callout-label">The founding obstacle thesis was wrong</div><div class="callout-text">"The barrier is commissions." Actual barrier: financial confidence. Every gamification feature was directionally correct for "make more trades" and directionally wrong for "build confidence." The wrong thesis is not a small mistake - it is the architecture.</div></div></div>
+  <table class="priority-table">
+    <tr><td>1. Correct the thesis</td><td>Before redesigning a single feature: "The barrier is not commissions. It is the fear of making the wrong decision." Everything downstream changes from this one correction.</td></tr>
+    <tr><td>2. Redesign O</td><td>Remove confetti. Add: "Your first investment. Here is why the company you picked has grown 12% since January." Celebrate the decision, not the execution.</td></tr>
+    <tr><td>3. Redesign E</td><td>"Based on your first three picks, here is what your investment style says about you." Every price movement notification explains why - not just what.</td></tr>
+  </table>
+
+  <h2 style="margin-top:40px;">Rippling</h2>
+  <p style="color:var(--muted);font-style:italic;margin-bottom:12px;">Strong product. P at Feature level. The compounding E layer is never shown.</p>
+  <table class="data-table">
+    <tr><th>Current</th><th>Should be</th></tr>
+    <tr><td>P: "HR and payroll in one place." Describes the tool category. Used as a sophisticated tool, not a compounding system.</td><td>P: "For fast-growing companies, Rippling delivers one employee record that flows to every system - so operations overhead stops compounding with headcount."</td></tr>
+    <tr><td>Stage 7 (Realisation) underdesigned. P never named at outcome level.</td><td>Quarterly: "Your team grew 40%, your HR ops hours grew 3%. That gap is Rippling."</td></tr>
+    <tr><td>Stage 8 absent. The moat never surfaced to customers.</td><td>"You have 14 systems connected around 230 employee records. Switching means rebuilding each integration." Surface the moat explicitly before renewal.</td></tr>
+  </table>
+
+  <h2 style="margin-top:40px;">GitHub Copilot</h2>
+  <p style="color:var(--muted);font-style:italic;margin-bottom:12px;">O fires immediately. The moat never forms. Transient when it should be Enabling.</p>
+  <table class="data-table">
+    <tr><th>Current state</th><th>The gap</th></tr>
+    <tr><td>T: Currently transient. Every session starts from roughly the same baseline. The product does not learn this developer's patterns deeply enough for the experience to compound.</td><td>The personalisation layer is not designed. Data currency never forms. Month 6 and Month 1 feel similar. The moat that should exist has not been built.</td></tr>
+    <tr><td>O: "First accurate autocomplete." Fires for the mechanism - not for the belief that mechanical work is disappearing over time.</td><td>O should be: "First time Copilot completes a function in exactly the way you would have written it." That is the moment that creates loyalty.</td></tr>
+  </table>
+  <div class="callout teal"><div class="callout-bar"></div><div class="callout-body"><div class="callout-label">The Copilot lesson</div><div class="callout-text">Strong O is not sufficient for a moat. The moat requires E-Accrued: the product must learn this developer specifically. Without personalisation, Copilot is an excellent transient product competing on features - not an enabling product competing on irreplaceability.</div></div></div>
+  <table class="priority-table">
+    <tr><td>1. Design the personalisation layer</td><td>Track per-developer: which suggestions are accepted, which patterns repeat. Build a developer fingerprint. Make Month 6 noticeably better than Month 1.</td></tr>
+    <tr><td>2. Build Stage 8</td><td>"Copilot handled 2,400 lines of boilerplate this month. Your acceptance rate is 71%, up from 49% in month 1. It is learning your style."</td></tr>
+    <tr><td>3. Redesign O</td><td>Move from "first accepted suggestion" to "first time Copilot completes a function exactly as you would have written it." That is the belief-breaking moment.</td></tr>
+  </table>
+
+  <div class="summary-box" style="margin-top:40px;">
+    <div class="summary-header"><div class="summary-title">Chapter Summary: Six Case Studies</div></div>
+    <div class="summary-item" data-n="1">MyFitnessPal: P at Feature level. The insight layer was architecturally possible and was never built. Noom took the gap.</div>
+    <div class="summary-item" data-n="2">Loom: O fires for the wrong actor. The real barrier is on the receiving end.</div>
+    <div class="summary-item" data-n="3">Strava: Stage 8 does not exist. The moat is enormous and invisible. Data Invisible failure mode.</div>
+    <div class="summary-item" data-n="4">Robinhood: wrong obstacle thesis. Every feature built on it was architecturally wrong regardless of execution quality.</div>
+    <div class="summary-item" data-n="5">Rippling: P at Feature level. Stages 7 and 8 absent. The compounding value is real but never shown.</div>
+    <div class="summary-item" data-n="6">GitHub Copilot: transient when it should be enabling. No personalisation layer. The moat that should exist has not been designed.</div>
+  </div>
+</div>
+
+<!-- APPENDIX A -->
+<div id="appendix-a" class="chapter-header">
+  <div class="chapter-num">Appendix A</div>
+  <div class="chapter-title">Quick Reference</div>
+  <div class="chapter-sub">The complete framework on two pages</div>
+</div>
+<div class="page-section">
+  <h2>BELT: The Diagnostic Sequence</h2>
+  <div class="belt-grid">
+    <div class="belt-cell header belt-b-h"><span class="belt-letter">B</span><div class="belt-name">Behaviour</div></div>
+    <div class="belt-cell header belt-e-h"><span class="belt-letter">E</span><div class="belt-name">Enduring</div></div>
+    <div class="belt-cell header belt-l-h"><span class="belt-letter">L</span><div class="belt-name">Lock-in</div></div>
+    <div class="belt-cell header belt-t-h"><span class="belt-letter">T</span><div class="belt-name">Type</div></div>
+    <div class="belt-cell belt-b" style="font-size:13px;">What are they doing despite friction? Find the bright-spot workaround. Score FUD (1-3 each).</div>
+    <div class="belt-cell belt-e" style="font-size:13px;">What outcome do they actually need? Write P at Life Change level, not Feature level.</div>
+    <div class="belt-cell belt-l" style="font-size:13px;">Why have they not switched? Identify: Switching Cost / Search Cost / Inertia.</div>
+    <div class="belt-cell belt-t" style="font-size:13px;">Transient or Enabling? Does the 100th use deliver more value than the first?</div>
+    <div class="belt-cell belt-b" style="font-size:12px;color:var(--muted);font-style:italic;">Strong B: specific, elaborate workaround the market has not solved.</div>
+    <div class="belt-cell belt-e" style="font-size:12px;color:var(--muted);font-style:italic;">P test: could it appear in a feature list? If yes, rewrite.</div>
+    <div class="belt-cell belt-l" style="font-size:12px;color:var(--muted);font-style:italic;">L must trace to this type. Generic ease of use is not L.</div>
+    <div class="belt-cell belt-t" style="font-size:12px;color:var(--muted);font-style:italic;">Transient: design for P-Salience. Enabling: design for depth value.</div>
+  </div>
+  <h2>POLE: The Design Architecture</h2>
+  <div class="pole-grid">
+    <div class="pole-cell header pole-p-h"><span class="pole-letter">P</span><div style="font-size:10px;color:rgba(255,255,255,0.8);margin-top:4px;">Destination</div></div>
+    <div class="pole-cell header pole-o-h"><span class="pole-letter">O</span><div style="font-size:10px;color:rgba(255,255,255,0.8);margin-top:4px;">Belief Moment</div></div>
+    <div class="pole-cell header pole-l-h"><span class="pole-letter">L</span><div style="font-size:10px;color:rgba(255,255,255,0.8);margin-top:4px;">Liberation</div></div>
+    <div class="pole-cell header pole-e-h"><span class="pole-letter">E</span><div style="font-size:10px;color:rgba(255,255,255,0.8);margin-top:4px;">Retention Arc</div></div>
+    <div class="pole-p" style="font-size:13px;">12-month outcome. Ongoing / Terminal / Intermittent. HOW challenge before writing.</div>
+    <div class="pole-o" style="font-size:13px;">Understandable before. Verifiable after. Fires in session 1. Derived from obstacle thesis.</div>
+    <div class="pole-l" style="font-size:13px;">Removes specific barrier. Type 1/2 Convergence with O possible.</div>
+    <div class="pole-e" style="font-size:13px;">5-step ladder. E-Delivered then E-Accrued. Step 5 cuts Metric Features.</div>
+    <div class="pole-p" style="font-size:12px;color:#999;font-style:italic;">Failure: P at Feature level.</div>
+    <div class="pole-o" style="font-size:12px;color:#999;font-style:italic;">Failure: too late / wrong segment / never fires.</div>
+    <div class="pole-l" style="font-size:12px;color:#999;font-style:italic;">Failure: wrong barrier / new friction.</div>
+    <div class="pole-e" style="font-size:12px;color:#999;font-style:italic;">Failure: Metric Features dominate.</div>
+  </div>
+  <h2>Value Currency</h2>
+  <table class="data-table">
+    <tr><th>Currency</th><th>What it is</th><th>When it forms</th><th>Failure mode</th></tr>
+    <tr><td><strong>Time</strong></td><td>Sessions invested. Seed.</td><td>First use.</td><td>Stuck at Time: competitors can buy it back.</td></tr>
+    <tr><td><strong>Data</strong></td><td>Irreplaceable personalisation. Moat.</td><td>After sustained use.</td><td>Data Invisible: moat exists but customer cannot feel it.</td></tr>
+    <tr><td><strong>Money</strong></td><td>Protects what was built. Lock.</td><td>When Data feels irreplaceable.</td><td>Premature Money: capture before Data is established.</td></tr>
+  </table>
+  <h2>Value Lifecycle - Nine Stages</h2>
+  <table class="data-table">
+    <tr><th>Stage</th><th>Actor</th><th>One-line definition</th></tr>
+    <tr><td><strong>1 Creation</strong></td><td style="color:var(--teal);">Generator</td><td>What the product is technically capable of delivering.</td></tr>
+    <tr><td><strong>2 Promise</strong></td><td style="color:var(--teal);">Generator</td><td>P, O, L, E - four promises at four different moments.</td></tr>
+    <tr><td><strong>3 Perception</strong></td><td style="color:var(--amber);">Receiver</td><td>Does the receiver believe the promise before trying?</td></tr>
+    <tr><td><strong>4 Delivery</strong></td><td style="color:var(--teal);">Generator</td><td>Functional VP and Experience VP, every session.</td></tr>
+    <tr><td><strong>5 Distribution</strong></td><td style="color:var(--purple);">Distributor</td><td>The channel that puts value in front of the receiver.</td></tr>
+    <tr><td><strong>6 Reception</strong></td><td style="color:var(--amber);">Receiver</td><td>Receiver experiences what was delivered.</td></tr>
+    <tr><td><strong>7 Realisation</strong></td><td style="color:var(--amber);">Receiver</td><td>P is met, exceeded, or not met.</td></tr>
+    <tr><td><strong style="color:var(--red);">8 Reinforcement</strong></td><td style="color:var(--olive);">Gen + Dist</td><td><strong>Making what was built visible before the customer considers leaving.</strong></td></tr>
+    <tr><td><strong>9 Capture</strong></td><td style="color:var(--teal);">Generator</td><td>Currency extracted: Money, Data, or Time.</td></tr>
+  </table>
+  <h2>Key Phrases</h2>
+  <table class="data-table">
+    <tr><th>Phrase</th><th>Context</th></tr>
+    <tr><td>"Your product does not have one value proposition. It has four."</td><td>The core POLE insight.</td></tr>
+    <tr><td>"Two customers belong to the same segment if they share the same enduring pain and the same lock-in type."</td><td>BELT segmentation definition.</td></tr>
+    <tr><td>"Solve Enabling Value before Experience Value."</td><td>T diagnostic. Confirm Enabling before investing in depth value.</td></tr>
+    <tr><td>"Kingfisher had a tagline. IndiGo had a system."</td><td>P design. Delivery vs perception as a competitive strategy.</td></tr>
+    <tr><td>"Shallow problems have obvious solutions. Deep problems have competing correct solutions."</td><td>POLE Tension Test.</td></tr>
+    <tr><td>"The moat only protects you if the customer can feel it."</td><td>Stage 8 principle. Invisible moats do not retain.</td></tr>
+  </table>
+</div>
+
+<!-- APPENDIX B -->
+<div id="appendix-b" class="chapter-header">
+  <div class="chapter-num">Appendix B</div>
+  <div class="chapter-title">Exercises Workbook</div>
+  <div class="chapter-sub">All exercises collected. Apply before reading the chapter solution.</div>
+</div>
+<div class="page-section">
+  <div class="exercise-box">
+    <div class="exercise-header"><div class="exercise-title">Chapter 2: Finding Your Bright Spots</div></div>
+    <div class="exercise-item" data-n="1">Describe the specific workaround your most valuable early customers were using before your product existed.</div>
+    <div class="exercise-item" data-n="2">Score the workaround on FUD (1-3 each). Calculate the product.</div>
+    <div class="exercise-item" data-n="3">What would those customers lose if they had to abandon your product tomorrow?</div>
+  </div>
+  <div class="exercise-box" style="margin-top:16px;">
+    <div class="exercise-header"><div class="exercise-title">Chapter 3: Writing Your P Statement</div></div>
+    <div class="exercise-item" data-n="1">Write your current P as it appears in your documentation.</div>
+    <div class="exercise-item" data-n="2">Apply the three tests: Feature list? Specific segment? Life change?</div>
+    <div class="exercise-item" data-n="3">Rewrite: "For [segment], [product] delivers [outcome], so [life changes in this specific way]."</div>
+    <div class="exercise-item" data-n="4">Show both versions to a customer. Which would they tell a friend?</div>
+  </div>
+  <div class="exercise-box" style="margin-top:16px;">
+    <div class="exercise-header"><div class="exercise-title">Chapter 4: Diagnosing Your Lock-in Type</div></div>
+    <div class="exercise-item" data-n="1">Which lock-in type describes your segment: Switching Cost, Search Cost, or Inertia?</div>
+    <div class="exercise-item" data-n="2">What does your current onboarding do to address this specific barrier?</div>
+    <div class="exercise-item" data-n="3">Ask five non-adopters why they have not switched. Does their answer confirm your diagnosis?</div>
+  </div>
+  <div class="exercise-box" style="margin-top:16px;">
+    <div class="exercise-header"><div class="exercise-title">Chapter 8: Designing O</div></div>
+    <div class="exercise-item" data-n="1">Write the obstacle thesis: "The primary reason [segment] has not solved [problem] is..."</div>
+    <div class="exercise-item" data-n="2">Name the specific belief the customer holds on arrival.</div>
+    <div class="exercise-item" data-n="3">Describe one session 1 moment that breaks exactly that belief.</div>
+    <div class="exercise-item" data-n="4">Ask five recent sign-ups: "Was there a moment where you thought 'this might actually work for me'?"</div>
+  </div>
+  <div class="exercise-box" style="margin-top:16px;">
+    <div class="exercise-header"><div class="exercise-title">Chapter 10: E Design - Run the Ladder</div></div>
+    <div class="exercise-item" data-n="1">Decompose your P into 3-5 components. What must be true in each session for P-state to hold?</div>
+    <div class="exercise-item" data-n="2">Set the floor for each component.</div>
+    <div class="exercise-item" data-n="3">Name the load-bearing Experience VP dimension. Which one addresses the obstacle thesis?</div>
+    <div class="exercise-item" data-n="4">Apply Step 5 to your three highest-engagement features. Can each be traced to Step 1 in two steps?</div>
+  </div>
+  <div class="exercise-box" style="margin-top:16px;">
+    <div class="exercise-header"><div class="exercise-title">Chapter 12: Lifecycle Audit</div></div>
+    <div class="exercise-item" data-n="1">For each of the nine stages: write one sentence describing what your product does there.</div>
+    <div class="exercise-item" data-n="2">Mark each: D (deliberately designed) or ? (happened by default).</div>
+    <div class="exercise-item" data-n="3">Count your D marks. Most products score 3-4 out of 9.</div>
+    <div class="exercise-item" data-n="4">Stage 8: what is the specific moment and channel where the accumulated asset is made visible to the customer?</div>
+  </div>
+  <div class="exercise-box" style="margin-top:16px;">
+    <div class="exercise-header"><div class="exercise-title">Chapter 13: Weakest Link Audit</div></div>
+    <div class="exercise-item" data-n="1">Score each POLE element H/M/L on Clarity and Credibility.</div>
+    <div class="exercise-item" data-n="2">Identify the Weakest Link.</div>
+    <div class="exercise-item" data-n="3">Write one specific change that would move that element from L to M.</div>
+    <div class="exercise-item" data-n="4">Estimate: what would the retention impact be if this fix worked?</div>
+  </div>
+</div>
+
+</div><!-- end .main -->
+
+<div style="background:var(--dark);padding:32px 60px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;border-top:1px solid #222;margin-left:220px;">
+  <div style="font-size:13px;color:#555;">The Anatomy of Value Propositions - BELT+POLE Framework. Vivek P Kumar.</div>
+  <div style="display:flex;gap:20px;">
+    <a href="index.html" style="font-size:13px;color:#555;text-decoration:none;">Home</a>
+    <a href="https://www.linkedin.com/in/consumerproductleader/" target="_blank" style="font-size:13px;color:#555;text-decoration:none;">LinkedIn</a>
+    <a href="http://viveckpkumar.me" target="_blank" style="font-size:13px;color:#555;text-decoration:none;">viveckpkumar.me</a>
+  </div>
+</div>
+
+</body>
+</html>
