@@ -268,6 +268,7 @@ p { margin-bottom: 14px; font-size: 15px; }
   <a href="#ch13">13. Weakest Link</a>
   <div class="nav-part">Part Six</div>
   <a href="#ch14">14. Case Studies</a>
+  <a href="#guide" style="color:var(--gold);font-weight:bold;">30-Min Guide</a>
   <div class="nav-part">Appendix</div>
   <a href="#appendix-a">Quick Reference</a>
   <a href="#appendix-b">Exercises</a>
@@ -312,6 +313,7 @@ p { margin-bottom: 14px; font-size: 15px; }
     <div class="toc-chapter"><span class="toc-ch-num">Chapter 13</span><span class="toc-ch-title">The Weakest Link Audit</span></div>
     <div class="toc-part">PART SIX <span class="toc-part-title">Applied</span></div>
     <div class="toc-chapter"><span class="toc-ch-num">Chapter 14</span><span class="toc-ch-title">Six Case Studies</span></div>
+    <div class="toc-chapter"><span class="toc-ch-num" style="color:var(--gold);">Guide</span><span class="toc-ch-title" style="font-weight:bold;">Run the Diagnostic in 30 Minutes</span></div>
     <div class="toc-appendix"><strong>Appendix A</strong> - Quick Reference</div>
     <div class="toc-appendix"><strong>Appendix B</strong> - Exercises Workbook</div>
   </div>
@@ -320,20 +322,35 @@ p { margin-bottom: 14px; font-size: 15px; }
 <!-- FOREWORD -->
 <div id="foreword" class="chapter-header">
   <div class="chapter-num">Foreword</div>
-  <div class="chapter-title">The Problem This Framework Solves</div>
+  <div class="chapter-title">The Trap Nobody Talks About</div>
+  <div class="chapter-sub">You are probably solving the wrong type of problem</div>
 </div>
 <div class="page-section">
-  <p class="lead">Most product teams are not short of ideas. They are short of a clear answer to one question: why will the right customer choose this, stay with it, and get the outcome they came for?</p>
-  <p>This framework is an answer to that question. It has two parts: BELT, which diagnoses the nature of the customer's problem before any design decision is made; and POLE, which engineers four distinct value propositions, each doing a specific job at a specific moment in the customer's journey.</p>
-  <p>The framework was built from a specific observation: most product teams conflate acquisition value with retention value, and conflate both with the outcome the customer actually needs. When those three things are designed separately and deliberately, products improve in ways that feel disproportionate to the effort invested.</p>
-  <div class="quote-block">"Two customers belong to the same segment if they share the same enduring pain and the same lock-in type."</div>
-  <div class="framework-box">
+  <p class="lead">There is a specific way product teams fail that nobody in the industry talks about clearly. They solve the wrong type of problem. Not a bad problem. Not a fake problem. The wrong type. And the distinction is everything.</p>
+
+  <p>A transient problem goes away on its own or after first use. The customer needed something once. You delivered it. They left. That is not a product failure. That is the natural consequence of solving a transient problem. But most product teams treat that churn as a retention problem and spend years trying to fix it with features, notifications, and loyalty mechanics. None of it works. You cannot retain someone who never had a reason to stay.</p>
+
+  <p>An enduring problem persists. It recurs. The customer needs a solution every week, every month, for years. This is the only type of problem that can sustain a product. And it is rarer than most teams think.</p>
+
+  <div style="background:var(--dark);padding:28px 32px;margin:28px 0;border-left:6px solid var(--red);">
+    <div style="font-family:Georgia,serif;font-size:1.3em;color:var(--white);line-height:1.5;font-style:italic;">"If your product is solving a transient problem, you do not have a retention problem. You have a diagnosis problem. No feature will fix it."</div>
+  </div>
+
+  <p>This book is a system for getting that diagnosis right before you design anything. It has two parts. BELT is the diagnostic engine: four questions that force you to classify the problem type before any design decision is made. POLE is the design architecture: four value propositions, each doing a different job at a different moment in the customer journey.</p>
+
+  <p>The sequence is non-negotiable. BELT before POLE. Diagnosis before design. The quality of everything you build in POLE is entirely determined by the quality of your BELT diagnosis. Skip the diagnosis and you design confidently toward the wrong destination.</p>
+
+  <p>The framework is not gentle. It will surface the gap between what your team believes about the product and what customers actually experience. That gap is usually larger and more structural than anyone expects. It is almost never fixed by a new feature.</p>
+
+  <div class="callout red"><div class="callout-bar"></div><div class="callout-body"><div class="callout-label">Before you read further</div><div class="callout-text">Ask one question about your current product: is the problem it solves transient or enduring? If you cannot answer with confidence, that uncertainty is the most important thing this book will resolve.</div></div></div>
+
+  <div class="framework-box" style="margin-top:32px;">
     <div class="framework-box-header" style="background:var(--navy);">How to Read This Book</div>
     <div class="framework-box-body">
-      <div class="framework-box-item">Each part builds on the previous. Do not skip BELT to get to POLE. The quality of POLE design is entirely determined by the quality of BELT diagnosis.</div>
-      <div class="framework-box-item">Each chapter ends with a Chapter Summary table and an Exercise. The exercises are most valuable when applied to your current product before reading the solution.</div>
-      <div class="framework-box-item">Case studies in Part Six are fully worked. Read them before your first real diagnostic. They calibrate what "good" looks like.</div>
-      <div class="framework-box-item">The Quick Reference appendix contains the entire framework on two pages. It is designed to be used in meetings, not just read.</div>
+      <div class="framework-box-item">Do not skip BELT to get to POLE. The sequence is the point. The quality of POLE design is entirely determined by the quality of BELT diagnosis.</div>
+      <div class="framework-box-item">The Introduction chapter on utility vs entertainment products is not optional context. It is the first gate. Read it before running any diagnostic.</div>
+      <div class="framework-box-item">Case studies in Part Six are fully worked. Read at least one before running the framework on your own product. They calibrate what the framework actually reveals, not just what it describes.</div>
+      <div class="framework-box-item">The 30-minute application guide at the end is where this becomes operational. Every concept in every chapter points toward that guide.</div>
     </div>
   </div>
 </div>
@@ -516,35 +533,57 @@ p { margin-bottom: 14px; font-size: 15px; }
 <!-- CH1 -->
 <div id="ch1" class="chapter-header">
   <div class="chapter-num">Chapter 1</div>
-  <div class="chapter-title">Why Diagnosis Comes First</div>
-  <div class="chapter-sub">The cost of designing before understanding</div>
+  <div class="chapter-title">The Diagnosis That Changes Everything</div>
+  <div class="chapter-sub">Most product failures are not execution failures. They are diagnosis failures.</div>
 </div>
 <div class="page-section">
-  <p class="lead">Every product failure contains the same mistake: the team designed a solution before they understood the problem. BELT exists to prevent that mistake.</p>
-  <h2>The Design-Before-Diagnosis Trap</h2>
-  <p>When a product team identifies a market, they almost immediately begin designing. The instinct is understandable: design is energising, tangible, and creates momentum. But design without diagnosis produces a specific failure pattern.</p>
-  <p>The product is built for a problem the team assumed, not one they diagnosed. Features are added to solve adjacent problems. The roadmap grows. The product becomes harder to explain. Retention plateaus. The team adds more features. Nothing changes.</p>
-  <div class="callout teal"><div class="callout-bar"></div><div class="callout-body"><div class="callout-label">The core insight</div><div class="callout-text">Before you design a single feature, you must answer four questions about the customer's problem. BELT is the sequence of those four questions.</div></div></div>
-  <h2>The Four BELT Questions</h2>
-  <table class="data-table">
-    <tr><th>Question</th><th>What it surfaces</th></tr>
-    <tr><td><strong>B</strong> - What are they doing despite friction?</td><td>The bright-spot customer who has already built a workaround. The most reliable signal of real demand.</td></tr>
-    <tr><td><strong>E</strong> - What outcome do they actually need?</td><td>The specific life change the customer is trying to produce. Not a feature. A destination.</td></tr>
-    <tr><td><strong>L</strong> - Why have they not switched?</td><td>The specific barrier between the customer's current situation and your product. Defines what L must remove.</td></tr>
-    <tr><td><strong>T</strong> - Transient or Enabling?</td><td>Whether depth value can compound. Determines whether an E architecture is possible at all.</td></tr>
-  </table>
-  <div class="case-box">
-    <div class="case-header"><div class="case-company">Robinhood</div><div class="case-headline">Wrong diagnosis, wrong product, wrong features</div></div>
-    <div class="case-row case-belt"><div class="case-label">BELT</div><div class="case-value">B: paper-trading on Reddit spreadsheets. E: financial confidence, not access. L: belief barrier ("what if I pick wrong?"), not commissions. T: Enabling if P is confidence. Transient if P is trade execution. Robinhood built for the wrong T.</div></div>
-    <div class="case-row case-gap"><div class="case-label">The gap</div><div class="case-value">The founding obstacle thesis was wrong. "The barrier is commissions." Actual barrier: financial confidence. Every gamification feature was directionally correct for "make more trades" and wrong for "build confidence." The wrong thesis is not a small mistake - it is the architecture.</div></div>
-    <div class="case-row case-fix"><div class="case-label">Fix</div><div class="case-value">Correct the obstacle thesis first. Everything downstream changes. Do not redesign features before redesigning the diagnosis.</div></div>
+  <p class="lead">In 2013, Robinhood launched with a founding thesis that would shape every product decision for the next decade: young adults are not investing because commissions are too high. Remove the commission. The market opens up. Problem solved.</p>
+
+  <p>The thesis was plausible. It was logical. It was wrong.</p>
+
+  <p>Young adults were not staying out of financial markets because of $9.99 commissions. They were staying out because they did not know what to buy and were terrified of making the wrong decision. The barrier was financial confidence, not financial access. These are different problems. They require different products.</p>
+
+  <p>Robinhood built for the wrong problem with enormous competence. The result: confetti on trade execution, gamified leaderboards, 24-hour trading, push notifications for every price movement. Every feature was engineered well. Every feature was wrong. The product optimised for more trades when it should have been building financial confidence. No amount of execution excellence can fix a diagnosis failure.</p>
+
+  <div style="background:var(--dark);padding:28px 32px;margin:28px 0;border-left:6px solid var(--gold);">
+    <div style="font-family:Georgia,serif;font-size:1.25em;color:var(--white);line-height:1.5;font-style:italic;">"When the obstacle thesis is wrong, every feature built on it is wrong - regardless of execution quality. The wrong diagnosis is not a small mistake. It is the entire architecture."</div>
   </div>
+
+  <p>This is not a story about a bad product team. Robinhood's engineering and design were exceptional. This is a story about what happens when you skip diagnosis and move directly to design. The team was answering the wrong question brilliantly.</p>
+
+  <h2>The Pattern Is Not Rare</h2>
+  <p>Robinhood is the most visible example of a failure pattern that appears in almost every product that plateaus. The team identifies a market. They begin designing. Momentum builds. Features ship. Metrics improve in the short term. Then retention flattens. The team diagnoses a retention problem and ships more features. Nothing changes.</p>
+
+  <p>The retention problem is real. But it is a symptom. The root cause is the diagnosis that happened before the first line of code was written - or did not happen at all.</p>
+
+  <div class="callout red"><div class="callout-bar"></div><div class="callout-body"><div class="callout-label">The uncomfortable truth</div><div class="callout-text">Most product teams diagnose the problem they want to solve, not the problem the customer actually has. User interviews confirm assumptions more often than they challenge them. Feature requests describe symptoms, not causes. The only reliable starting point is behaviour - what the customer is doing despite friction, without your product.</div></div></div>
+
+  <h2>BELT: Four Questions That Force the Right Diagnosis</h2>
+  <p>BELT is not a framework for generating ideas. It is a framework for stress-testing the idea you already have. It forces four specific questions in sequence. Each one is designed to surface the assumption most likely to be wrong.</p>
+
+  <table class="data-table">
+    <tr><th style="width:30%;">Question</th><th style="width:35%;">What it surfaces</th><th style="width:35%;">What it kills</th></tr>
+    <tr><td><strong>B</strong> - What are they doing despite friction?</td><td>The workaround. Proof that the problem is real and unsolved.</td><td>Hypothetical customers. Problems that exist only in interviews.</td></tr>
+    <tr><td><strong>E</strong> - What outcome do they actually need?</td><td>The life change. The destination, not the feature.</td><td>Feature-level P. Products that optimise the mechanism instead of the outcome.</td></tr>
+    <tr><td><strong>L</strong> - Why have they not switched?</td><td>The specific barrier. What liberation must remove.</td><td>Generic onboarding. Liberation designed for the wrong lock-in type.</td></tr>
+    <tr><td><strong>T</strong> - Transient or Enabling?</td><td>Whether depth value can form. Whether E architecture is possible.</td><td>E investment on Transient products. Moats that can never form.</td></tr>
+  </table>
+
+  <p>Applied to Robinhood: B surfaces young adults paper-trading on Reddit spreadsheets - real demand confirmed. E asks what outcome they actually need, and the honest answer is financial confidence, not trade execution. L identifies the barrier as activation inertia ("what if I pick the wrong stock?") not commission cost. T asks whether the hundredth trade should be more informed than the first - yes, if P is confidence, making this Enabling. Robinhood built for the wrong E and the wrong T simultaneously.</p>
+
+  <h2>The Sequence Is Not Optional</h2>
+  <p>Each question depends on the previous one. B confirms there is real demand before you theorise about the problem. E names the destination before you design toward it. L identifies the specific barrier before you claim to remove it. T determines whether the entire E architecture is architecturally possible.</p>
+
+  <p>Skip B and you design for a hypothetical customer. Skip E and you design at feature level. Skip L and your onboarding removes the wrong barrier. Skip T and you spend 18 months building a moat that cannot form.</p>
+
+  <div class="callout navy"><div class="callout-bar"></div><div class="callout-body"><div class="callout-label">What BELT is not</div><div class="callout-text">BELT is not a customer discovery template. It is not a list of interview questions. It is a stress test applied to your current hypothesis. Run it on a product you are already building. The gaps it surfaces are almost always already visible in your retention data - they just have not been named yet.</div></div></div>
+
   <div class="summary-box">
-    <div class="summary-header"><div class="summary-title">Chapter Summary: Why Diagnosis Comes First</div></div>
-    <div class="summary-item" data-n="1">Design without diagnosis produces a product built for an assumed problem, not a confirmed one.</div>
-    <div class="summary-item" data-n="2">BELT is a sequence of four questions. Each builds on the previous.</div>
-    <div class="summary-item" data-n="3">B confirms demand. E names the destination. L identifies the barrier. T determines whether depth value is possible.</div>
-    <div class="summary-item" data-n="4">The cost of a wrong diagnosis compounds with every feature built on it. Robinhood is the clearest example.</div>
+    <div class="summary-header"><div class="summary-title">Chapter Summary: The Diagnosis That Changes Everything</div></div>
+    <div class="summary-item" data-n="1">Robinhood is the defining case: wrong obstacle thesis, wrong E architecture, wrong features - regardless of execution quality. The diagnosis failure happened before the first feature was designed.</div>
+    <div class="summary-item" data-n="2">Most product failures are not execution failures. They are diagnosis failures. The team was answering the wrong question brilliantly.</div>
+    <div class="summary-item" data-n="3">BELT forces four questions in sequence: B (workaround), E (life change), L (specific barrier), T (Transient or Enabling). Each one is designed to surface the assumption most likely to be wrong.</div>
+    <div class="summary-item" data-n="4">The sequence is non-negotiable. Each question depends on the previous. Skipping any one produces a specific, predictable failure mode downstream.</div>
   </div>
 </div>
 
@@ -607,6 +646,11 @@ p { margin-bottom: 14px; font-size: 15px; }
     <div class="summary-item" data-n="2">Three interview questions. The third ("what would you lose?") is the most important.</div>
     <div class="summary-item" data-n="3">FUD score = Frequency x Urgency x Distinctness. Above 18: structural demand. Below 9: insufficient motivation.</div>
   </div>
+</div>
+
+<div style="background:var(--dark);padding:32px 40px;border-left:6px solid var(--olive);">
+  <div style="font-size:11px;font-weight:bold;color:var(--olive);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Non-obvious truth</div>
+  <div style="font-family:Georgia,serif;font-size:1.3em;color:var(--white);line-height:1.5;font-style:italic;">"User feedback over-indexes on transient pain. The problem that generates the loudest complaints is almost never the enduring problem worth solving. Listen to what customers do, not what they say."</div>
 </div>
 
 <!-- CH3 -->
@@ -693,6 +737,11 @@ p { margin-bottom: 14px; font-size: 15px; }
   </div>
 </div>
 
+<div style="background:var(--dark);padding:32px 40px;border-left:6px solid var(--navy);">
+  <div style="font-size:11px;font-weight:bold;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Non-obvious truth</div>
+  <div style="font-family:Georgia,serif;font-size:1.3em;color:var(--white);line-height:1.5;font-style:italic;">"Lock-in matters more than delight in low-frequency products. A customer who loves your product but has no lock-in will leave the moment a competitor offers a better first session. A customer who is locked in will stay even when they are frustrated."</div>
+</div>
+
 <!-- CH5 -->
 <div id="ch5" class="chapter-header">
   <div class="chapter-num">Chapter 5</div>
@@ -715,6 +764,11 @@ p { margin-bottom: 14px; font-size: 15px; }
     <div class="summary-item" data-n="2">Building E architecture on a Transient product is wasted investment.</div>
     <div class="summary-item" data-n="3">Cyclical and episodic Enabling products require deliberate Stage 8 (Reinforcement) design - Wrapped, Year in Sport.</div>
   </div>
+</div>
+
+<div style="background:var(--dark);padding:32px 40px;border-left:6px solid var(--amber);">
+  <div style="font-size:11px;font-weight:bold;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Non-obvious truth</div>
+  <div style="font-family:Georgia,serif;font-size:1.3em;color:var(--white);line-height:1.5;font-style:italic;">"If your product is solving a transient problem, you do not have a retention problem. You have a diagnosis problem. No feature, no onboarding improvement, and no re-engagement campaign will fix it. The only fix is a different problem."</div>
 </div>
 
 <!-- CH6 -->
@@ -969,6 +1023,11 @@ p { margin-bottom: 14px; font-size: 15px; }
   </div>
 </div>
 
+<div style="background:var(--dark);padding:32px 40px;border-left:6px solid var(--teal);">
+  <div style="font-size:11px;font-weight:bold;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Non-obvious truth</div>
+  <div style="font-family:Georgia,serif;font-size:1.3em;color:var(--white);line-height:1.5;font-style:italic;">"Most PMs are optimising the acquisition layer while the retention layer collapses underneath them. Strong O + weak E is a leaky bucket. You can keep filling it. It will keep leaking. Fix E first."</div>
+</div>
+
 <!-- PART THREE -->
 <div class="part-divider">
   <div class="part-label">Part Three</div>
@@ -1197,6 +1256,11 @@ p { margin-bottom: 14px; font-size: 15px; }
   </div>
 </div>
 
+<div style="background:var(--dark);padding:32px 40px;border-left:6px solid var(--purple);">
+  <div style="font-size:11px;font-weight:bold;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Non-obvious truth</div>
+  <div style="font-family:Georgia,serif;font-size:1.3em;color:var(--white);line-height:1.5;font-style:italic;">"Delight without lock-in is retention theater. You can build the most satisfying session experience in your category and still have 30% Month 3 retention. Session quality and switching cost are different things. You need both."</div>
+</div>
+
 <!-- PART FIVE -->
 <div class="part-divider">
   <div class="part-label">Part Five</div>
@@ -1362,6 +1426,115 @@ p { margin-bottom: 14px; font-size: 15px; }
     <div class="summary-item" data-n="4">Robinhood: wrong obstacle thesis. Every feature built on it was architecturally wrong regardless of execution quality.</div>
     <div class="summary-item" data-n="5">Rippling: P at Feature level. Stages 7 and 8 absent. The compounding value is real but never shown.</div>
     <div class="summary-item" data-n="6">GitHub Copilot: transient when it should be enabling. No personalisation layer. The moat that should exist has not been designed.</div>
+  </div>
+</div>
+
+
+<!-- 30-MINUTE GUIDE -->
+<div id="guide" class="chapter-header" style="border-left-color:var(--gold);">
+  <div class="chapter-num" style="color:var(--gold);">Application Guide</div>
+  <div class="chapter-title">Run the Diagnostic in 30 Minutes</div>
+  <div class="chapter-sub">Five steps. One output. Applied to any product you know.</div>
+</div>
+<div class="page-section">
+  <p class="lead">Every concept in this book points here. The framework is only valuable when it is in contact with a real product. This guide takes you from blank page to diagnosis in 30 minutes.</p>
+
+  <div style="background:var(--olive);color:var(--white);padding:14px 20px;font-size:13px;font-weight:bold;margin-bottom:24px;">You will need: one product you know well, 30 minutes, a place to write. Nothing else.</div>
+
+  <!-- Step 1 -->
+  <div style="display:grid;grid-template-columns:72px 1fr;gap:0;margin:0 0 4px;border-radius:2px;overflow:hidden;">
+    <div style="background:var(--teal);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 8px;">
+      <div style="font-family:Georgia,serif;font-size:1.8em;font-weight:bold;color:white;">1</div>
+      <div style="font-size:9px;color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;">5 min</div>
+    </div>
+    <div style="background:var(--teal-pale);padding:16px 20px;border:1px solid var(--teal);border-left:none;">
+      <div style="font-weight:bold;color:var(--teal);font-size:14px;margin-bottom:8px;">B - Find the behaviour</div>
+      <p style="font-size:14px;margin-bottom:8px;">Write down: what is the specific workaround your most committed early customers used before your product existed? Make it concrete. "They used spreadsheets" is not specific enough. "They maintained a colour-coded spreadsheet with 47 rows of manually tracked data that they updated every Sunday night" is specific enough.</p>
+      <div style="background:white;border:1px solid #cce;padding:10px 14px;font-size:13px;color:var(--muted);">If you cannot name a specific workaround: stop here. You do not have confirmed demand. You have a hypothesis. Validate B before running the rest of this guide.</div>
+    </div>
+  </div>
+
+  <!-- Step 2 -->
+  <div style="display:grid;grid-template-columns:72px 1fr;gap:0;margin:4px 0;border-radius:2px;overflow:hidden;">
+    <div style="background:var(--olive);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 8px;">
+      <div style="font-family:Georgia,serif;font-size:1.8em;font-weight:bold;color:white;">2</div>
+      <div style="font-size:9px;color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;">5 min</div>
+    </div>
+    <div style="background:var(--olive-pale);padding:16px 20px;border:1px solid var(--olive);border-left:none;">
+      <div style="font-weight:bold;color:var(--olive);font-size:14px;margin-bottom:8px;">E - Name the life change</div>
+      <p style="font-size:14px;margin-bottom:8px;">Complete this sentence: "For [specific segment], [product] delivers [specific outcome], so [life is different in this specific way]." Read it back. Could it appear in a feature list? If yes, you are at feature level. Rewrite it at life change level.</p>
+      <p style="font-size:14px;margin-bottom:8px;">Then answer: is this problem enduring or transient? If the problem resolves itself after first use, or if the customer has no reason to return once P is delivered, it is transient. Name this honestly.</p>
+      <div style="background:white;border:1px solid #dda;padding:10px 14px;font-size:13px;color:var(--muted);">Transient is not a failure. It is information. A transient problem requires a different product strategy. Do not build E architecture on a transient product.</div>
+    </div>
+  </div>
+
+  <!-- Step 3 -->
+  <div style="display:grid;grid-template-columns:72px 1fr;gap:0;margin:4px 0;border-radius:2px;overflow:hidden;">
+    <div style="background:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 8px;">
+      <div style="font-family:Georgia,serif;font-size:1.8em;font-weight:bold;color:white;">3</div>
+      <div style="font-size:9px;color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;">5 min</div>
+    </div>
+    <div style="background:var(--navy-pale);padding:16px 20px;border:1px solid var(--navy);border-left:none;">
+      <div style="font-weight:bold;color:var(--navy);font-size:14px;margin-bottom:8px;">L - Identify the lock-in type</div>
+      <p style="font-size:14px;margin-bottom:8px;">Which one describes your segment? Switching Cost (prior investment in a competitor that cannot be transferred), Search Cost (evaluation anxiety - they do not know if the alternative is better), or Inertia (they have never started - the barrier is belief, not migration).</p>
+      <p style="font-size:14px;">Now look at your current onboarding. Write one sentence describing what it does to address this specific barrier. If the sentence describes generic setup or feature orientation rather than the specific lock-in type you just named: your L is misdiagnosed.</p>
+    </div>
+  </div>
+
+  <!-- Step 4 -->
+  <div style="display:grid;grid-template-columns:72px 1fr;gap:0;margin:4px 0;border-radius:2px;overflow:hidden;">
+    <div style="background:var(--amber);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 8px;">
+      <div style="font-family:Georgia,serif;font-size:1.8em;font-weight:bold;color:white;">4</div>
+      <div style="font-size:9px;color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;">5 min</div>
+    </div>
+    <div style="background:var(--amber-pale);padding:16px 20px;border:1px solid var(--amber);border-left:none;">
+      <div style="font-weight:bold;color:var(--amber);font-size:14px;margin-bottom:8px;">T - Validate the type</div>
+      <p style="font-size:14px;margin-bottom:8px;">Answer one question: if a customer stopped using your product for six months and came back, would the product know them? Would the 601st session feel different from the first?</p>
+      <p style="font-size:14px;">If yes: Enabling. Build the E architecture. The moat can form. If no: Transient. Do not invest in personalisation or depth value features. They will not compound. Design for P-Salience instead: make your product the obvious choice at the moment the problem recurs.</p>
+    </div>
+  </div>
+
+  <!-- Step 5 -->
+  <div style="display:grid;grid-template-columns:72px 1fr;gap:0;margin:4px 0 24px;border-radius:2px;overflow:hidden;">
+    <div style="background:var(--purple);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 8px;">
+      <div style="font-family:Georgia,serif;font-size:1.8em;font-weight:bold;color:white;">5</div>
+      <div style="font-size:9px;color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;">10 min</div>
+    </div>
+    <div style="background:var(--purple-pale);padding:16px 20px;border:1px solid var(--purple);border-left:none;">
+      <div style="font-weight:bold;color:var(--purple);font-size:14px;margin-bottom:8px;">Score your POLE</div>
+      <p style="font-size:14px;margin-bottom:8px;">Score each element High, Medium, or Low on two questions: Clarity (can a customer state this element clearly?) and Credibility (do customers believe it from experience?).</p>
+      <table style="width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;">
+        <tr><th style="background:var(--navy);color:white;padding:7px 10px;text-align:left;width:15%;">Element</th><th style="background:var(--navy);color:white;padding:7px 10px;text-align:left;width:30%;">Clarity score</th><th style="background:var(--navy);color:white;padding:7px 10px;text-align:left;width:30%;">Credibility score</th><th style="background:var(--navy);color:white;padding:7px 10px;text-align:left;">Combined</th></tr>
+        <tr><td style="padding:8px 10px;border-bottom:1px solid #ddd;font-weight:bold;color:var(--purple);">P</td><td style="padding:8px 10px;border-bottom:1px solid #ddd;color:#bbb;font-style:italic;">H / M / L</td><td style="padding:8px 10px;border-bottom:1px solid #ddd;color:#bbb;font-style:italic;">H / M / L</td><td style="padding:8px 10px;border-bottom:1px solid #ddd;"></td></tr>
+        <tr><td style="padding:8px 10px;border-bottom:1px solid #ddd;font-weight:bold;color:var(--amber);">O</td><td style="padding:8px 10px;border-bottom:1px solid #ddd;color:#bbb;font-style:italic;">H / M / L</td><td style="padding:8px 10px;border-bottom:1px solid #ddd;color:#bbb;font-style:italic;">H / M / L</td><td style="padding:8px 10px;border-bottom:1px solid #ddd;"></td></tr>
+        <tr><td style="padding:8px 10px;border-bottom:1px solid #ddd;font-weight:bold;color:var(--teal);">L</td><td style="padding:8px 10px;border-bottom:1px solid #ddd;color:#bbb;font-style:italic;">H / M / L</td><td style="padding:8px 10px;border-bottom:1px solid #ddd;color:#bbb;font-style:italic;">H / M / L</td><td style="padding:8px 10px;border-bottom:1px solid #ddd;"></td></tr>
+        <tr><td style="padding:8px 10px;font-weight:bold;color:var(--olive);">E</td><td style="padding:8px 10px;color:#bbb;font-style:italic;">H / M / L</td><td style="padding:8px 10px;color:#bbb;font-style:italic;">H / M / L</td><td style="padding:8px 10px;"></td></tr>
+      </table>
+      <p style="font-size:13px;color:var(--muted);margin-top:10px;">The element with the lowest combined score is your Weakest Link. That is your only priority. Fix it before investing in any other element.</p>
+    </div>
+  </div>
+
+  <!-- Output -->
+  <div style="background:var(--dark);padding:24px 28px;border-radius:2px;margin-top:8px;">
+    <div style="font-size:11px;font-weight:bold;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Your output at the end of 30 minutes</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div>
+        <div style="font-size:13px;font-weight:bold;color:var(--white);margin-bottom:8px;">You will have named:</div>
+        <div style="font-size:13px;color:#aaa;line-height:1.8;">The specific workaround (B)<br>The life change at outcome level (E)<br>The problem type: transient or enduring (T)<br>The lock-in type (L)<br>The weakest POLE element</div>
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:bold;color:var(--white);margin-bottom:8px;">You will know:</div>
+        <div style="font-size:13px;color:#aaa;line-height:1.8;">Whether E architecture is possible<br>Whether your onboarding removes the right barrier<br>Which single change would have the highest impact<br>Whether your product is worth building the moat for</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:32px;padding:20px 24px;background:#F0EEE8;border-left:4px solid var(--olive);">
+    <p style="font-size:14px;color:var(--dark);">Run this guide on the same product twice: once with what you believe to be true, and once based purely on what your data shows. The gap between those two runs is your product's most important strategic problem.</p>
+    <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap;">
+      <a href="index.html" style="background:var(--olive);color:white;padding:10px 20px;font-size:13px;font-weight:bold;border-radius:2px;display:inline-block;text-decoration:none;">Back to home</a>
+      <a href="https://www.linkedin.com/in/consumerproductleader/" target="_blank" style="background:var(--dark);color:white;padding:10px 20px;font-size:13px;font-weight:bold;border-radius:2px;display:inline-block;text-decoration:none;">Discuss with Vivek</a>
+    </div>
   </div>
 </div>
 
