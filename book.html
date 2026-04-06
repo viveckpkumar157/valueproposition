@@ -426,7 +426,7 @@
   </table>
 
   <h3>The Entertainment Trap</h3>
-  <p>Many product teams build utility products but measure them like entertainment products — maximising session length, daily active users, and content consumption. When utility products optimise for engagement rather than outcome progress, they accidentally build Metric Features. Calm's streak is the most cited example: it optimises sessions opened, not felt calm. The metric is entertainment-native. The product is utility.</p>
+  <p>Many product teams build utility products but measure them like entertainment products — maximising session length, daily active users, and content consumption. When utility products optimise for engagement rather than outcome progress, they design features that move a metric without advancing P-state. Calm's streak is the most cited example: it optimises sessions opened, not felt calm. The metric is entertainment-native. The product is utility.</p>
 
   <h3>Four Diagnostic Questions Before You Begin</h3>
   <ol>
@@ -477,6 +477,24 @@
   <h2>The Bright Spot Method</h2>
   <p>Before any product exists, some customers solve the problem themselves. They log food in Notes apps. They record Loom-like videos in Zoom and share the link. They build finance spreadsheets that track their portfolio in ways apps do not. These are bright spots.</p>
   <p><strong>B asks:</strong> "What are they doing despite the friction of doing it manually?" The answer defines your most valuable early customer.</p>
+
+  <h3>Two Bright Spots in Practice</h3>
+
+  <table>
+    <tr><th>Product</th><th>The workaround (the bright spot)</th><th>What it confirms</th></tr>
+    <tr>
+      <td><strong>Calendly</strong></td>
+      <td>Professionals sending chains of 5–8 emails to schedule a single meeting. "Are you free Tuesday?" "Tuesday is bad, how about Thursday?" "Thursday works — morning or afternoon?" The workaround is elaborate, universal, and embarrassing enough that people joke about it.</td>
+      <td>The scheduling pain is real and the market is enormous. Nobody does this because they enjoy it. They do it because there is no obvious, frictionless alternative they trust.</td>
+    </tr>
+    <tr>
+      <td><strong>Notion</strong></td>
+      <td>Teams managing knowledge across a patchwork of Google Docs, Slack threads, email chains, and personal spreadsheets — each person maintaining their own system, none of it connected. When someone new joins, they spend two weeks asking "where is the process doc for X?" and getting a different answer each time.</td>
+      <td>The knowledge management pain is real and structural. Teams are not doing this by choice. They are doing it because nothing has made the alternative feel worth the switch.</td>
+    </tr>
+  </table>
+
+  <p>In both cases the workaround is vivid, specific, and self-sustaining. The customer has already decided to spend time on the problem. Your product does not need to convince them the problem exists — it needs to be better than what they already built.</p>
 
   <h3>The Bright Spot Interview — Three Questions</h3>
   <ol>
@@ -635,6 +653,34 @@
     </div>
   </div>
 
+  <h3>One Product Per Type</h3>
+
+  <table>
+    <tr><th>Type</th><th>Product</th><th>What the customer has already invested</th><th>What liberation must do</th></tr>
+    <tr>
+      <td><strong>Switching Cost</strong></td>
+      <td>Figma</td>
+      <td>A design team has spent months building component libraries, design systems, and shared assets inside their current tool. Every new component deepens the investment. The cost of leaving is not the subscription — it is rebuilding months of work from scratch in a new environment.</td>
+      <td>Figma's liberation: import files directly. Nothing is lost. The team can start alongside their existing tool. The switching cost is removed before it becomes the reason to stay.</td>
+    </tr>
+    <tr>
+      <td><strong>Search Cost</strong></td>
+      <td>Warby Parker</td>
+      <td>The customer is not attached to their current glasses supplier. They are trapped by evaluation anxiety: will these frames look right on my face? Ordering online without trying first has always felt like a gamble. Most people have been burned before — the glasses arrive and look nothing like the website.</td>
+      <td>Warby Parker's liberation: five frames, five days, free. Try them at home. No commitment until you have seen them on your face. The evaluation risk disappears before the purchase decision.</td>
+    </tr>
+    <tr>
+      <td><strong>Inertia</strong></td>
+      <td>Calendly</td>
+      <td>The email scheduling workaround is not painful enough to force a crisis. It is annoying, slow, and slightly embarrassing — but it works. There is no moment where the customer thinks "I must fix this today." The status quo wins by default because nothing makes the switch feel obviously worth it.</td>
+      <td>Calendly's liberation: send one link. The other person picks a slot. The first use takes 30 seconds. No account required for the recipient. The switch costs less than the next email thread it replaces.</td>
+    </tr>
+  </table>
+
+  <div class="callout">
+    <strong>The wrong liberation is worse than no liberation.</strong> Designing import tools for an inertia customer adds friction at exactly the moment you need to remove it. Designing a free trial for a switching cost customer does not address what they are actually afraid of losing. Lock-in type determines liberation design. Get the type wrong and the barrier stays intact.
+  </div>
+
   <table>
     <tr><th>Lock-in type</th><th>What L must do</th><th>What L must not do</th></tr>
     <tr><td><strong>Switching Cost</strong></td><td>Make migration effortless. Import history. Prove nothing is lost.</td><td>"Easy to get started." That is not the barrier.</td></tr>
@@ -747,6 +793,47 @@
   </ol>
   <p><strong>Spotify:</strong> every platform assumed "music = something you find." Spotify: "what if music finds you?" This HOW challenge reframes P, O, and E simultaneously.</p>
   <p><strong>TurboTax:</strong> assumed HOW was "better form-filling UX reduces the chore of tax filing." Ethnographic research revealed that for every 2–4 hours spent filing, users spent equal time collecting data. The bottleneck was not the form — it was the data. Real HOW: move the customer from data entry to data verifier. Automate collection. Let users confirm, not type.</p>
+
+  <h3>Full Derivation: Notion</h3>
+  <p>Here is the complete journey from HOW Audit to P for a product the target reader almost certainly uses.</p>
+
+  <table>
+    <tr><th>Step</th><th>Question</th><th>Answer</th></tr>
+    <tr>
+      <td><strong>HOW assumed</strong></td>
+      <td>What mechanism does every workspace tool assume?</td>
+      <td>"A beautiful, flexible interface makes teams more organised." Build great UX. Teams will adopt it. Organisation follows.</td>
+    </tr>
+    <tr>
+      <td><strong>HOW challenged</strong></td>
+      <td>What if that's wrong?</td>
+      <td>Beautiful UI is the O — the acquisition hook. It is not the mechanism. The real HOW: connected knowledge survives team change. The product that links pages, tracks decisions, and makes processes findable is the product that retains. Aesthetics gets them in. Linkage keeps them.</td>
+    </tr>
+    <tr>
+      <td><strong>Obstacle thesis</strong></td>
+      <td>Why is P not already true for the target segment?</td>
+      <td>Knowledge is created in silos with no connective tissue. When someone writes a process in their personal Google Doc, it disappears when they leave. When a new person joins, they spend weeks asking where things are. The organisation re-learns the same things repeatedly because nothing is built to survive turnover.</td>
+    </tr>
+    <tr>
+      <td><strong>P — first draft</strong></td>
+      <td>What is permanently different if Notion works?</td>
+      <td>"Teams that are more organised." Fails competitor test — Confluence can say this too. Too generic.</td>
+    </tr>
+    <tr>
+      <td><strong>P — raised</strong></td>
+      <td>More specific. What actually changes?</td>
+      <td>"Teams that never lose institutional knowledge and never repeat the same onboarding from scratch."</td>
+    </tr>
+    <tr>
+      <td><strong>Three tests</strong></td>
+      <td>Does it pass competitor, five-year, emotion?</td>
+      <td>Competitor: Confluence cannot claim this for small teams — it is too complex. Pass. Five-year: as long as teams grow and people leave, this matters. Pass. Emotion: every founder who has lost a key hire and watched knowledge walk out the door. Relief. Recognition. Pass.</td>
+    </tr>
+  </table>
+
+  <div class="callout">
+    The P that comes out of this process is not a tagline. It is a design brief. Every POLE element that follows — the O, the L, the E — is derived from it. If P had stayed at "more organised," every downstream design decision would have been weaker.
+  </div>
 
   <div class="pullquote">"Kingfisher had a tagline. IndiGo had a system. One competed on perception. The other competed on delivery. Only one is still flying."</div>
 
@@ -898,8 +985,31 @@
     <tr><td><strong>What it is</strong></td><td>Value the product provides in each session. Good recommendations. Fast search. Clean UX. The product performs well.</td><td>Value that belongs to the user, built inside the product over time. Cannot be transferred. Cannot be replicated by a competitor.</td></tr>
     <tr><td><strong>What it drives</strong></td><td>Day 1 to Day 30 retention. Week-to-week habit formation.</td><td>Month 3+ retention and renewal. Real switching cost.</td></tr>
     <tr><td><strong>Can a competitor match it?</strong></td><td>Yes. Within 12 months with investment.</td><td>No. The competitor cannot replicate what the user has already built.</td></tr>
-    <tr><td><strong>Example</strong></td><td>Spotify Discover Weekly (resets each week, improves per listen).</td><td>Spotify playlists, liked songs — irreplaceable. Notion team workspace after 12 months.</td></tr>
     <tr><td><strong>Switching cost</strong></td><td>Weak alone. User leaves without losing anything they built.</td><td>Strong. Switching means losing the workspace, history, model — what the user built inside the product.</td></tr>
+  </table>
+
+  <h3>Three Products, Both Layers</h3>
+
+  <table>
+    <tr><th>Product</th><th>E-Delivered — what each session gives</th><th>E-Accrued — what the user has built</th><th>The moat test</th></tr>
+    <tr>
+      <td><strong>Stitch Fix</strong></td>
+      <td>Each box has 5 well-chosen pieces. The stylist uses feedback signals from the previous box. Quality improves within the first few deliveries. The product performs well per session.</td>
+      <td>After 12 months: hundreds of feedback signals — kept, returned, why, size, occasion, budget — have built a style profile a human stylist would spend years developing. The next box is better because of everything that came before it.</td>
+      <td>Your style profile cannot be transferred. A competitor starts from zero. Switching means months of average boxes while the new service learns what Stitch Fix already knows. The moat is the data the customer gave to the product over time.</td>
+    </tr>
+    <tr>
+      <td><strong>Grammarly</strong></td>
+      <td>Red underlines in real time. Tone suggestions. Clarity rewrites. Each session catches errors before they cause embarrassment. The product is useful and consistent every time it runs.</td>
+      <td>A writing style model that learns your voice — vocabulary, formality level, sentence patterns, frequent errors. Month 6 suggestions feel personal in a way Month 1 suggestions do not. The model knows how you write.</td>
+      <td>Your personal style model cannot be exported. Switching to a generic grammar checker means suggestions that feel nothing like your voice. The product that has learned you is not interchangeable with one that has not.</td>
+    </tr>
+    <tr>
+      <td><strong>Substack (reader)</strong></td>
+      <td>Each issue is well-written. The writer covers the reader's niche in depth. The reader learns something. The quality of each individual issue is the reason the reader opened the email in the first place.</td>
+      <td>Two years of archives. A relationship with a writer whose thinking the reader now understands deeply. Context that makes each new issue richer than the last. The hundredth issue lands differently from the first because the reader knows the writer's framework, references, and history.</td>
+      <td>The archive and the relationship are irreplaceable. A new newsletter starts the reader at zero — no context, no history, no shared reference points. Switching is not just changing the source of content. It is starting a new relationship from scratch.</td>
+    </tr>
   </table>
 
   <div class="callout">
@@ -939,29 +1049,11 @@
     <div class="ladder-step">
       <div class="ladder-n">5</div>
       <div class="ladder-content">
-        <div class="ladder-title">E-P Alignment — Cut Metric Features</div>
-        <div class="ladder-desc">For every feature: does it trace to Step 1 via the obstacle thesis in two steps or fewer? If not, it is a Metric Feature. Cut it. Features that pass Step 5 are Micro-P. Features that fail it consume roadmap without advancing P-state.</div>
+        <div class="ladder-title">E-P Alignment — Cut features that don't trace to P</div>
+        <div class="ladder-desc">For every feature: does it trace to Step 1 via the obstacle thesis in two steps or fewer? If not, cut it. It is consuming roadmap without advancing P-state.</div>
       </div>
     </div>
   </div>
-
-  <h2>Metric Features vs Micro-P</h2>
-  <p>The most common E failure: teams optimise for engagement metrics that feel like retention but do not advance P-state. These are Metric Features. Micro-P features are the alternative — they carry the customer toward P in a session-specific, personalised way.</p>
-
-  <div class="mf-table">
-    <div class="mf-header good">Micro-P — passes Step 5</div>
-    <div class="mf-header">Metric Feature — fails Step 5</div>
-    <div class="mf-row">"You caught 34 errors this week, down from 51." — Grammarly</div>
-    <div class="mf-row">"Your profile is 80% complete."</div>
-    <div class="mf-row alt">"Your pace improved 12% over 8 weeks." — Strava</div>
-    <div class="mf-row alt">"You completed your 10th ride!"</div>
-    <div class="mf-row">"Discover Weekly accuracy up — 7 tracks saved vs 2 last week." — Spotify</div>
-    <div class="mf-row">"You have listened 200 hours this year."</div>
-    <div class="mf-row alt">"First sentence understood without translating." — Duolingo</div>
-    <div class="mf-row alt">"You finished your first lesson!"</div>
-  </div>
-
-  <p>Metric Features optimise the metric. Micro-P advances the outcome. A customer who receives Micro-P can describe what they got. A customer who receives only Metric Features cannot.</p>
 
   <h2>The Referral Moment</h2>
   <p>Referral is not a feature. It is the moment E-Accrued becomes perceivable and shareable. Spotify Wrapped works because it fires in December — after 12 months of E-Accrued listening history. The value was already there. Wrapped made it visible. Triggering referral at adoption (Stage 3) before E-Accrued has formed produces an empty chart and no sharing.</p>
@@ -981,8 +1073,7 @@
   <div class="summary">
     <h3>Chapter Summary</h3>
     <strong>E-Delivered</strong> retains week to week. A competitor can match it. <strong>E-Accrued</strong> creates real switching cost — leaving means losing what was built.<br><br>
-    <strong>5-step ladder:</strong> decompose P, set floor, derive Experience VP from obstacle thesis, identify E-Accrued layer, cut Metric Features that cannot trace to Step 1.<br><br>
-    <strong>Metric Features</strong> optimise the metric. <strong>Micro-P</strong> advances the outcome. Build Micro-P. Cut Metric Features.<br><br>
+    <strong>5-step ladder:</strong> decompose P, set floor, derive Experience VP from obstacle thesis, identify E-Accrued layer, cut features that cannot trace to Step 1.<br><br>
     <strong>Non-obvious truth:</strong> most PMs optimise the acquisition layer while the retention layer collapses underneath them. Strong O + weak E is a leaky bucket. Fix E-Delivered first. Then E-Accrued. Then referral.
   </div>
 </section>
@@ -1317,8 +1408,8 @@
     <div class="pole-card yellow">
       <div class="pole-letter">E</div>
       <div class="pole-name">Retention Arc</div>
-      <div class="pole-desc">E-Delivered (per session, replicable) then E-Accrued (irreplaceable moat). 5-step ladder. Cut Metric Features. Referral at Stage 8.</div>
-      <div class="pole-failure">Failure: Metric Features dominate. E-Accrued invisible. E before E-Delivered.</div>
+      <div class="pole-desc">E-Delivered (per session, replicable) then E-Accrued (irreplaceable moat). 5-step ladder. Cut features that don't trace to P. Referral at Stage 8.</div>
+      <div class="pole-failure">Failure: E-Accrued invisible. E before E-Delivered.</div>
     </div>
   </div>
 
@@ -1413,7 +1504,7 @@
       <li>Set the Functional VP floor for each component.</li>
       <li>Name the load-bearing Experience VP dimension. Which one addresses the obstacle thesis?</li>
       <li>Identify the E-Accrued layer. What does the user build that they cannot export or transfer?</li>
-      <li>Apply Step 5 to your three highest-engagement features. Can each be traced to Step 1 in two steps? Features that fail are Metric Features. Cut them.</li>
+      <li>Apply Step 5 to your three highest-engagement features. Can each be traced to Step 1 in two steps? Features that cannot should be cut.</li>
     </ol>
   </div>
 
