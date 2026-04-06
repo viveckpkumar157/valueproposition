@@ -23,41 +23,41 @@ a{color:inherit;text-decoration:none;}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(17,19,24,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(107,122,30,0.3);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:56px;}
-.nav-logo{font-family:Georgia,serif;font-size:15px;font-weight:bold;color:var(--white);letter-spacing:0.5px;}
+.nav-logo{font-family:Georgia,serif;font-size:18px;font-weight:bold;color:var(--white);letter-spacing:0.5px;}
 .nav-logo span{color:var(--gold);}
 .nav-links{display:flex;gap:28px;align-items:center;}
-.nav-links a{color:#aaa;font-size:13px;transition:color 0.2s;}
+.nav-links a{color:#aaa;font-size:18px;transition:color 0.2s;}
 .nav-links a:hover{color:var(--gold);}
-.nav-cta{background:var(--olive);color:var(--white)!important;padding:7px 18px;border-radius:2px;font-size:13px;font-weight:bold;transition:background 0.2s;}
+.nav-cta{background:var(--olive);color:var(--white)!important;padding:7px 18px;border-radius:2px;font-size:18px;font-weight:bold;transition:background 0.2s;}
 .nav-cta:hover{background:#7d8e23!important;}
 
 /* HERO */
 .hero{min-height:100vh;background:var(--dark);display:flex;flex-direction:column;justify-content:center;padding:100px 60px 80px;position:relative;overflow:hidden;border-left:6px solid var(--olive);}
 .hero::before{content:'';position:absolute;top:0;right:0;width:40%;height:100%;background:linear-gradient(135deg,transparent 0%,rgba(107,122,30,0.06) 100%);}
-.hero-eyebrow{font-size:11px;font-weight:bold;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:20px;}
+.hero-eyebrow{font-size:13px;font-weight:bold;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:20px;}
 .hero-headline{font-family:Georgia,serif;font-size:clamp(2.2em,4vw,3.6em);color:var(--white);line-height:1.1;max-width:780px;margin-bottom:24px;}
 .hero-headline .strike{text-decoration:line-through;color:#555;font-style:italic;}
-.hero-sub{font-size:1.1em;color:#aaa;max-width:600px;margin-bottom:12px;line-height:1.7;}
-.hero-tension{font-size:1em;color:var(--gold);font-style:italic;margin-bottom:40px;max-width:600px;}
+.hero-sub{font-size:1.2em;color:#aaa;max-width:600px;margin-bottom:12px;line-height:1.7;}
+.hero-tension{font-size:1.2em;color:var(--gold);font-style:italic;margin-bottom:40px;max-width:600px;}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:60px;}
-.btn-primary{background:var(--olive);color:var(--white);padding:14px 28px;font-size:14px;font-weight:bold;border-radius:2px;transition:background 0.2s;display:inline-block;}
+.btn-primary{background:var(--olive);color:var(--white);padding:14px 28px;font-size:18px;font-weight:bold;border-radius:2px;transition:background 0.2s;display:inline-block;}
 .btn-primary:hover{background:#7d8e23;}
-.btn-secondary{border:1px solid #444;color:#ccc;padding:14px 28px;font-size:14px;border-radius:2px;transition:all 0.2s;display:inline-block;}
+.btn-secondary{border:1px solid #444;color:#ccc;padding:14px 28px;font-size:18px;border-radius:2px;transition:all 0.2s;display:inline-block;}
 .btn-secondary:hover{border-color:var(--gold);color:var(--gold);}
 .hero-proof{display:flex;gap:32px;flex-wrap:wrap;align-items:center;}
-.proof-label{font-size:11px;color:#555;letter-spacing:1px;text-transform:uppercase;}
+.proof-label{font-size:13px;color:#555;letter-spacing:1px;text-transform:uppercase;}
 .proof-companies{display:flex;gap:24px;flex-wrap:wrap;}
-.proof-co{font-size:13px;color:#666;font-weight:bold;letter-spacing:0.5px;}
+.proof-co{font-size:18px;color:#666;font-weight:bold;letter-spacing:0.5px;}
 
 /* TENSION STRIP */
-.tension-strip{background:var(--red);color:var(--white);padding:18px 60px;font-size:15px;font-weight:bold;text-align:center;letter-spacing:0.3px;}
+.tension-strip{background:var(--red);color:var(--white);padding:18px 60px;font-size:18px;font-weight:bold;text-align:center;letter-spacing:0.3px;}
 .tension-strip span{color:rgba(255,255,255,0.7);font-weight:normal;}
 
 /* SECTIONS */
 .section{padding:80px 60px;max-width:1000px;margin:0 auto;}
-.section-label{font-size:11px;font-weight:bold;color:var(--olive);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;}
+.section-label{font-size:13px;font-weight:bold;color:var(--olive);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;}
 .section-title{font-family:Georgia,serif;font-size:clamp(1.8em,3vw,2.6em);color:var(--dark);margin-bottom:16px;line-height:1.2;}
-.section-sub{font-size:1em;color:var(--muted);max-width:640px;margin-bottom:40px;line-height:1.7;}
+.section-sub{font-size:1.2em;color:var(--muted);max-width:640px;margin-bottom:40px;line-height:1.7;}
 
 /* ENEMY SECTION */
 .enemy-section{background:var(--dark);padding:80px 60px;border-left:6px solid var(--red);}
@@ -66,10 +66,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(17,19,24,0.9
 .enemy-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;max-width:800px;margin:32px 0;}
 .enemy-card{padding:20px 24px;}
 .enemy-wrong{background:#1a0d0d;border-top:3px solid var(--red);}
-.enemy-wrong-label{font-size:11px;font-weight:bold;color:var(--red);letter-spacing:1px;margin-bottom:10px;text-transform:uppercase;}
+.enemy-wrong-label{font-size:13px;font-weight:bold;color:var(--red);letter-spacing:1px;margin-bottom:10px;text-transform:uppercase;}
 .enemy-right{background:#0d1a0d;border-top:3px solid var(--green);}
-.enemy-right-label{font-size:11px;font-weight:bold;color:var(--green);letter-spacing:1px;margin-bottom:10px;text-transform:uppercase;}
-.enemy-item{font-size:14px;color:#ccc;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.05);}
+.enemy-right-label{font-size:13px;font-weight:bold;color:var(--green);letter-spacing:1px;margin-bottom:10px;text-transform:uppercase;}
+.enemy-item{font-size:18px;color:#ccc;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.05);}
 .enemy-item:last-child{border-bottom:none;}
 
 /* BELT+POLE VISUAL */
@@ -78,81 +78,81 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(17,19,24,0.9
 .belt-block{border-radius:2px;overflow:hidden;}
 .belt-header{padding:16px;text-align:center;}
 .belt-letter-big{font-family:Georgia,serif;font-size:3em;font-weight:bold;color:var(--white);display:block;line-height:1;}
-.belt-name-sm{font-size:10px;color:rgba(255,255,255,0.75);margin-top:4px;letter-spacing:0.5px;}
-.belt-body{padding:14px 16px;font-size:13px;line-height:1.5;}
-.belt-question{font-weight:bold;margin-bottom:6px;font-size:12px;}
-.belt-signal{font-size:12px;color:var(--muted);font-style:italic;}
+.belt-name-sm{font-size:12px;color:rgba(255,255,255,0.75);margin-top:4px;letter-spacing:0.5px;}
+.belt-body{padding:14px 16px;font-size:18px;line-height:1.5;}
+.belt-question{font-weight:bold;margin-bottom:6px;font-size:13px;}
+.belt-signal{font-size:15px;color:var(--muted);font-style:italic;}
 
 .pole-visual{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin:32px 0;max-width:880px;}
 .pole-block{border-radius:2px;overflow:hidden;}
 .pole-header{padding:16px;text-align:center;}
 .pole-letter-big{font-family:Georgia,serif;font-size:3em;font-weight:bold;color:var(--white);line-height:1;}
-.pole-tagline{font-size:10px;color:rgba(255,255,255,0.75);margin-top:4px;}
-.pole-body{padding:14px 16px;font-size:13px;line-height:1.5;}
+.pole-tagline{font-size:12px;color:rgba(255,255,255,0.75);margin-top:4px;}
+.pole-body{padding:14px 16px;font-size:18px;line-height:1.5;}
 
 /* TEARDOWN */
 .teardown-section{background:var(--white);padding:80px 60px;border-top:4px solid var(--olive);}
-.teardown-badge{display:inline-block;background:var(--olive);color:var(--white);font-size:11px;font-weight:bold;padding:4px 12px;letter-spacing:1px;margin-bottom:20px;text-transform:uppercase;}
+.teardown-badge{display:inline-block;background:var(--olive);color:var(--white);font-size:13px;font-weight:bold;padding:4px 12px;letter-spacing:1px;margin-bottom:20px;text-transform:uppercase;}
 .teardown-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin:32px 0;}
 .teardown-col{}
-.teardown-col-label{font-size:11px;font-weight:bold;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid;}
+.teardown-col-label{font-size:13px;font-weight:bold;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid;}
 .teardown-col-label.wrong{color:var(--red);border-color:var(--red);}
 .teardown-col-label.right{color:var(--green);border-color:var(--green);}
 .teardown-row{padding:12px 0;border-bottom:1px solid #eee;display:grid;grid-template-columns:56px 1fr;gap:12px;align-items:start;}
 .teardown-row:last-child{border-bottom:none;}
-.pole-badge{width:36px;height:36px;border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-size:16px;font-weight:bold;color:var(--white);flex-shrink:0;}
-.teardown-text{font-size:14px;line-height:1.5;}
+.pole-badge{width:36px;height:36px;border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-size:18px;font-weight:bold;color:var(--white);flex-shrink:0;}
+.teardown-text{font-size:18px;line-height:1.5;}
 .teardown-text.wrong-text{color:var(--red);font-style:italic;}
 .teardown-text.right-text{color:var(--dark);}
 .teardown-impact{background:var(--dark);padding:20px 24px;margin-top:32px;border-radius:2px;}
-.teardown-impact-label{font-size:11px;color:var(--gold);font-weight:bold;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
-.teardown-impact-text{color:var(--white);font-size:15px;line-height:1.6;}
+.teardown-impact-label{font-size:13px;color:var(--gold);font-weight:bold;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
+.teardown-impact-text{color:var(--white);font-size:18px;line-height:1.6;}
 
 /* WHO IT'S FOR */
 .for-section{background:var(--navy);padding:80px 60px;}
 .for-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;max-width:800px;margin:32px 0;}
 .for-card{padding:24px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);}
-.for-card-title{font-size:15px;font-weight:bold;color:var(--white);margin-bottom:8px;}
-.for-card-text{font-size:13px;color:#888;line-height:1.6;}
+.for-card-title{font-size:18px;font-weight:bold;color:var(--white);margin-bottom:8px;}
+.for-card-text{font-size:18px;color:#888;line-height:1.6;}
 .not-for{background:rgba(192,57,43,0.08);border-color:rgba(192,57,43,0.2);}
 .not-for .for-card-title{color:#e88;}
 
 /* CTA SECTION */
 .cta-section{background:var(--olive);padding:80px 60px;text-align:center;}
 .cta-title{font-family:Georgia,serif;font-size:2.4em;color:var(--white);margin-bottom:16px;line-height:1.2;}
-.cta-sub{font-size:1em;color:rgba(255,255,255,0.8);max-width:560px;margin:0 auto 36px;}
+.cta-sub{font-size:1.2em;color:rgba(255,255,255,0.8);max-width:560px;margin:0 auto 36px;}
 .cta-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-.cta-btn-primary{background:var(--dark);color:var(--white);padding:16px 32px;font-size:15px;font-weight:bold;border-radius:2px;display:inline-block;transition:background 0.2s;}
+.cta-btn-primary{background:var(--dark);color:var(--white);padding:16px 32px;font-size:18px;font-weight:bold;border-radius:2px;display:inline-block;transition:background 0.2s;}
 .cta-btn-primary:hover{background:#1e2228;}
-.cta-btn-secondary{background:transparent;color:var(--white);padding:16px 32px;font-size:15px;border:2px solid rgba(255,255,255,0.4);border-radius:2px;display:inline-block;transition:all 0.2s;}
+.cta-btn-secondary{background:transparent;color:var(--white);padding:16px 32px;font-size:18px;border:2px solid rgba(255,255,255,0.4);border-radius:2px;display:inline-block;transition:all 0.2s;}
 .cta-btn-secondary:hover{border-color:var(--white);}
 
 /* FOOTER */
 footer{background:var(--dark);padding:32px 60px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;border-top:1px solid #222;}
-.footer-left{font-size:13px;color:#555;}
+.footer-left{font-size:18px;color:#555;}
 .footer-right{display:flex;gap:24px;}
-.footer-right a{font-size:13px;color:#555;transition:color 0.2s;}
+.footer-right a{font-size:18px;color:#555;transition:color 0.2s;}
 .footer-right a:hover{color:var(--gold);}
 
 /* ABOUT STRIP */
 .about-strip{background:#F0EEE8;padding:48px 60px;display:flex;gap:40px;align-items:flex-start;max-width:1000px;margin:0 auto;border-top:1px solid #E0DDD6;}
 .about-avatar{width:64px;height:64px;border-radius:50%;background:var(--olive);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-size:24px;font-weight:bold;color:var(--white);}
 .about-text{}
-.about-name{font-weight:bold;font-size:15px;color:var(--dark);margin-bottom:4px;}
-.about-bio{font-size:13px;color:var(--muted);line-height:1.6;max-width:600px;}
+.about-name{font-weight:bold;font-size:18px;color:var(--dark);margin-bottom:4px;}
+.about-bio{font-size:18px;color:var(--muted);line-height:1.6;max-width:600px;}
 .about-links{display:flex;gap:16px;margin-top:10px;}
-.about-links a{font-size:12px;color:var(--olive);font-weight:bold;border-bottom:1px solid var(--olive-pale);}
+.about-links a{font-size:13px;color:var(--olive);font-weight:bold;border-bottom:1px solid var(--olive-pale);}
 
 /* STAT BAR */
 .stat-bar{background:var(--dark);border-top:1px solid #1e2228;padding:32px 60px;display:flex;gap:48px;justify-content:center;flex-wrap:wrap;}
 .stat-item{text-align:center;}
 .stat-num{font-family:Georgia,serif;font-size:2em;font-weight:bold;color:var(--gold);}
-.stat-label{font-size:12px;color:#555;margin-top:4px;}
+.stat-label{font-size:13px;color:#555;margin-top:4px;}
 
 /* QUOTE BLOCK */
 .quote-section{padding:60px;background:var(--bg);border-left:6px solid var(--gold);}
 .big-quote{font-family:Georgia,serif;font-size:clamp(1.2em,2vw,1.7em);color:var(--dark);font-style:italic;max-width:720px;line-height:1.5;}
-.big-quote-source{font-size:13px;color:var(--muted);margin-top:16px;}
+.big-quote-source{font-size:18px;color:var(--muted);margin-top:16px;}
 
 @media(max-width:680px){
   .hero,.section,.framework-section,.teardown-section,.for-section,.cta-section,.enemy-section{padding-left:24px;padding-right:24px;}
@@ -184,7 +184,7 @@ footer{background:var(--dark);padding:32px 60px;display:flex;justify-content:spa
     Most products fail<br>not because they lack value.<br>
     Because they <span class="strike">design</span> it wrong.
   </h1>
-  <p class="hero-sub">A diagnostic and design system for product value propositions. Detect the failure mode in 15 minutes. Fix it before you ship another feature.</p>
+  <p class="hero-sub">A diagnostic and design system for product value propositions. Detect the failure mode before you ship another feature.</p>
   <p class="hero-tension">You already have the insight. You are optimising the wrong thing.</p>
   <div class="hero-ctas">
     <a href="book.html" class="btn-primary">Read the Full Framework</a>
@@ -239,7 +239,7 @@ footer{background:var(--dark);padding:32px 60px;display:flex;justify-content:spa
     </div>
   </div>
   <div style="margin-top:24px;padding:20px 24px;background:rgba(201,162,39,0.08);border-left:4px solid var(--gold);max-width:700px;">
-    <p style="color:var(--gold);font-size:15px;font-style:italic;line-height:1.6;">"Kingfisher had a tagline. IndiGo had a system. One competed on perception. The other competed on delivery. Only one is still flying."</p>
+    <p style="color:var(--gold);font-size:18px;font-style:italic;line-height:1.6;">"Kingfisher had a tagline. IndiGo had a system. One competed on perception. The other competed on delivery. Only one is still flying."</p>
   </div>
 </div>
 
@@ -250,7 +250,7 @@ footer{background:var(--dark);padding:32px 60px;display:flex;justify-content:spa
     <h2 class="section-title">Two parts. Eight questions. One system.</h2>
     <p class="section-sub">BELT diagnoses the problem before any design decision is made. POLE engineers four distinct value propositions, each doing a different job at a different moment.</p>
 
-    <p style="font-weight:bold;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;">Part One: BELT - Diagnosis</p>
+    <p style="font-weight:bold;font-size:18px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;">Part One: BELT - Diagnosis</p>
     <div class="belt-visual">
       <div class="belt-block">
         <div class="belt-header" style="background:#1A8C7A;">
@@ -259,7 +259,7 @@ footer{background:var(--dark);padding:32px 60px;display:flex;justify-content:spa
         </div>
         <div class="belt-body" style="background:var(--teal-pale);">
           <div class="belt-question">What are they doing despite friction?</div>
-          <div class="belt-signal">Find the workaround. Gate: is this uniquely underserved? Then score FUDU (Frequency &times; Ubiquity &times; Depth &times; Urgency).</div>
+          <div class="belt-signal">Find the workaround. Score FUDU. Gate: is this uniquely underserved?</div>
         </div>
       </div>
       <div class="belt-block">
@@ -269,7 +269,7 @@ footer{background:var(--dark);padding:32px 60px;display:flex;justify-content:spa
         </div>
         <div class="belt-body" style="background:var(--olive-pale);">
           <div class="belt-question">What outcome do they actually need?</div>
-          <div class="belt-signal">Life Change level, not Feature level. Use the So What? technique until the answer stops mentioning the product.</div>
+          <div class="belt-signal">Life Change level, not Feature level. Life Change level. Use the So What? technique.</div>
         </div>
       </div>
       <div class="belt-block">
@@ -279,7 +279,7 @@ footer{background:var(--dark);padding:32px 60px;display:flex;justify-content:spa
         </div>
         <div class="belt-body" style="background:var(--navy-pale);">
           <div class="belt-question">Why have they not switched?</div>
-          <div class="belt-signal">Switching Cost / Search Cost / Inertia. Each requires a different liberation. Generic ease of use is not L.</div>
+          <div class="belt-signal">Switching Cost / Search Cost / Inertia. Each requires different liberation.</div>
         </div>
       </div>
       <div class="belt-block">
@@ -289,12 +289,12 @@ footer{background:var(--dark);padding:32px 60px;display:flex;justify-content:spa
         </div>
         <div class="belt-body" style="background:var(--amber-pale);">
           <div class="belt-question">Transient or Enabling?</div>
-          <div class="belt-signal">Does the 100th use deliver more value than the first? If no, depth value cannot form. Do not build E architecture on a Transient product.</div>
+          <div class="belt-signal">Does the 100th use deliver more value than the first? If no: Transient. Do not build E architecture on it.</div>
         </div>
       </div>
     </div>
 
-    <p style="font-weight:bold;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;margin-top:32px;">Part Two: POLE - Design</p>
+    <p style="font-weight:bold;font-size:18px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;margin-top:32px;">Part Two: POLE - Design</p>
     <div class="pole-visual">
       <div class="pole-block">
         <div class="pole-header" style="background:#6C3483;">
@@ -303,7 +303,7 @@ footer{background:var(--dark);padding:32px 60px;display:flex;justify-content:spa
         </div>
         <div class="pole-body" style="background:var(--purple-pale);">
           <div class="belt-question">The 12-month life change.</div>
-          <div class="belt-signal">Ongoing / Terminal / Intermittent. The north star every other element moves toward. HOW Audit before writing.</div>
+          <div class="belt-signal">Ongoing / Terminal / Intermittent. HOW Audit before writing.</div>
         </div>
       </div>
       <div class="pole-block">
@@ -313,7 +313,7 @@ footer{background:var(--dark);padding:32px 60px;display:flex;justify-content:spa
         </div>
         <div class="pole-body" style="background:var(--amber-pale);">
           <div class="belt-question">Breaks scepticism in session 1.</div>
-          <div class="belt-signal">Understandable before first use. Verifiable after. Derived from the obstacle thesis. If you cannot trace O to the obstacle thesis, it is a default, not a design.</div>
+          <div class="belt-signal">Understandable before first use. Verifiable after. Traces to the obstacle thesis.</div>
         </div>
       </div>
       <div class="pole-block">
@@ -323,7 +323,7 @@ footer{background:var(--dark);padding:32px 60px;display:flex;justify-content:spa
         </div>
         <div class="pole-body" style="background:var(--teal-pale);">
           <div class="belt-question">Removes the specific barrier.</div>
-          <div class="belt-signal">Traces to the BELT L diagnosis. Four O+L types: Convergence, Near-convergence, Sequential, Independent. Aim for convergence.</div>
+          <div class="belt-signal">Traces to the BELT L diagnosis. Four O+L types. Aim for convergence.</div>
         </div>
       </div>
       <div class="pole-block">
@@ -333,17 +333,17 @@ footer{background:var(--dark);padding:32px 60px;display:flex;justify-content:spa
         </div>
         <div class="pole-body" style="background:var(--olive-pale);">
           <div class="belt-question">Makes leaving costly.</div>
-          <div class="belt-signal">E-Delivered (per session) then E-Accrued (irreplaceable moat). The moat must be visible before the customer considers leaving.</div>
+          <div class="belt-signal">E-Delivered per session. E-Accrued across sessions — the irreplaceable moat.</div>
         </div>
       </div>
     </div>
 
     <div style="background:var(--dark);padding:20px 24px;margin-top:8px;border-radius:2px;display:flex;gap:24px;align-items:center;flex-wrap:wrap;">
       <div style="flex:1;min-width:240px;">
-        <div style="font-size:11px;color:var(--gold);font-weight:bold;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;">The key principle</div>
-        <div style="color:var(--white);font-size:15px;line-height:1.5;">Your product does not have one value proposition. It has four. Each one does a different job. Designing only one and hoping the others follow is why most products plateau.</div>
+        <div style="font-size:13px;color:var(--gold);font-weight:bold;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;">The key principle</div>
+        <div style="color:var(--white);font-size:18px;line-height:1.5;">Your product does not have one value proposition. It has four. Each does a different job.</div>
       </div>
-      <a href="https://www.linkedin.com/in/consumerproductleader/" target="_blank" style="background:var(--olive);color:var(--white);padding:12px 24px;font-size:13px;font-weight:bold;border-radius:2px;white-space:nowrap;">Discuss with Vivek</a>
+      <a href="https://www.linkedin.com/in/consumerproductleader/" target="_blank" style="background:var(--olive);color:var(--white);padding:12px 24px;font-size:18px;font-weight:bold;border-radius:2px;white-space:nowrap;">Discuss with Vivek</a>
     </div>
   </div>
 </div>
@@ -364,15 +364,15 @@ footer{background:var(--dark);padding:32px 60px;display:flex;justify-content:spa
         </div>
         <div class="teardown-row">
           <div class="pole-badge" style="background:#B7770D;">O</div>
-          <div class="teardown-text wrong-text">Calorie goal set in onboarding. First day under target confirms P. O fires for logging, not for understanding.</div>
+          <div class="teardown-text wrong-text">Calorie goal set in onboarding. O fires for logging, not for understanding.</div>
         </div>
         <div class="teardown-row">
           <div class="pole-badge" style="background:#1A8C7A;">L</div>
-          <div class="teardown-text wrong-text">Onboarding requires a calorie target and weight goal before any value is felt. Barrier is Inertia - this is exactly the wrong design.</div>
+          <div class="teardown-text wrong-text">Requires calorie target and weight goal before any value is felt. Barrier is Inertia — exactly the wrong design.</div>
         </div>
         <div class="teardown-row">
           <div class="pole-badge" style="background:#6B7A1E;">E</div>
-          <div class="teardown-text wrong-text">Streak badge, daily reminder, barcode scanner. All optimise logging frequency. None produce the outcome the user came for.</div>
+          <div class="teardown-text wrong-text">Streak badge, daily reminder, barcode scanner. All optimise logging. None produce the outcome the user came for.</div>
         </div>
       </div>
       <div class="teardown-col">
@@ -398,13 +398,13 @@ footer{background:var(--dark);padding:32px 60px;display:flex;justify-content:spa
 
     <div class="teardown-impact">
       <div class="teardown-impact-label">The commercial gap this reveals</div>
-      <div class="teardown-impact-text">Noom charged $60 per month for the insight layer MyFitnessPal left on the table. The data was always there. The obstacle thesis was wrong: the barrier was not "I need better tracking tools" - it was "I eat in ways I do not understand." One sentence change to P. Everything downstream follows. Noom built a $600 million business on the gap.</div>
+      <div class="teardown-impact-text">Noom charged $60/month for the insight layer MFP left on the table. One sentence change to P. Everything downstream follows. Noom built a $600 million business on the gap.</div>
     </div>
 
     <div style="margin-top:32px;padding:20px 0;border-top:1px solid #eee;">
-      <p style="font-size:14px;color:var(--muted);">This is what the framework does in 15 minutes with any product you know. The gap is almost always visible once you ask the right four questions.</p>
-      <a href="book.html" style="display:inline-block;margin-top:16px;background:var(--olive);color:var(--white);padding:12px 24px;font-size:13px;font-weight:bold;border-radius:2px;">Read the Full Framework</a>
-      <a href="https://www.linkedin.com/in/consumerproductleader/" target="_blank" style="display:inline-block;margin-top:16px;margin-left:12px;background:transparent;color:var(--olive);padding:12px 24px;font-size:13px;font-weight:bold;border-radius:2px;border:1px solid var(--olive);">Run this with Vivek</a>
+      <p style="font-size:18px;color:var(--muted);">This is what the framework does in 15 minutes with any product you know.</p>
+      <a href="book.html" style="display:inline-block;margin-top:16px;background:var(--olive);color:var(--white);padding:12px 24px;font-size:18px;font-weight:bold;border-radius:2px;">Read the Full Framework</a>
+      <a href="https://www.linkedin.com/in/consumerproductleader/" target="_blank" style="display:inline-block;margin-top:16px;margin-left:12px;background:transparent;color:var(--olive);padding:12px 24px;font-size:18px;font-weight:bold;border-radius:2px;border:1px solid var(--olive);">Run this with Vivek</a>
     </div>
   </div>
 </div>
@@ -413,11 +413,11 @@ footer{background:var(--dark);padding:32px 60px;display:flex;justify-content:spa
 <div style="background:#F0EEE8;border-top:1px solid #E0DDD6;border-bottom:1px solid #E0DDD6;padding:40px 60px;">
   <div style="max-width:880px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;">
     <div>
-      <div style="font-size:11px;font-weight:bold;color:var(--olive);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">The Complete Framework</div>
+      <div style="font-size:13px;font-weight:bold;color:var(--olive);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">The Complete Framework</div>
       <div style="font-family:Georgia,serif;font-size:1.6em;color:var(--dark);margin-bottom:8px;">The Anatomy of Value Propositions</div>
-      <div style="font-size:14px;color:var(--muted);">14 chapters. 6 case studies. 13 exercises. Quick reference. Fully free.</div>
+      <div style="font-size:18px;color:var(--muted);">14 chapters. 6 case studies. 13 exercises. Quick reference. Fully free.</div>
     </div>
-    <a href="book.html" style="background:var(--olive);color:var(--white);padding:14px 28px;font-size:14px;font-weight:bold;border-radius:2px;white-space:nowrap;display:inline-block;">Read the Book</a>
+    <a href="book.html" style="background:var(--olive);color:var(--white);padding:14px 28px;font-size:18px;font-weight:bold;border-radius:2px;white-space:nowrap;display:inline-block;">Read the Book</a>
   </div>
 </div>
 
@@ -439,18 +439,17 @@ footer{background:var(--dark);padding:32px 60px;display:flex;justify-content:spa
       <div class="for-card">
         <div class="for-card-title">This is for you if</div>
         <div class="for-card-text" style="color:#aaa;">
-          You are a PM or product leader working on a product that solves a recurring problem.<br><br>
+          You are a PM or product leader building a product that solves a recurring problem.<br><br>
           You have shipped features that drove engagement but did not move retention.<br><br>
-          You suspect your P is at feature level but have not been able to name what it should be instead.<br><br>
-          You are building in fintech, productivity, health, professional tools, or marketplaces.
+          You are building in fintech, productivity, health, or professional tools.
         </div>
       </div>
       <div class="for-card not-for">
         <div class="for-card-title">This is not for you if</div>
         <div class="for-card-text" style="color:#888;">
-          You are building a pure entertainment product. Netflix, TikTok, and Instagram have a different value architecture. This framework will give you the wrong answers.<br><br>
-          You want a framework that tells you what features to ship. This tells you whether the problem is right before you ship anything.<br><br>
-          You want a shortcut. There is no shortcut. The diagnosis takes time. The design takes rigor.
+          You are building a pure entertainment product — this framework will give you the wrong answers.<br><br>
+          You want a framework that tells you what features to ship.<br><br>
+          You want a shortcut. There is no shortcut.
         </div>
       </div>
     </div>
