@@ -255,6 +255,25 @@
   .job-question { font-size: 0.95rem; color: var(--gray60); font-style: italic; margin-bottom: 0.5rem; }
   .job-pole { font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em; color: var(--teal); }
 
+  /* DIAGNOSTIC TREES */
+  .diag-tree { margin: 2rem 0; font-family: 'Helvetica Neue', sans-serif; }
+  .diag-tree-title { font-size: 0.7rem; font-weight: bold; letter-spacing: 0.15em; text-transform: uppercase; color: var(--yellow); background: var(--black); display: inline-block; padding: 0.2rem 0.6rem; margin-bottom: 1rem; }
+  .diag-node { display: flex; align-items: flex-start; gap: 0; margin-bottom: 0; }
+  .diag-branch { display: flex; flex-direction: column; }
+  .diag-question { background: var(--gray95); border: 1px solid var(--gray80); padding: 0.7rem 1rem; font-size: 0.95rem; font-weight: bold; display: inline-block; }
+  .diag-answers { display: flex; gap: 0; margin-top: 0; }
+  .diag-answer { display: flex; flex-direction: column; flex: 1; }
+  .diag-arrow { font-size: 0.8rem; color: var(--gray60); padding: 0.3rem 1rem; border-left: 1px solid var(--gray80); margin-left: 1rem; }
+  .diag-result { padding: 0.6rem 0.9rem; font-size: 0.88rem; margin: 0.3rem 0 0.3rem 1rem; border-left: 3px solid var(--teal); background: #d6f0e9; }
+  .diag-result.red { border-left-color: var(--red); background: #fdecea; }
+  .diag-result.yellow { border-left-color: #c8a000; background: #fef6b3; }
+  .diag-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem; }
+  .diag-cell { padding: 0.6rem 0.9rem; font-size: 0.88rem; border: 1px solid var(--gray80); }
+  .diag-cell.q { background: var(--black); color: var(--white); font-weight: bold; }
+  .diag-cell.yes { border-left: 3px solid var(--teal); background: #d6f0e9; }
+  .diag-cell.no { border-left: 3px solid var(--red); background: #fdecea; }
+  .diag-cell.warn { border-left: 3px solid #c8a000; background: #fef6b3; }
+
   /* FOUR JOBS CALLBACK */
   .four-jobs-callback { font-family: 'Helvetica Neue', sans-serif; font-size: 0.78rem; color: var(--gray60); letter-spacing: 0.04em; margin-top: -0.5rem; margin-bottom: 1.5rem; border-left: 2px solid var(--gray80); padding-left: 0.75rem; }
 
@@ -437,9 +456,31 @@
 
   <p>BELT is the diagnostic engine that tells you <em>which</em> version of each job your product must do, and for whom. POLE is the architecture for doing all four jobs deliberately, instead of doing one and hoping the rest follow.</p>
 
-  <p>The four jobs are not equally achievable at the same time with the same resources. Every sprint spent compensating for a weak O is a sprint not spent deepening E. Every onboarding redesign triggered by low adoption is usually a symptom of wrong L, not weak product. The tension between the jobs is not a design problem to be solved. It is the signal that tells you where your weakest link actually is.</p>
+  <h2>The constraint</h2>
+  <p>The four jobs are not independent. They compete. You cannot optimise all four at the same time with the same resources. Every decision that strengthens one creates pressure somewhere else.</p>
 
-  <div class="pullquote">"Most products fail not because they lack value, but because they design it wrong. They treat four distinct jobs as one, write one message, and wonder why acquisition converts but retention collapses."</div>
+  <div class="callout">
+    <strong>When a job is not designed, it is compensated for.</strong><br><br>
+    Weak belief becomes an education problem.<br>
+    Weak switching becomes a feature problem.<br>
+    Weak outcome becomes a usage problem.<br>
+    Weak compounding becomes a re-engagement problem.<br><br>
+    The symptoms look different. The cause is the same. A job was not designed. It was compensated for.
+  </div>
+
+  <h2>The failure pattern</h2>
+  <p>Most products fail with one of these structures:</p>
+  <table>
+    <tr><th>Pattern</th><th>What it looks like</th></tr>
+    <tr><td>Strong belief, weak outcome</td><td>High acquisition, low retention. Users try and leave.</td></tr>
+    <tr><td>Strong outcome, weak switching</td><td>Admiration without adoption. People love the idea but don't switch.</td></tr>
+    <tr><td>Strong usage, weak compounding</td><td>Activity without value. People return but nothing builds.</td></tr>
+    <tr><td>Strong compounding, wrong outcome</td><td>A moat around nothing. Deep engagement with the wrong destination.</td></tr>
+  </table>
+
+  <p>The product looks healthy. Until it doesn't. The team responds by improving execution. The product improves. The system does not.</p>
+
+  <div class="pullquote">"Most products do not fail because they lack value. They fail because they assign the wrong job to the wrong moment — and then try to fix it with effort."</div>
 
   <p>Read the BELT section before writing a single POLE element. The quality of each job is entirely determined by the quality of your diagnosis. Skip the diagnosis and you are designing four architectures for the wrong customer.</p>
 </section>
@@ -450,17 +491,29 @@
   <h1>The Wrong Choice, Made Confidently</h1>
   <h4>Why most product failure is a value selection problem, not an execution problem</h4>
 
-  <p>In 2013, Robinhood launched with a clear thesis: young adults are not investing because commissions are too high. The team was not guessing. They had data. They had conviction. They removed the commission.</p>
+  <p>In 2013, Robinhood made a decision.</p>
 
-  <p>The product grew. And then a strange thing happened. Users signed up, explored, and left. Not because the product was badly built. Not because the team shipped too slowly. Because the barrier that kept young adults out of investing was never the $9.99 commission. It was the terror of not knowing what to buy. The problem was financial confidence, not financial access. Robinhood built a frictionless door into a room the customer was still afraid to enter.</p>
+  <p>Young adults are not investing because commissions are too high. Remove the commission. The market opens up.</p>
 
-  <p>This is not an execution failure. The engineering was good. The growth strategy was sound. The team worked hard and moved fast. The failure happened before a single line of code was written, in the moment the team chose which problem to solve and which value to build.</p>
+  <p>The logic was clean. The conviction was real. The execution was strong.</p>
+
+  <p>It was also wrong.</p>
+
+  <p>Users signed up. They explored. They left. Not because the product was badly built. Not because the team moved slowly. Because the problem was misdiagnosed.</p>
+
+  <p>The barrier was not cost. It was confidence. People were not avoiding markets because they could not afford to enter. They were avoiding them because they did not know what to do once inside. Robinhood removed the door fee. It did not remove the fear of the room.</p>
 
   <div class="pullquote">"Most products do not fail because teams build badly. They fail because teams choose the wrong value to build, and then execute that choice with complete confidence."</div>
 
-  <p>This is the failure mode nobody in the industry talks about clearly, because it is invisible until it is too late. A team that builds the wrong feature knows it quickly. A team that builds the wrong type of value proposition can spend years, and tens of millions, before the diagnosis becomes undeniable.</p>
+  <p>This is the failure mode nobody talks about clearly, because it is invisible until it is too late. A team that builds the wrong feature knows it quickly. A team that builds the wrong type of value proposition can spend years, and tens of millions, before the diagnosis becomes undeniable.</p>
 
-  <p>The root cause is almost always the same: single value proposition thinking. The assumption that one well-crafted statement, carefully worded, competitively tested, shipped everywhere, that can simultaneously explain why a customer should try your product, why they should stay, why switching is too costly, and what their life looks like after sustained use. It cannot. Each job requires its own architecture. Conflating them is how Robinhood happened. It is how most product failures happen.</p>
+  <p>Not poor execution. Not lack of effort. Not bad teams. A wrong decision, made early, made cleanly, made with confidence. Everything that followed was correct. And everything that followed made the product worse.</p>
+
+  <p>Execution does not fix a bad decision. It multiplies it. The better the team, the faster they build. The faster they build, the deeper they commit. The deeper they commit, the harder it becomes to see the mistake. By the time the signal appears — low retention, confused usage, stalled growth — the product is already shaped around the wrong idea.</p>
+
+  <p>The root cause is almost always the same: single value proposition thinking. The assumption that one well-crafted statement can simultaneously explain why a customer should try your product, why they should stay, why switching is too costly, and what their life looks like after sustained use. It cannot. Each job requires its own architecture. Conflating them is how Robinhood happened.</p>
+
+  <p>Every product has four value propositions. Each does a specific job. Each must be designed separately. Each can fail independently. If you design one and assume the others will follow, you will build a product that works — just enough — until it doesn't.</p>
 
   <div class="pullquote">"Your product does not have one value proposition. It has four. Each does a different job at a different moment. Designing one and ignoring the others is not a shortcut. It is a structural fault."</div>
 
@@ -480,7 +533,11 @@
   <h1>Where This Framework Applies</h1>
   <h4>Utility products, entertainment products, and the difference that determines everything</h4>
 
-  <p>Before running any BELT diagnostic, answer one question: is this a utility product or an entertainment product? The answer determines whether the framework applies, how it applies, and where its limits are.</p>
+  <p>Before you use this framework, answer one question.</p>
+
+  <p>What kind of product is this?</p>
+
+  <p>If you get this wrong, everything that follows will look correct — and fail in practice. This is not a warm-up question. It is a gate. The answer determines whether the framework applies, how it applies, and where its limits are.</p>
 
   <h2>The Core Distinction</h2>
   <p>A <strong>utility product</strong> solves a specific, recurring problem. The customer uses it because it moves them toward a defined outcome they would pursue even without the product. The product is instrumental. Value is measured in progress.</p>
@@ -506,6 +563,14 @@
   <h3>The Entertainment Trap</h3>
   <p>Many product teams build utility products but measure them like entertainment products, maximising session length, daily active users, and content consumption. When utility products optimise for engagement rather than outcome progress, they design features that move a metric without advancing P-state. Calm's streak is the most cited example: it optimises sessions opened, not felt calm. The metric is entertainment-native. The product is utility.</p>
 
+  <p>The opposite failure exists too. Some teams build entertainment products and force utility logic onto them. They define outcomes that do not exist. They build tracking where no progress is required. They search for compounding where none can form. The product becomes heavier without becoming better.</p>
+
+  <p>If the customer is not trying to get somewhere, you are not building a utility product. And this framework will not save you.</p>
+
+  <div class="callout">
+    <strong>The strategic implication of getting this wrong:</strong> If your product does not create progress, you cannot build compounding value. If you cannot build compounding value, you cannot create a moat through use. If you cannot create a moat, you are competing on attention. And attention is rented.
+  </div>
+
   <h3>Four Diagnostic Questions Before You Begin</h3>
   <ol>
     <li><strong>Can a loyal customer name a specific outcome?</strong> Not "I enjoy it": a specific destination. If yes: utility framing is valid.</li>
@@ -522,17 +587,30 @@
   <p class="four-jobs-callback">Diagnosis determines all four jobs.</p>
   <p>Most product failures are not execution failures. They are diagnosis failures.</p>
 
-  <p>In 2013, Robinhood launched with a founding thesis that would shape every product decision for the next decade: young adults are not investing because commissions are too high. Remove the commission. The market opens up. Problem solved.</p>
-  <p>The thesis was plausible. It was logical. It was wrong.</p>
-  <p>Young adults were not staying out of financial markets because of $9.99 commissions. They were staying out because they did not know what to buy and were terrified of making the wrong decision. The barrier was financial confidence, not financial access. These are different problems. They require different products.</p>
+  <p>In 2013, Robinhood made a decision. Young adults are not investing because commissions are too high. Remove the commission. The market opens up.</p>
+
+  <p>The logic was sound. The data supported it. The team executed well. The decision was wrong.</p>
+
+  <p>Users signed up. They explored. They left. Not because the product was badly built. Not because the team moved slowly. Because the barrier was misidentified. The problem was not cost. It was confidence. People were not staying out of markets because they could not afford to enter. They were staying out because they did not know what to do once inside.</p>
+
+  <p>Robinhood removed friction. It did not remove uncertainty.</p>
 
   <div class="pullquote">"When the obstacle thesis is wrong, every feature built on it is wrong, regardless of execution quality. The wrong diagnosis is not a small mistake. It is the entire architecture."</div>
 
-  <p>The Robinhood team did not lack data. They lacked a system for asking whether the data was answering the right question. This is the failure mode BELT is designed to prevent: not bad work, but brilliant work aimed in the wrong direction.</p>
+  <p>This is where the failure happens. Before the roadmap. Before the features. Before the first line of code. At the moment the team decides what problem they are solving. If that decision is wrong, everything that follows is correct — and useless.</p>
 
-  <div class="pullquote">"Execution multiplies the quality of your decision. If the decision is wrong, execution just gets you there faster."</div>
+  <div class="pullquote">"Execution does not fix a bad diagnosis. It scales it."</div>
 
-  <p>The pattern has a name: single value proposition thinking. The assumption that one clear statement can simultaneously explain why a customer should try your product, why they should stay, why switching is too costly, and what their life looks like after sustained use. It cannot. Each job requires a separate architecture. Every product that treats one statement as sufficient is building on a structural fault that no amount of execution quality can correct.</p>
+  <p>The better the team, the faster they build. The faster they build, the deeper they commit. The deeper they commit, the harder it becomes to question the premise. By the time the signal appears — low retention, confused usage, stalled growth — the product is already shaped around the wrong idea. Most teams never see this clearly. Because they are not looking for it. They are trained to debug execution: improve onboarding, refine messaging, add features, increase acquisition. All reasonable. All downstream. The problem was upstream.</p>
+
+  <h2>The pattern</h2>
+  <p>Most failed products share the same structure:</p>
+  <div class="callout">
+    A plausible idea. Strong execution. Early traction. Gradual decay.<br><br>
+    The team responds by improving execution. The decay continues. Because the system is solving the wrong problem well.
+  </div>
+
+  <p>Product quality is not defined by how well you build. It is defined by how accurately you choose. BELT is the system for making that choice correctly. POLE is how you execute it once the choice is right. Get BELT wrong, and POLE becomes precision applied to the wrong problem. Get BELT right, and POLE becomes obvious.</p>
 
   <h2>BELT: Four Questions That Force the Right Diagnosis</h2>
   <table>
@@ -543,12 +621,25 @@
     <tr><td><strong>T</strong> — Transient or Enabling?</td><td>Whether depth value can form. Whether E architecture is possible.</td><td>E investment on Transient products. Moats that can never form.</td></tr>
   </table>
 
+  <div class="diag-tree">
+    <div class="diag-tree-title">BELT diagnostic flow</div>
+    <div class="diag-row"><div class="diag-cell q">B: Is there an existing workaround?</div><div class="diag-cell"></div></div>
+    <div class="diag-row"><div class="diag-cell yes">Yes — real demand exists. Describe the workaround concretely. Score FUDU.</div><div class="diag-cell no">No — stop. You have a hypothesis, not a problem. Do not proceed to E.</div></div>
+    <div class="diag-row"><div class="diag-cell q">E: Does the outcome persist beyond the product?</div><div class="diag-cell"></div></div>
+    <div class="diag-row"><div class="diag-cell yes">Yes — define P at Life Change level. Proceed to L.</div><div class="diag-cell no">No — rewrite at higher altitude. If the problem is transient, design for P-Salience only.</div></div>
+    <div class="diag-row"><div class="diag-cell q">L: What is keeping them in the current solution?</div><div class="diag-cell"></div></div>
+    <div class="diag-row"><div class="diag-cell yes">Switching Cost — design for migration and continuity.</div><div class="diag-cell warn">Search Cost — design for outcome before commitment.</div></div>
+    <div class="diag-row"><div class="diag-cell yes">Inertia — design for zero-commitment first step.</div><div class="diag-cell no">Cannot name it — stop. Generic onboarding will not fix an unidentified barrier.</div></div>
+    <div class="diag-row"><div class="diag-cell q">T: Does the hundredth use deliver more value than the first?</div><div class="diag-cell"></div></div>
+    <div class="diag-row"><div class="diag-cell yes">Enabling — build E architecture. Design accumulation from day one.</div><div class="diag-cell no">Transient — do not invest in retention systems. Compete on speed, convenience, reliability.</div></div>
+  </div>
+
   <div class="summary">
     <h3>Chapter Summary</h3>
     <strong>Robinhood:</strong> wrong obstacle thesis. Wrong E architecture. Wrong features. Regardless of execution quality.<br><br>
-    Most product failures are not execution failures. They are diagnosis failures. The team was answering the wrong question brilliantly.<br><br>
-    <strong>Single value proposition thinking</strong> is the structural fault. One statement cannot do four jobs. BELT forces the right diagnosis before any design decision is made. The sequence is non-negotiable.<br><br>
-    What follows BELT: the POLE architecture, which engineers four separate value propositions, one for each job the product must do. Diagnosis before design. Always.<br><br>
+    Most product failures are not execution failures. They are diagnosis failures. The team was answering the wrong question brilliantly. The better the team, the faster the wrong direction.<br><br>
+    <strong>BELT is not a framework for building.</strong> It is a system for preventing the wrong decision. It tells you what not to build. Four questions in sequence — each one eliminates a class of mistake.<br><br>
+    What follows BELT: POLE, which engineers four separate value propositions, one for each job the product must do. Get the diagnosis right, and the design becomes obvious.<br><br>
     Your best growth quarter may be the quarter you validated the wrong thesis at scale.
   </div>
 </section>
@@ -560,13 +651,17 @@
   <h4>What are they doing despite friction?</h4>
   <p class="four-jobs-callback">Confirms a job worth solving exists.</p>
 
-  <p>The most reliable signal of real demand is not a survey. It is a person who has already built their own solution to the problem you are trying to solve.</p>
+  <p>Before you define the problem, answer this: what is the customer already doing to solve it?</p>
 
-  <h2>The Bright Spot Method</h2>
-  <p>Before any product exists, some customers solve the problem themselves. They log food in Notes apps. They record Loom-like videos in Zoom and share the link. They build finance spreadsheets that track their portfolio in ways apps do not. These are bright spots.</p>
-  <p><strong>B asks:</strong> "What are they doing despite the friction of doing it manually?" The answer defines your most valuable early customer.</p>
+  <p>Not what they say. Not what they intend. What they actually do.</p>
+
+  <p>If nothing exists — no workaround, no behaviour, no repeated attempt — there is no problem worth building for. There is only interest. And interest does not convert.</p>
 
   <div class="pullquote">"Customers do not invent workarounds for problems they do not care about."</div>
+
+  <h2>The Bright Spot Method</h2>
+  <p>Every meaningful product begins the same way. A small group of customers is already doing the thing — despite the friction. They are slower than they want, using the wrong tools, stitching together systems, repeating effort. But they are doing it. These are your first customers. Not because they said they would use your product. Because they already built one.</p>
+  <p><strong>B asks:</strong> "What are they doing despite the friction of doing it manually?" The answer defines your most valuable early customer. Without B, you build for hypothetical users, stated preferences, imagined demand. It feels convincing. Until it meets reality.</p>
 
   <h3>Two Bright Spots in Practice</h3>
   <table>
@@ -629,6 +724,16 @@
     </div>
   </div>
 
+  <div class="diag-tree">
+    <div class="diag-tree-title">FUDU decision gate</div>
+    <div class="diag-row"><div class="diag-cell q">Gate: Is this problem uniquely underserved?</div><div class="diag-cell"></div></div>
+    <div class="diag-row"><div class="diag-cell yes">Yes — proceed to score FUDU dimensions.</div><div class="diag-cell no">No — you are entering a competition, not building a moat. Execution wins here, not architecture.</div></div>
+    <div class="diag-row"><div class="diag-cell q">Score: is combined FUDU above 18?</div><div class="diag-cell q">Is Frequency AND Depth both high (score 3)?</div></div>
+    <div class="diag-row"><div class="diag-cell yes">Yes — structural demand. Worth building for.</div><div class="diag-cell yes">Yes — potential Enabling product. Check T.</div></div>
+    <div class="diag-row"><div class="diag-cell warn">9–18 — real but narrow. Viable for a focused product. Not a platform.</div><div class="diag-cell no">No — Transient or shallow. Do not build E architecture. Compete on convenience.</div></div>
+    <div class="diag-row"><div class="diag-cell no">Below 9 — insufficient demand. Do not proceed. The problem will not sustain a product.</div><div class="diag-cell"></div></div>
+  </div>
+
   <div class="insight">
     <p><strong>FUDU summary for Calendly:</strong> Frequency: HIGH (multiple times per day). Ubiquity: HIGH (every professional who schedules meetings). Depth: HIGH (15–30 minutes wasted, credibility cost). Urgency: HIGH (the thread is live, the meeting is this week, cannot be deferred).<br><br>All four dimensions high. Worth building for.</p>
   </div>
@@ -652,7 +757,8 @@
     <strong>Bright spots</strong> are customers who solved the problem with a workaround. Most reliable signal of real demand.<br><br>
     <strong>Three interview questions.</strong> The third ("what would you lose?") is the most important.<br><br>
     <strong>FUDU gate:</strong> before scoring, confirm the problem is uniquely underserved. Then score Frequency x Ubiquity x Depth x Urgency.<br><br>
-    <strong>Non-obvious truth:</strong> user feedback over-indexes on transient pain. The problem that generates the loudest complaints is almost never the enduring problem worth solving. Listen to what customers do, not what they say.
+    <strong>Non-obvious truth:</strong> user feedback over-indexes on transient pain. The problem that generates the loudest complaints is almost never the enduring problem worth solving. Listen to what customers do, not what they say.<br><br>
+    <strong>The constraint:</strong> if the customer is not already doing something painful, they will not adopt something better. If there is no workaround, there is no product.
   </div>
 </section>
 
@@ -673,8 +779,12 @@
     <tr><td><strong>Life Change</strong></td><td>How the customer's life is different.</td><td>"Understand your body so tracking becomes unnecessary."</td></tr>
   </table>
 
+  <h2>The Product Removal Test</h2>
+  <p>Take your current value proposition. Remove the product from the description. What remains?</p>
+  <p>If nothing meaningful remains, you are describing a mechanism. Not a destination. If the value disappears with the product, you have not found the outcome. If the value remains after the product is removed, you are close to P.</p>
+
   <h2>The So What? Technique</h2>
-  <p>Most teams describe features when asked about P. The So What? technique forces escalation from feature level to life change level. Keep asking until the answer stops mentioning the product.</p>
+  <p>The So What? technique forces the same escalation systematically. Most teams describe features when asked about P. Keep asking "so what?" until the answer stops mentioning the product. That is where the destination lives.</p>
 
   <table>
     <tr><th>Loom: from feature claim to P</th><th>Level</th></tr>
@@ -719,20 +829,27 @@
     <strong>Three levels:</strong> Feature, Outcome, Life Change. P must be at Life Change level.<br><br>
     <strong>So What? technique:</strong> keep asking until the answer stops mentioning the product. That is P.<br><br>
     If P could appear in a feature list, it is at the wrong altitude.<br><br>
-    Transient vs Enduring: not all problems sustain motivation. E architecture only works for enduring problems. If your product is solving a transient problem, no retention investment will fix it. Only a different problem classification will.
+    Transient vs Enduring: not all problems sustain motivation. E architecture only works for enduring problems. If your product is solving a transient problem, no retention investment will fix it. Only a different problem classification will.<br><br>
+    <strong>The line:</strong> customers do not stay for what the product does. They stay for what their life becomes. If you cannot describe what their life becomes, you have not found P.
   </div>
 </section>
 
 <!-- CHAPTER 4 -->
 <section id="ch4" class="chapter">
   <div class="chapter-label">Part One — BELT &nbsp;|&nbsp; Chapter 4</div>
-  <h1>L — Lock-in</h1>
-  <h4>Why have they not switched?</h4>
+  <h1>L — Lock-in Discovery</h1>
+  <h4>Why have they not switched? What is the cost keeping them where they are?</h4>
   <p class="four-jobs-callback">Identifies the barrier blocking Job 2.</p>
 
-  <p>Every customer who has not yet adopted your product is paying some cost to stay where they are. L names that cost and removes it.</p>
+  <p>If your product is genuinely better, why isn't the customer already using it?</p>
+
+  <p>Most teams answer incorrectly. They say: they don't know about us, our onboarding is not smooth enough, we need better messaging. These are not causes. They are symptoms.</p>
+
+  <p>Customers do not stay with worse products by accident. They stay because leaving costs something. Until that cost is removed, no improvement matters. A better product does not win. A product wins when the cost of switching is lower than the cost of staying.</p>
 
   <div class="pullquote">"Customers do not switch when a better product exists. They switch when the cost of staying becomes visible."</div>
+
+  <p>Lock-in is not loyalty. It is not satisfaction. It is not preference. It is accumulated cost. That cost takes different forms. If you do not identify which form exists, you will remove the wrong barrier. And nothing will change.</p>
 
   <h2>Three Lock-in Types</h2>
   <div class="pole-grid">
@@ -787,6 +904,10 @@
     <tr><td><strong>Inertia</strong></td><td>Reduce the first step to near-zero. No commitment before value.</td><td>Onboarding requiring belief, goals, or commitment.</td></tr>
   </table>
 
+  <div class="warning">
+    <strong>Teams design onboarding when they should be removing lock-in.</strong> Onboarding explains the product. Lock-in prevents switching. These are different problems with different solutions. If adoption is low and feedback is positive, the barrier was never removed. The product improved. The customer did not switch.
+  </div>
+
   <div class="exercise">
     <h4>Exercise: Diagnosing Your Lock-in Type</h4>
     <ol>
@@ -806,12 +927,16 @@
 <section id="ch5" class="chapter">
   <div class="chapter-label">Part One — BELT &nbsp;|&nbsp; Chapter 5</div>
   <h1>T — Type</h1>
-  <h4>Transient or Enabling?</h4>
+  <h4>Transient or Enabling? Do they come back — and does it matter more each time?</h4>
   <p class="four-jobs-callback">Determines whether Job 4 can exist.</p>
 
-  <p>T is the most consequential question in the diagnostic. The answer determines whether an E architecture is possible at all.</p>
+  <p>Not every real problem is worth building a product for.</p>
+
+  <p>Some problems occur, get solved, and disappear. You can build for them. You cannot build on them. T is the most consequential question in the diagnostic because it determines the ceiling — not just whether E architecture is possible, but how far this product can go before you build it.</p>
 
   <div class="pullquote">"You cannot compound value in a problem that does not repeat."</div>
+
+  <p>The question is not just transient or enabling. It is: does solving this problem make the next use more valuable, or does it reset to zero? If it resets, you are building a transaction. If it compounds, you are building a system.</p>
 
   <table>
     <tr><th>Transient</th><th>Enabling</th></tr>
@@ -824,13 +949,28 @@
   <h3>The T Test</h3>
   <p>"If a customer stopped using the product for six months and came back, would the product know them? Would the 601st session feel different from the first?" If yes: Enabling. If no: Transient.</p>
 
+  <h3>What T determines downstream</h3>
+  <table>
+    <tr><th></th><th>Transient</th><th>Enabling</th></tr>
+    <tr><td><strong>E architecture</strong></td><td>Do not invest. Nothing can accumulate.</td><td>Design for accumulation from day one. Make progress visible.</td></tr>
+    <tr><td><strong>Retention strategy</strong></td><td>P-Salience: stay top of mind at the moment the problem recurs.</td><td>Switching cost: increase what is lost by leaving with each use.</td></tr>
+    <tr><td><strong>Moat type</strong></td><td>Speed, convenience, reliability, price.</td><td>Data, capability, structure, social — built through use.</td></tr>
+    <tr><td><strong>Growth model</strong></td><td>Re-acquisition at each problem recurrence. Referral at moment of use.</td><td>Compounding retention. Referral at Stage 8 when E-Accrued is visible.</td></tr>
+    <tr><td><strong>Wrong investment</strong></td><td>Personalisation, habit loops, loyalty mechanics — nothing to compound.</td><td>Competing on speed and price — the moat comes from use, not performance.</td></tr>
+  </table>
+
+  <div class="callout">
+    <strong>The common mistake:</strong> teams see repeated usage and assume compounding value. These are not the same. A customer can return often without building anything. A food delivery app may have daily usage — but nothing meaningful accumulates. No asset is built. No capability improves. No switching cost increases. Usage is not compounding. Repeated use is not the same as increasing value.
+  </div>
+
   <div class="warning">
     <strong>The cost of getting this wrong.</strong> Every month spent building compounding E architecture on a transient segment is a month the product deepens a moat that can never hold. The personalisation investment is real. The roadmap cost is real. The moat never forms because the problem does not recur with enough regularity for data to accumulate into something irreplaceable. The wise for tourists and the Wise for expats are not two points on the same spectrum. They are different products that temporarily share a UI. T forces that distinction before the investment is made, not after years of retention work that cannot possibly succeed.
   </div>
 
   <div class="summary">
     <h3>Chapter Summary</h3>
-    <strong>Enabling:</strong> the hundredth use is more valuable than the first. <strong>Transient:</strong> every session delivers the same value.<br><br>
+    <strong>T defines the ceiling.</strong> It tells you how far this product can go — before you build it.<br><br>
+    <strong>Enabling:</strong> the hundredth use is more valuable than the first. <strong>Transient:</strong> every session delivers the same value. Repeated use is not the same as increasing value.<br><br>
     Building E architecture on a Transient product is wasted investment. The moat cannot form where the problem does not recur.<br><br>
     <strong>Non-obvious truth:</strong> if your product is solving a transient problem, you do not have a retention problem. You have a diagnosis problem. No feature, no onboarding improvement, and no re-engagement campaign will fix it. The only fix is a different problem.
   </div>
@@ -842,6 +982,14 @@
   <h1>Segmentation</h1>
   <h4>The BELT definition</h4>
   <p class="four-jobs-callback">Defines which customer the four jobs apply to.</p>
+
+  <p>Most teams think they know their customer. They can describe age, industry, job title. They can name personas, cohorts, demographics.</p>
+
+  <p>None of this is segmentation.</p>
+
+  <p>Segmentation is not who the customer is. It is who experiences the problem in a way that cannot be ignored. If you build for the group, you build for the average. And the average does not adopt.</p>
+
+  <p>BELT defines the segment through the problem, not the person. A segment is a group with the same behaviour, the same desired outcome, the same barrier, and the same type of problem. If any of these differ, you are not looking at one segment. The pressure test: a real segment should make you uncomfortable, because it is narrow, because it excludes people, because it forces tradeoffs. If your segment feels safe, it is too broad.</p>
 
   <div class="pullquote">"Two customers belong to the same segment if they share the same enduring pain and the same lock-in type."</div>
 
@@ -860,10 +1008,13 @@
     <strong>BELT segmentation is not a marketing exercise. It is a product architecture decision.</strong> Two customers with different BELT profiles require different P, different O, different L, and different E. The product that tries to serve both with one architecture will serve neither well, and will blame execution, growth, or UX when the real problem is an undifferentiated design. Split before designing. Always.
   </div>
 
+  <div class="pullquote">"A segment that includes everyone who might benefit is not a segment. It is a market. Markets do not adopt. Segments do."</div>
+
   <div class="summary">
     <h3>Chapter Summary</h3>
     <strong>"Two customers are in the same segment if they share the same enduring pain and the same lock-in type."</strong><br><br>
     Same product, different segments, different designs. If BELT answers diverge within your candidate segment, you have two segments. Split before designing.<br><br>
+    Segmentation is the synthesis of B, E, L, and T. It answers: for whom is this system true? If you cannot answer that precisely, you cannot design POLE correctly.<br><br>
     BELT is now complete. What follows is POLE: the design architecture for each of the four jobs your product must do, built on the foundation the diagnosis just established.
   </div>
 </section>
@@ -876,7 +1027,15 @@
 
   <div class="pullquote">"POLE is not four parts. It is a chain. When one breaks, the others lose value."</div>
 
-  <p>BELT is complete. You have named the workaround, classified the problem type, identified the specific lock-in, determined whether depth value can form, and defined the segment. You now have four outputs. Each one is a direct input into POLE.</p>
+  <p>At this point, you have answers.</p>
+
+  <p>What the customer is already doing. What outcome they actually need. Why they have not already switched. Whether the problem can compound. Who experiences all of this in the same way.</p>
+
+  <p>This is enough to describe the problem. It is not enough to design the product.</p>
+
+  <p>Most teams make the same mistake here. They move directly from understanding to building. They start defining features, sketching flows, writing requirements. It feels like progress. It is not. Because the answers you now have do not describe what to build. They describe what must be true.</p>
+
+  <p>BELT does not produce a strategy. It produces the conditions under which all four jobs can be done correctly. Weak BELT means POLE is confident design in the wrong direction. Each BELT output is a direct input into POLE:</p>
 
   <table>
     <tr><th>BELT output</th><th>What it hands to POLE</th></tr>
@@ -886,15 +1045,15 @@
     <tr><td><strong>T — Transient or Enabling</strong></td><td>Whether E architecture is worth building. Transient: design for P-Salience. Enabling: invest in the compounding layer.</td></tr>
   </table>
 
-  <p>BELT does not produce a strategy. It produces the conditions under which all four jobs can be done correctly. Weak BELT means POLE is confident design in the wrong direction.</p>
-
   <div class="bridge-section">
     <h2>The quality of POLE is entirely determined by the quality of BELT.</h2>
     <p>A weak BELT produces confident POLE design in the wrong direction. Strong P articulation with a shallow obstacle thesis produces O that fires for the wrong belief. Correct lock-in type with a P still at Feature level produces L that removes the right barrier to the wrong destination. T misclassified as Enabling on a Transient problem produces E architecture that compounds toward a moat that can never hold.</p>
     <p>The designers of POLE who skip BELT are Robinhood. Brilliant work. Wrong direction. The diagnosis comes first because there is no other sequence that produces a correct design.</p>
   </div>
 
-  <p>The four POLE chapters that follow are not four separate topics. They are one connected architecture, designed in sequence, each element following directly from the BELT diagnosis you just completed. Read them as a system, because that is what they are.</p>
+  <p>The four POLE chapters that follow are not four separate topics. They are one connected architecture. Each element follows directly from the BELT diagnosis. Before entering each POLE chapter, ask: are we designing this job — or compensating for the failure of another?</p>
+
+  <div class="pullquote">"BELT tells you what must be true. POLE is how you make it true."</div>
 
   <div class="insight">
     <p>POLE is not four parts of a framework. It is four dependencies. When one fails, the others become less valuable. A weak P means O has no clear belief to break. O without correct L means you paid to bring someone to a door that is still locked. L without a working E means you cleared the barrier to a product that cannot sustain what it promised. The sequence is not stylistic. It is structural.</p>
@@ -912,9 +1071,25 @@
 
   <div class="pullquote">"Every weak POLE element shows up somewhere else as effort. Weak O becomes an education problem. Weak L becomes an onboarding problem. Weak E becomes a re-engagement problem. The symptoms look different. The cause is the same."</div>
 
-  <p>P follows directly from the E question in BELT. What outcome does the segment actually need? P is not a rephrasing of that question. It is the design-level answer: a precise statement of the life change that makes every other product decision evaluable. If P is right, O, L, and E have a target. If P is wrong, they have none.</p>
+  <p>Every product points somewhere. Most teams never name where.</p>
 
-  <p>P is not a tagline. It is the specific outcome the customer experiences after sustained use. It is the destination that every other POLE element is moving the customer toward.</p>
+  <p>They describe features, improvements, experiences. All of which are real. None of which answer the question: what is different if this works?</p>
+
+  <p>P is not what the product does. P is what the customer's world looks like after it works. If you remove the product from the description and the value remains, you have found P. If the value disappears with the product, you have not.</p>
+
+  <p>P is not a tagline. It is a design brief: a precise statement of the life change that makes every other product decision evaluable. If P is right, O, L, and E have a target. If P is wrong, they have none.</p>
+
+  <div class="callout">
+    <strong>The cascade:</strong> weak P does not just weaken P. It corrupts every element downstream. O cannot break the right belief if the destination is vague — it will break some belief, probably the wrong one. L cannot remove the right barrier if it is unclear what the customer is switching toward. E cannot compound toward the right outcome if the outcome was never defined. You will build a product that feels coherent, converts reasonably, and then slowly empties. Not because execution failed. Because the destination was wrong from the start.
+  </div>
+
+  <div class="diag-tree">
+    <div class="diag-tree-title">POLE weakest link: quick diagnostic</div>
+    <div class="diag-row"><div class="diag-cell q">Symptom: high acquisition, high churn</div><div class="diag-cell q">Symptom: low conversion despite positive feedback</div></div>
+    <div class="diag-row"><div class="diag-cell no">Root cause: weak P or weak E. Users arrive, believe, but have nothing to stay for.</div><div class="diag-cell no">Root cause: weak L. Belief was created. Switching cost was never removed.</div></div>
+    <div class="diag-row"><div class="diag-cell q">Symptom: strong usage, unstable retention</div><div class="diag-cell q">Symptom: slow growth despite deep retention</div></div>
+    <div class="diag-row"><div class="diag-cell no">Root cause: weak E. Usage without accumulation. Nothing lost when leaving.</div><div class="diag-cell no">Root cause: weak O. Product is powerful once inside. Belief does not form before first use.</div></div>
+  </div>
 
   <h2>Three Types of P</h2>
   <p>Not all north stars work the same way. Before writing P, classify which type your product produces. Each type requires a different E architecture and a different definition of success.</p>
@@ -1019,13 +1194,28 @@
   <h4>Understandable before first use. Verifiable after first use.</h4>
   <p class="four-jobs-callback">Designs Job 1 — belief.</p>
 
-  <p>O is the most underrated contribution in product thinking. Every team can tell you what their product does. Very few can tell you exactly which sceptical belief a new customer holds on arrival, and exactly which moment in session 1 breaks it. That gap is where most acquisition strategies fail: not in targeting, not in messaging, but in the absence of a designed belief-breaking moment.</p>
+  <p>Before a customer uses your product, they make a decision. Not to adopt. Not to pay. To believe.</p>
+
+  <p>If that decision is no, nothing else matters.</p>
+
+  <p>Teams think belief comes from explanation. So they describe features, list benefits, compare alternatives. They assume clarity creates belief. It doesn't. Customers do not evaluate products from first principles. They use shortcuts. They ask: have I seen something like this work before? Does this look like it will work for someone like me? What would have to be true for this to fail? If those questions are not resolved quickly, they leave.</p>
 
   <div class="pullquote">"If belief does not change in the first session, behaviour will not change in the second."</div>
 
+  <p>O is the most underrated contribution in product thinking. Every team can tell you what their product does. Very few can name the one dominant doubt a new customer holds on arrival — and which moment in session 1 removes it. That gap is where most acquisition strategies fail.</p>
+
   <p>O is the moment a new customer first believes that P is possible. It must fire in session 1. If it does not, the customer leaves before E can begin. Everything invested in E (the compounding layer, the moat, the data currency) is unreachable if O never fires. O is the gate everything else passes through.</p>
 
+  <div class="callout">
+    <strong>The tradeoff:</strong> if you optimise O without fixing L, you do not increase adoption. You increase curiosity. More people arrive at the door. The same proportion walk away. The acquisition number improves. The conversion number does not move. This is the most common misdiagnosis in growth work — mistaking O performance for adoption performance. O creates belief. L creates adoption. They are different jobs.
+  </div>
+
   <p>O is not just apparent before use. It breaks the specific sceptical belief the obstacle thesis identified. If you cannot trace O back to the obstacle thesis, your O is not designed. It is a default: a feature that happened to create a positive first impression, not an architecture that was built to break a specific barrier.</p>
+
+  <h2>The one doubt</h2>
+  <p>Every customer arrives with one dominant reason this will not work. Not many. One. If you do not identify it, you will explain everything and convince nothing. The test: ask "what would have to be true for this to fail?" The answer is your belief barrier. That is what O must remove. Not the positioning. Not the messaging. Not the features. The doubt.</p>
+
+  <p>Belief comes from evidence, not claims. Evidence can take different forms: demonstration, social proof, visible outcome, immediate experience. But all of them do one thing: they remove the dominant doubt. You do not need to prove everything. You need to remove one doubt. Trying to prove everything creates confusion. Removing one doubt creates belief.</p>
 
   <h2>O and the Obstacle Thesis</h2>
   <p>The obstacle thesis names the specific structural reason the customer has not already solved the problem. O must break exactly the belief that thesis identifies.</p>
@@ -1098,15 +1288,23 @@
 <!-- CHAPTER 9 -->
 <section id="ch9" class="chapter">
   <div class="chapter-label">Part Two — POLE &nbsp;|&nbsp; Chapter 9</div>
-  <h1>L — Liberation</h1>
+  <h1>L — Liberation Design</h1>
   <h4>Removes the old barrier. Enables adoption without rebuild.</h4>
   <p class="four-jobs-callback">Designs Job 2 — switching.</p>
 
   <p style="font-family:'Helvetica Neue',sans-serif;font-size:0.88rem;color:var(--gray60);background:var(--gray95);padding:0.6rem 1rem;border-left:2px solid var(--gray80);margin-bottom:1.5rem;">Note on naming: BELT uses L to name the lock-in type — the specific barrier keeping the segment out. POLE uses L for Liberation — the deliberate removal of that barrier. Same letter, two roles: one diagnoses, one designs. The BELT diagnosis tells you which liberation to build.</p>
 
-  <p>O created the belief that P is possible. L picks up where O stops. O is about breaking a belief. L is about removing the structural cost of acting on that belief. A customer can believe the product works and still not adopt it, because switching requires rebuilding something they have already invested in. L addresses that cost, precisely, based on the lock-in type BELT identified.</p>
+  <p>By the time a customer reaches your product, they have already decided not to use it. Not consciously. Not explicitly. But correctly. They have a specific reason. If that reason is still true, they will not switch.</p>
 
-  <p>L is not easy onboarding. It is the deliberate removal of the specific barrier keeping this segment out. Generic ease of use is not L.</p>
+  <p>BELT's L asked: why have they not already switched? POLE's L answers: what must be removed for them to switch now? If these two do not match, nothing will move.</p>
+
+  <p>O created the belief that P is possible. L picks up where O stops. O breaks a belief. L removes the structural cost of acting on that belief. A customer can believe the product works and still not adopt it — because switching requires protecting something they have already invested in. L removes that cost precisely.</p>
+
+  <p>Liberation is not guidance. It is removal. It removes the exact cost that kept the customer in their current state. Not gradually. Not eventually. Immediately. Generic ease of use is not L.</p>
+
+  <div class="callout">
+    <strong>The tradeoff:</strong> strong L without O removes the barrier before the customer believes crossing it is worth anything. You have made switching easy for someone who has not yet decided to switch. The friction is gone. The conviction is not there. This produces trials that do not convert — not because the product is bad, but because belief was not established before the barrier was removed. O and L must work in sequence or in convergence. L alone is a door with no reason to open it.
+  </div>
 
   <table>
     <tr><th>Lock-in type</th><th>What L must do</th><th>Example</th></tr>
@@ -1179,7 +1377,15 @@
 
   <div class="pullquote">"Retention is not a feature. It is a consequence of accumulated value."</div>
 
-  <p>E is not "the retention features." E is the architecture that ensures each session deposits value that did not exist before, until leaving means losing something irreplaceable.</p>
+  <p>A customer uses your product once. Then again. Then stops. Nothing broke. Nothing failed. Nothing was lost. That is the problem.</p>
+
+  <div class="callout">
+    <strong>The tradeoff:</strong> strong E with wrong P is a moat around nothing. You have built a system that compounds, that makes leaving costly, that creates genuine data accumulation — in service of a destination the customer never cared about enough. The retention numbers look reasonable. The renewal conversations are hard. The NPS is mediocre. Because the customer is locked in, not delighted. Lock-in without outcome is a tax, not a moat. Fix P before investing in E.
+  </div>
+
+  <p>Teams treat retention as a behaviour problem. They try to increase engagement, send reminders, build habits. They assume that if users return, retention will follow. It doesn't. Retention is not caused by usage. It is caused by value that remains. If nothing accumulates, each session starts from zero. And what starts from zero can be abandoned without loss.</p>
+
+  <p>E is the architecture that changes that equation: each session must deposit value that did not exist before, until leaving means losing something irreplaceable.</p>
 
   <h2>E-Delivered and E-Accrued</h2>
   <p>E operates in two distinct modes. Understanding which mode you are investing in, and whether E-Delivered is solid before E-Accrued begins, is the most common gap in product roadmaps.</p>
@@ -1246,7 +1452,12 @@
       <div class="ladder-n">4</div>
       <div class="ladder-content">
         <div class="ladder-title">Identify the E-Accrued layer</div>
-        <div class="ladder-desc">What does the user build inside the product that cannot be taken with them? Spotify: playlists, liked songs, taste model. Notion: workspace, processes, decision log. Figma: component libraries. This is the moat.</div>
+        <div class="ladder-desc">What does the user build inside the product that cannot be taken with them? E-Accrued takes four forms:<br><br>
+<strong>Data</strong> — the product becomes more useful because it knows more. Spotify taste model, financial history, fitness tracking. Leaving means losing insight the product built about you.<br><br>
+<strong>Capability</strong> — the customer becomes better through using the product. Grammarly style model, design tool component libraries, coding environments that learn patterns. Leaving means losing the leverage the product built for you.<br><br>
+<strong>Structure</strong> — the product becomes embedded in how work or life happens. Notion workspace, team workflows, systems of record. Leaving means disruption, not just inconvenience.<br><br>
+<strong>Social</strong> — the product becomes tied to community membership, professional identity, or status. Leaving means losing relationships and standing, not just data.<br><br>Strava: segment leaderboards, Strava-specific PRs, a follower network built around athletic identity. Switching to Garmin means losing the social layer, not just the data. Figma: shared component libraries, design system collaboration, a professional identity as a "Figma designer" — not just a designer who uses Figma. The shared creative culture is a moat as real as the component library. LinkedIn: professional network, connection history, endorsements, a profile that represents career identity accumulated over years. Leaving LinkedIn is not switching tools. It is rebuilding a professional presence.<br><br>This is the most underestimated form of E-Accrued in utility products. Teams dismiss it as an entertainment moat (social = engagement = TikTok). It is not. When social accumulation is tied to professional identity or community standing, it operates as structural switching cost in an otherwise utility product. Design for it deliberately, or discover it too late.<br><br>
+Identify which form (or forms) your product accumulates. Each has different implications for switching cost and moat design.</div>
       </div>
     </div>
     <div class="ladder-step">
@@ -1288,7 +1499,15 @@
   <h1>Value Currency</h1>
   <h4>Time, Data, Money</h4>
 
+  <p>Every product creates value. Very few capture it well. Not because the product is weak. Because the form of value is misunderstood.</p>
+
+  <p>Value is not abstract. It always takes a form. And every product is an exchange: the customer gives something, and the product returns something. If that exchange is unclear, conversion drops, trust weakens, and monetisation stalls — even if the product is genuinely useful.</p>
+
   <p>Every product accumulates at least one currency. The moat only forms when the customer can feel what they have built. If the moat is invisible, it does not protect.</p>
+
+  <div class="pullquote">"Price reveals value. It does not create it."</div>
+
+  <div class="pullquote">"Most products get stuck at Time. Competitors can always buy it back. The moat only forms when the customer has built something they cannot take with them."</div>
 
   <div class="pole-grid">
     <div class="pole-card" style="border-top-color:var(--gray60);">
@@ -1344,6 +1563,10 @@
   <div class="chapter-label">Part Four — Value Lifecycle &nbsp;|&nbsp; Chapter 12</div>
   <h1>The Value Lifecycle</h1>
   <h4>Nine stages. Three actors. Design for all of them.</h4>
+
+  <p>A product does not deliver value once. It delivers value across a sequence. Each step creates value, transfers value, or loses value. Most teams optimise individual steps. Very few see the system.</p>
+
+  <p>The failure is rarely within a stage. It happens between them. Expectation set, then not met. Belief created, then not reinforced. Value shown, then not sustained. The product works. The system does not. Most breakdowns do not happen within a stage — they happen in the handoff.</p>
 
   <p>Value does not stop at delivery. It must be promised, perceived, delivered, received, realised, reinforced, and captured to complete the cycle. Most products design for Stages 1–4 and leave everything else to chance.</p>
 
@@ -1405,6 +1628,7 @@
   <div class="summary">
     <h3>Chapter Summary</h3>
     <strong>Nine stages. Three actors.</strong> Each stage has a primary owner.<br><br>
+    <strong>The line:</strong> most products fail not at the stage they optimise, but at the handoff they ignore.<br><br>
     <strong>Stage 8 (Reinforcement) is the highest-leverage gap in most roadmaps.</strong> Making E-Accrued visible before the customer considers leaving. Most products design Stages 1–7 deliberately. Stage 8 is left to chance.<br><br>
     <strong>Value Promise (Stage 2) is four promises</strong>: P, O, L, E, each made at a different moment and evaluated at a different stage.<br><br>
     <strong>Capture (Stage 9) must follow Realisation (Stage 7).</strong> Capture before Realisation is a paywall. It extracts value the customer has not yet felt.
@@ -1417,7 +1641,21 @@
   <h1>The Weakest Link Audit</h1>
   <h4>One weak element caps everything else</h4>
 
+  <p>At any point in time, one part of your system is failing more than the rest. Not two. Not three. One. Everything else is secondary.</p>
+
+  <p>Teams try to improve everything. They build roadmaps with better onboarding, more features, improved retention, increased acquisition. Each makes sense. Together, they dilute focus. Because not all problems matter equally. A system does not fail everywhere. It fails where it is weakest. And that weakness defines the outcome.</p>
+
+  <p>Improving a strong part does not fix a weak one. It hides it. When metrics improve in one area but overall performance does not change, the system is telling you: you are fixing the wrong thing.</p>
+
   <p>POLE elements compound each other. A strong E cannot compensate for a weak P. The weakest link determines the ceiling of the entire product.</p>
+
+  <div class="diag-tree">
+    <div class="diag-tree-title">Weakest link: find it before you fix it</div>
+    <div class="diag-row"><div class="diag-cell q">Conversion is low. Users arrive but don't adopt.</div><div class="diag-cell q">Adoption is fine. Retention is poor.</div></div>
+    <div class="diag-row"><div class="diag-cell warn">Check O first: is belief forming in session 1? Then check L: is the switching barrier removed?</div><div class="diag-cell warn">Check P first: is the destination worth staying for? Then check E: is anything accumulating?</div></div>
+    <div class="diag-row"><div class="diag-cell q">Retention is fine. Revenue is hard.</div><div class="diag-cell q">Everything looks reasonable. Nothing is growing.</div></div>
+    <div class="diag-row"><div class="diag-cell warn">Check E: is the moat visible? Is the customer being shown what they would lose? Stage 8 gap.</div><div class="diag-cell warn">Check P: is the destination specific enough? A vague P produces mediocre everything. Start here.</div></div>
+  </div>
 
   <h2>The Audit</h2>
   <p>Score each POLE element on two dimensions. <strong>Clarity:</strong> can a customer state this element clearly without prompting? <strong>Credibility:</strong> do customers believe it based on actual experience?</p>
@@ -1477,22 +1715,25 @@
     <h3>Chapter Summary</h3>
     Score each POLE element H/M/L on Clarity and Credibility. Lowest score = Weakest Link.<br><br>
     Fix order: P first, then O, then L, then E.<br><br>
-    L is High without P is a ceiling, not a foundation (LinkedIn). E failure is almost always a symptom of weak P, not a root cause.
+    L is High without P is a ceiling, not a foundation (LinkedIn). E failure is almost always a symptom of weak P, not a root cause.<br><br>
+    <strong>A system grows at the speed of its weakest link.</strong> Not at the speed of its strongest.
   </div>
 </section>
 
 <!-- CHAPTER 14 -->
 <section id="ch14" class="chapter">
   <div class="chapter-label">Part Six — Applied &nbsp;|&nbsp; Chapter 14</div>
-  <h1>Six Case Studies</h1>
-  <h4>The framework applied. The gaps named. The fixes specified.</h4>
+  <h1>Case Studies</h1>
+  <h4>What this looks like in the real world</h4>
 
-  <p>Six real products. Each case applies BELT+POLE in full and names one thing the product's own team almost certainly knows is a gap, but has not yet fixed. The question for each is not "what went wrong" but "what would a correct BELT+POLE diagnosis have changed."</p>
+  <p>A framework is only useful if it explains what already exists. If you cannot look at a product and see what job it is doing, what it is missing, and where it is breaking — the framework is not complete. Each case below is a diagnosis, not a story. We look at what the product got right, where it failed, and what BELT+POLE would change.</p>
+
+  <p>Every product can be explained through one strong element and one weak element. And the interaction between them.</p>
 
   <h2>MyFitnessPal</h2>
   <h4>P at feature level. The insight layer was always there. Nobody built it.</h4>
 
-  <div class="pullquote">"Strong product. Weak value architecture. P is defined at feature level, so the insight layer never forms — and a competitor charges $60/month for it instead."</div>
+  <div class="pullquote">"MyFitnessPal did not have a feature problem. It had a P problem. The data was always there. The question it was answering — how many calories today? — was never the question the customer was actually asking."</div>
 
   <table>
     <tr><th>BELT</th><th>Finding</th></tr>
@@ -1510,6 +1751,8 @@
 
   <h2>Loom</h2>
   <h4>O fires for the sender. It never fires for the recipient. The real barrier is on the receiving end.</h4>
+  <div class="pullquote">"Loom built a great product for the sender. The sender was never the constraint. Async culture fails at the recipient. That was the barrier that was never designed for."</div>
+
   <p><strong>Weakest Link: O, for the wrong actor.</strong> O exists and fires for the sender. But until the recipient's O fires ("this 90-second video replaced a meeting that would have taken 47 minutes to schedule"), async culture does not spread. Loom optimised the wrong side of the interaction.</p>
   <p><strong>The verdict:</strong> the product assumes the sender is the decision-maker for adoption. In most organisations, the constraint is the recipient's tolerance for video versus written communication. A correct BELT diagnosis would have named the recipient as a distinct segment with its own lock-in (inertia toward text) and its own O to design.</p>
   <p><strong>Fix:</strong> redesign O for the recipient. Build Stage 8 at team level: "Your team sent 43 Looms this month. 24 meetings replaced." Makes the cultural shift visible and irreversible.</p>
@@ -1517,7 +1760,7 @@
   <h2>Strava</h2>
   <h4>The moat is enormous. The customer cannot see it. Stage 8 does not exist.</h4>
 
-  <div class="pullquote">"One of the deepest E-Accrued moats in consumer fitness. The customer cannot feel it. Every churned user left without knowing what they were giving up."</div>
+  <div class="pullquote">"Strava built a moat it never showed anyone. The switching cost is enormous. The customer never knew. Every churned user left without knowing what they gave up."</div>
 
   <table>
     <tr><th>The situation</th><th>The gap</th></tr>
@@ -1529,7 +1772,7 @@
   <h2>Robinhood</h2>
   <h4>The obstacle thesis was wrong. Every feature built on it was wrong, regardless of execution quality.</h4>
 
-  <div class="pullquote">"The obstacle thesis was wrong. Every feature built on it was wrong. Regardless of execution quality."</div>
+  <div class="pullquote">"Robinhood did not remove friction. It removed the wrong friction. The door was always open. The fear of the room was never addressed."</div>
 
   <p>The founding obstacle thesis: "The barrier is commissions." Actual barrier: financial confidence. Every gamification feature was directionally correct for "make more trades" and directionally wrong for "build confidence." The wrong thesis is not a small mistake. It is the architecture.</p>
   <p><strong>Fix:</strong> correct the thesis before redesigning a single feature. "The barrier is not commissions. It is the fear of making the wrong decision." Redesign O to celebrate the decision, not the execution. Redesign E to build confidence over time, not trade frequency.</p>
@@ -1541,13 +1784,81 @@
     <tr><td>P: "HR and payroll in one place." Describes the tool category.</td><td>P: "For fast-growing companies, Rippling delivers one employee record that flows to every system, so operations overhead stops compounding with headcount."</td></tr>
     <tr><td>Stage 8 absent. The moat never surfaced to customers.</td><td>"You have 14 systems connected around 230 employee records. Switching means rebuilding each integration." Surface the moat before renewal.</td></tr>
   </table>
+  <div class="pullquote">"Rippling built an infrastructure moat and called it HR software. The moat is real. The customer never saw it until the renewal conversation — which is exactly the wrong moment to reveal it."</div>
+
   <p><strong>The verdict:</strong> Rippling has strong E-Accrued (every integration deepens the switching cost) but leaves it invisible. The renewal conversation happens without the customer knowing what they would lose. A 30-minute audit of Stage 8 would produce a retention intervention that protects months of E investment.</p>
 
   <h2>GitHub Copilot</h2>
   <h4>O fires immediately. The moat never forms. Transient when it should be Enabling.</h4>
+  <div class="pullquote">"Copilot has the strongest O in developer tooling. But strong O with no E-Accrued is just a very good tap on a leaky bucket. Month 6 and month 1 feel identical. That is not a product limitation. It is a design decision that was never made."</div>
+
   <p>T is currently Transient. Every session starts from roughly the same baseline. The product does not learn this developer's patterns deeply enough for the experience to compound. Month 6 and Month 1 feel similar. The moat that should exist has not been designed.</p>
   <p><strong>The verdict:</strong> Copilot has the strongest O in developer tooling: type code, see a suggestion, verify immediately that it works. But strong O is not sufficient for a moat. The T classification exposes the gap: Copilot is currently an excellent transient product competing on feature quality rather than an enabling product competing on irreplaceability. The fix is a product architecture decision, not a feature decision. Once the personalisation layer is designed, T shifts from Transient to Enabling and every retention metric changes.</p>
   <p><strong>Fix:</strong> design the personalisation layer. Track per-developer: which suggestions are accepted, which patterns repeat. Build a developer fingerprint. Make Month 6 noticeably better than Month 1. Build Stage 8: "Copilot handled 2,400 lines of boilerplate this month. Your acceptance rate is 71%, up from 49% in month 1. It is learning your style."</p>
+
+  <h2>Calm</h2>
+  <h4>Strong usage. Weak E. Activity optimised. Outcome not.</h4>
+
+  <div class="pullquote">"Daily usage. Streak tracking. High engagement. Nothing meaningful accumulates. The product optimises activity, not calm."</div>
+
+  <table>
+    <tr><th>POLE element</th><th>Score</th><th>Diagnosis</th></tr>
+    <tr><td><strong>O</strong></td><td style="color:var(--teal);font-weight:bold;">H</td><td>Meditation is a known behaviour. O fires quickly — the product is immediately understandable.</td></tr>
+    <tr><td><strong>L</strong></td><td style="color:var(--teal);font-weight:bold;">H</td><td>Low barrier to start. No switching cost to overcome.</td></tr>
+    <tr><td><strong>P</strong></td><td style="color:var(--red);font-weight:bold;">L</td><td>"Feel better." This is not a destination. It is a direction. No specific outcome, no specific segment, no way to know if P is ever reached.</td></tr>
+    <tr><td><strong>E</strong></td><td style="color:var(--red);font-weight:bold;">L</td><td>Streaks track activity, not outcome. What accumulates? Not calm. Only sessions opened.</td></tr>
+  </table>
+  <p><strong>The verdict:</strong> Calm is measuring the wrong thing. The streak is entertainment-native metric applied to a utility product. Usage is high. Retention is fragile. Because nothing meaningful builds through use — no data asset, no capability, no structure the customer would lose if they stopped. The product is used. It is not depended on.</p>
+  <p><strong>Fix:</strong> redefine P specifically ("for adults who struggle with chronic stress, Calm delivers a daily practice that reduces reactivity over time"). Design E around felt change: mood tracking, session reflection, monthly pattern reports. Make the accumulation visible before the customer considers leaving.</p>
+
+  <h2>Stripe</h2>
+  <h4>Strong L. Strong P. Strong E. The benchmark for liberation design.</h4>
+
+  <div class="pullquote">"When the barrier is removed precisely, the product disappears into the workflow. That is the goal."</div>
+
+  <table>
+    <tr><th>POLE element</th><th>Score</th><th>Diagnosis</th></tr>
+    <tr><td><strong>O</strong></td><td style="color:var(--teal);font-weight:bold;">H</td><td>Credible to developers immediately. Simple APIs, clear documentation, immediate test environment. Belief forms before production deployment.</td></tr>
+    <tr><td><strong>L</strong></td><td style="color:var(--teal);font-weight:bold;">H</td><td>Integration complexity was the barrier. Stripe removed it precisely: clean API, fast setup, developer-first design. The switch cost less than building the alternative.</td></tr>
+    <tr><td><strong>P</strong></td><td style="color:var(--teal);font-weight:bold;">H</td><td>"Accept payments without friction." Clear outcome, specific to the segment, life-change level: the developer can now ship something they could not ship before.</td></tr>
+    <tr><td><strong>E</strong></td><td style="color:var(--teal);font-weight:bold;">H</td><td>Embedded in production systems. Transaction history. Compliance infrastructure. Every new integration deepens the switching cost. Leaving means rebuilding.</td></tr>
+  </table>
+  <p><strong>The verdict:</strong> Stripe is the clearest example of convergence between O and L — the same product feature (simple API) both breaks the belief ("is integration really this easy?") and removes the barrier (integration complexity). The result is rapid adoption that deepens into structural dependence. When POLE elements are well-designed and mutually reinforcing, the product feels inevitable.</p>
+
+  <h2>Calendly</h2>
+  <h4>Strong B. Precise L. Clear P. A case study in removing the right friction.</h4>
+
+  <div class="pullquote">"The best products do not improve the task. They remove the need for it."</div>
+
+  <table>
+    <tr><th>BELT</th><th>Finding</th></tr>
+    <tr><td>B</td><td>5–8 emails per meeting. Universal, painful, unavoidable. Everyone complained. More importantly: everyone did it anyway.</td></tr>
+    <tr><td>E</td><td>Schedule without coordination friction. The outcome is not "fewer emails" — it is "this never happens again."</td></tr>
+    <tr><td>L</td><td>Inertia. Email scheduling works badly but without crisis. Status quo wins by default.</td></tr>
+    <tr><td>T</td><td>Enabling for heavy users (embedded in workflow). Transient for occasional schedulers.</td></tr>
+  </table>
+  <table>
+    <tr><th>POLE element</th><th>Diagnosis</th></tr>
+    <tr><td><strong>O</strong></td><td>Sequential with L: seeing the link is O (apparent, effortless to understand). The 30-second first use is L (removes inertia at the moment of decision). Near-convergence in practice.</td></tr>
+    <tr><td><strong>L</strong></td><td>Correctly identified as Inertia. First use costs less than the next email chain it replaces. Zero-commitment start. No onboarding, no goals, no setup.</td></tr>
+    <tr><td><strong>P</strong></td><td>Clear and specific: scheduling without back-and-forth. Passes competitor test, five-year test, emotion test.</td></tr>
+    <tr><td><strong>E</strong></td><td>Embedded in workflow and professional identity over time. Sharing your Calendly link becomes part of how you present professionally.</td></tr>
+  </table>
+  <p><strong>The verdict:</strong> Calendly is the clearest example of inertia-type L being removed at exactly the right moment. The product did not improve scheduling. It removed the need for the behaviour entirely. When the barrier is correctly identified and precisely removed, adoption feels obvious — not because the product is better, but because staying with the old behaviour stops making sense.</p>
+
+  <h2>The pattern across all cases</h2>
+  <p>Every product is strong somewhere and failing somewhere. The interaction between the strong element and the weak one determines the outcome.</p>
+
+  <table>
+    <tr><th>Pattern</th><th>What it produces</th><th>Example</th></tr>
+    <tr><td>Strong O, weak P</td><td>High acquisition, high churn. Users try and leave because nothing was worth staying for.</td><td>Robinhood: frictionless entry, no confidence destination.</td></tr>
+    <tr><td>Strong P, weak L</td><td>Admiration without adoption. People understand and want the outcome but do not switch.</td><td>Any product with strong vision but misidentified switching barrier.</td></tr>
+    <tr><td>Strong usage, weak E</td><td>Activity without value. Users return but nothing accumulates, leaving is costless.</td><td>Calm: daily sessions, no E-Accrued layer.</td></tr>
+    <tr><td>Strong E, weak O</td><td>Deep retention among believers, slow growth. Hard to convince new customers to start.</td><td>Notion early: powerful once inside, hard to believe before.</td></tr>
+    <tr><td>Strong O + strong L</td><td>Rapid adoption. When belief and switching cost removal happen simultaneously, growth accelerates.</td><td>Stripe: same feature does both jobs. Gmail 2004: 1GB was O and L in one.</td></tr>
+  </table>
+
+  <p>Use these patterns diagnostically. When a product is underperforming, identify the strong element first — then find what it cannot compensate for. That is the weakest link.</p>
 </section>
 
 <!-- GUIDE -->
@@ -1556,35 +1867,37 @@
   <h1>Run the Diagnostic in 30 Minutes</h1>
   <h4>Five steps. One output. Applied to any product you know.</h4>
 
-  <p>Every concept in this book points here. The framework is only valuable when it is in contact with a real product. This guide takes you from blank page to diagnosis in 30 minutes.</p>
+  <p>This is not a workshop. It is a filter. The goal is not to be complete. The goal is to be correct enough to avoid building the wrong thing.</p>
+
+  <p>Do this alone or with your team. Do not debate definitions. Answer what is true. Each step has a stopping condition. If you hit one, stop. You are not ready to design.</p>
 
   <div class="ladder">
     <div class="ladder-step">
       <div class="ladder-n">1</div>
       <div class="ladder-content">
         <div class="ladder-title">B — Find the behaviour <em style="font-weight:normal;color:var(--gray60);font-size:0.8rem;">(5 min)</em></div>
-        <div class="ladder-desc">Write down the specific workaround your most committed early customers used before your product existed. Make it concrete. "They used spreadsheets" is not specific enough. If you cannot name a specific workaround: stop here. You have a hypothesis, not confirmed demand.</div>
+        <div class="ladder-desc">Write down the specific workaround your most committed early customers used before your product existed. Make it concrete: tool, steps, repetition, friction. "They used spreadsheets" is not specific enough.<br><br><strong>Stopping condition:</strong> if you cannot describe the workaround concretely, stop. You have a hypothesis, not confirmed demand. Do not proceed until B is clear.</div>
       </div>
     </div>
     <div class="ladder-step">
       <div class="ladder-n">2</div>
       <div class="ladder-content">
         <div class="ladder-title">E — Name the life change <em style="font-weight:normal;color:var(--gray60);font-size:0.8rem;">(5 min)</em></div>
-        <div class="ladder-desc">Complete: "For [specific segment], [product] delivers [specific outcome], so [life is different in this specific way]." Run the So What? technique: keep asking until the answer stops mentioning the product. Then answer: is this problem enduring or transient?</div>
+        <div class="ladder-desc">Complete: "For [specific segment], [product] delivers [specific outcome], so [life is different in this specific way]." Apply the product removal test: remove the product — does the value remain? Run So What? until the answer stops mentioning the product.<br><br><strong>Stopping condition:</strong> if you are building features, not defining a change. If the outcome still mentions the product, rewrite.</div>
       </div>
     </div>
     <div class="ladder-step">
       <div class="ladder-n">3</div>
       <div class="ladder-content">
         <div class="ladder-title">L — Identify the lock-in type <em style="font-weight:normal;color:var(--gray60);font-size:0.8rem;">(5 min)</em></div>
-        <div class="ladder-desc">Which one describes your segment: Switching Cost, Search Cost, or Inertia? Then look at your current onboarding. Write one sentence describing what it does to address this specific barrier. If the sentence describes generic setup rather than the specific lock-in type you named: your L is misdiagnosed.</div>
+        <div class="ladder-desc">Which one describes your segment: Switching Cost, Search Cost, or Inertia? Write the single dominant reason your segment has not already switched. Classify it precisely.<br><br><strong>Stopping condition:</strong> if you cannot name the barrier precisely, or if your onboarding describes generic setup rather than removing the specific barrier you named — stop. You are designing adoption, not hope.</div>
       </div>
     </div>
     <div class="ladder-step">
       <div class="ladder-n">4</div>
       <div class="ladder-content">
         <div class="ladder-title">T — Validate the type <em style="font-weight:normal;color:var(--gray60);font-size:0.8rem;">(5 min)</em></div>
-        <div class="ladder-desc">If a customer stopped using your product for six months and came back, would the product know them? Would the 601st session feel different from the first? If yes: Enabling, build the E architecture. If no: Transient, do not invest in personalisation. Design for P-Salience instead.</div>
+        <div class="ladder-desc">Ask: does solving this problem make the next use more valuable, or does it reset to zero? Does the 601st session feel different from the first?<br><br>If Enabling: design for accumulation from day one. If Transient: do not invest in retention systems expecting compounding. Compete on speed, convenience, and reliability instead.<br><br><strong>Stopping condition:</strong> if T is Transient and you are planning a compounding E architecture — stop. The ceiling has been set.</div>
       </div>
     </div>
     <div class="ladder-step">
@@ -1605,6 +1918,12 @@
   </table>
 
   <p>Run this guide twice: once with what you believe to be true, and once based purely on what your data shows. The gap between those two runs is your product's most important strategic problem.</p>
+
+  <div class="callout">
+    <strong>What this should feel like when done correctly:</strong> uncomfortable with your current roadmap. Clearer about what not to build. Focused on one constraint. If you feel more confident but nothing changed, you used it as a validation exercise, not a diagnostic. Run it again with harder answers.
+  </div>
+
+  <div class="pullquote">"The fastest way to build the right product is to stop building the wrong one."</div>
 </section>
 
 <!-- APPENDIX A -->
