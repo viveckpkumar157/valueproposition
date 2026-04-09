@@ -27,7 +27,7 @@
     font-size: 19px;
   }
 
-  /* ── NAV BAR ── */
+  /* NAV BAR */
   .topbar {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     background: var(--black);
@@ -39,10 +39,10 @@
   .topbar nav a { color: var(--gray80); text-decoration: none; font-family: sans-serif; font-size: 0.95rem; margin-left: 1.5rem; letter-spacing: 0.04em; }
   .topbar nav a:hover { color: var(--yellow); }
 
-  /* ── LAYOUT ── */
+  /* LAYOUT */
   .layout { display: flex; margin-top: 56px; min-height: calc(100vh - 56px); }
 
-  /* ── SIDEBAR ── */
+  /* SIDEBAR */
   .sidebar {
     position: fixed; top: 56px; left: 0; bottom: 0;
     width: var(--sidebar-w);
@@ -70,10 +70,10 @@
     font-weight: bold;
   }
 
-  /* ── MAIN ── */
+  /* MAIN */
   .main { margin-left: var(--sidebar-w); padding: 3rem 4rem 6rem; max-width: 860px; flex: 1; }
 
-  /* ── TYPOGRAPHY ── */
+  /* TYPOGRAPHY */
   h1 { font-size: 2.4rem; line-height: 1.15; margin-bottom: 1.2rem; color: var(--black); font-weight: bold; }
   h2 { font-size: 1.55rem; margin: 2.5rem 0 0.8rem; color: var(--black); font-weight: bold; }
   h3 { font-size: 1.15rem; margin: 1.8rem 0 0.5rem; color: var(--black); font-weight: bold; font-family: 'Helvetica Neue', sans-serif; }
@@ -86,7 +86,7 @@
   a { color: var(--teal); text-decoration: none; }
   a:hover { text-decoration: underline; }
 
-  /* ── SECTION ── */
+  /* SECTION */
   .chapter { padding: 3rem 0 2rem; border-top: 3px solid var(--yellow); margin-top: 3rem; }
   .chapter:first-child { border-top: none; margin-top: 0; }
   .chapter-label {
@@ -96,7 +96,7 @@
     margin-bottom: 1rem;
   }
 
-  /* ── CALLOUTS ── */
+  /* CALLOUTS */
   .pullquote {
     border-left: 5px solid var(--yellow); padding: 1rem 1.5rem;
     margin: 2rem 0; font-size: 1.1rem; font-style: italic;
@@ -116,7 +116,7 @@
   }
   .insight strong { color: var(--yellow); }
 
-  /* ── BELT SEQUENCE ── */
+  /* BELT SEQUENCE */
   .belt-row { display: flex; gap: 0; margin: 1.5rem 0; }
   .belt-cell {
     flex: 1; padding: 1rem; border: 1px solid var(--gray80);
@@ -127,7 +127,7 @@
   .belt-name { font-size: 0.7rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gray60); display: block; margin-bottom: 0.3rem; }
   .belt-desc { font-size: 0.95rem; color: var(--gray60); }
 
-  /* ── POLE GRID ── */
+  /* POLE GRID */
   .pole-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
   .pole-card {
     padding: 1.2rem; background: var(--gray95);
@@ -140,14 +140,14 @@
   .pole-desc { font-size: 0.95rem; color: var(--gray30); }
   .pole-failure { font-size: 0.86rem; color: var(--red); margin-top: 0.5rem; font-style: italic; }
 
-  /* ── TABLES ── */
+  /* TABLES */
   table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; font-family: 'Helvetica Neue', sans-serif; }
   th { background: var(--black); color: var(--yellow); padding: 0.6rem 0.8rem; text-align: left; font-size: 0.75rem; letter-spacing: 0.05em; font-weight: bold; }
   td { padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--gray80); vertical-align: top; }
   tr:nth-child(even) td { background: var(--gray95); }
   tr:last-child td { border-bottom: none; }
 
-  /* ── FUDU SCORING ── */
+  /* FUDU SCORING */
   .fudu-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
   .fudu-card {
     border: 1px solid var(--gray80); overflow: hidden;
@@ -164,7 +164,7 @@
   .fudu-q { font-size: 0.86rem; color: var(--gray60); font-style: italic; margin-bottom: 0.4rem; }
   .fudu-levels { font-size: 0.75rem; color: var(--gray60); }
 
-  /* ── STEPS LADDER ── */
+  /* STEPS LADDER */
   .ladder { margin: 1.5rem 0; }
   .ladder-step {
     display: flex; gap: 1rem; margin-bottom: 0.75rem; align-items: flex-start;
@@ -179,7 +179,7 @@
   .ladder-title { font-weight: bold; font-size: 0.97rem; margin-bottom: 0.15rem; }
   .ladder-desc { font-size: 0.92rem; color: var(--gray60); }
 
-  /* ── O+L TYPES ── */
+  /* O+L TYPES */
   .ol-types { margin: 1.5rem 0; }
   .ol-type {
     display: flex; gap: 1rem; padding: 0.8rem 1rem;
@@ -195,21 +195,21 @@
   .ol-rule { font-size: 0.90rem; color: var(--gray60); margin-bottom: 0.2rem; }
   .ol-eg { font-size: 0.95rem; color: var(--gray30); font-style: italic; }
 
-  /* ── P TYPES ── */
+  /* P TYPES */
   .p-types { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
   .p-type { padding: 1rem; border: 1px solid var(--gray80); font-family: 'Helvetica Neue', sans-serif; }
   .p-type-name { font-weight: bold; font-size: 0.92rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; color: var(--black); }
   .p-type-def { font-size: 0.90rem; color: var(--gray60); margin-bottom: 0.5rem; }
   .p-type-eg { font-size: 0.95rem; color: var(--teal); font-style: italic; }
 
-  /* ── METRIC FEATURES ── */
+  /* METRIC FEATURES */
   .mf-table { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 1.5rem 0; font-family: 'Helvetica Neue', sans-serif; font-size: 0.92rem; }
   .mf-header { background: var(--black); color: var(--white); padding: 0.6rem 1rem; font-weight: bold; font-size: 0.75rem; letter-spacing: 0.05em; }
   .mf-header.good { background: var(--teal); }
   .mf-row { padding: 0.5rem 1rem; border-bottom: 1px solid var(--gray80); }
   .mf-row.alt { background: var(--gray95); }
 
-  /* ── LIFECYCLE ── */
+  /* LIFECYCLE */
   .lifecycle { display: flex; flex-wrap: wrap; gap: 0; margin: 1.5rem 0; font-family: 'Helvetica Neue', sans-serif; }
   .stage {
     flex: 1; min-width: 80px; padding: 0.8rem 0.6rem; text-align: center;
@@ -222,17 +222,17 @@
   .stage-actor { font-size: 0.65rem; color: var(--gray60); display: block; }
   .stage.highlight .stage-actor { color: var(--black); }
 
-  /* ── EXERCISE ── */
+  /* EXERCISE */
   .exercise { background: var(--gray95); padding: 1.5rem; margin: 2rem 0; border-top: 3px solid var(--black); }
   .exercise h4 { margin-top: 0; color: var(--black); }
   .exercise ol { margin-top: 0.5rem; }
 
-  /* ── CHAPTER SUMMARY ── */
+  /* CHAPTER SUMMARY */
   .summary { background: var(--black); color: var(--gray80); padding: 1.5rem; margin: 2rem 0; }
   .summary strong { color: var(--yellow); }
   .summary h3 { color: var(--yellow); margin-top: 0; margin-bottom: 0.8rem; font-size: 0.92rem; letter-spacing: 0.1em; text-transform: uppercase; }
 
-  /* ── O FAILURE MODES ── */
+  /* O FAILURE MODES */
   .o-failures { margin: 1.5rem 0; }
   .o-failure {
     display: flex; gap: 1rem; margin-bottom: 0.75rem;
@@ -243,11 +243,30 @@
   .o-failure-title { font-weight: bold; color: var(--red); margin-bottom: 0.2rem; }
   .o-failure-fix { color: var(--teal); font-style: italic; margin-top: 0.2rem; }
 
-  /* ── FOOTER ── */
+  /* FOUR JOBS */
+  .four-jobs { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0; }
+  .job-card {
+    padding: 1.5rem; border: 1px solid var(--gray80);
+    font-family: 'Helvetica Neue', sans-serif;
+    border-top: 4px solid var(--black);
+  }
+  .job-number { font-size: 2.5rem; font-weight: bold; font-family: 'Georgia', serif; line-height: 1; margin-bottom: 0.5rem; color: var(--yellow); background: var(--black); display: inline-block; padding: 0 0.4rem; }
+  .job-title { font-size: 1rem; font-weight: bold; margin-bottom: 0.4rem; }
+  .job-question { font-size: 0.95rem; color: var(--gray60); font-style: italic; margin-bottom: 0.5rem; }
+  .job-pole { font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em; color: var(--teal); }
+
+  /* FOUR JOBS CALLBACK */
+  .four-jobs-callback { font-family: 'Helvetica Neue', sans-serif; font-size: 0.78rem; color: var(--gray60); letter-spacing: 0.04em; margin-top: -0.5rem; margin-bottom: 1.5rem; border-left: 2px solid var(--gray80); padding-left: 0.75rem; }
+
+  /* BRIDGE SECTION */
+  .bridge-section { background: var(--gray95); border: 2px solid var(--black); padding: 2rem; margin: 3rem 0; }
+  .bridge-section h2 { margin-top: 0; font-size: 1.3rem; }
+
+  /* FOOTER */
   .footer { border-top: 4px solid var(--yellow); background: var(--black); padding: 2rem 4rem; margin-left: var(--sidebar-w); color: var(--gray60); font-size: 0.92rem; font-family: 'Helvetica Neue', sans-serif; display: flex; justify-content: space-between; align-items: center; }
   .footer a { color: var(--yellow); text-decoration: none; }
 
-  /* ── COVER ── */
+  /* COVER */
   .cover {
     background: var(--black); color: var(--white); padding: 4rem;
     margin: -3rem -4rem 3rem; min-height: 50vh;
@@ -259,7 +278,6 @@
   .cover-stats { display: flex; gap: 2.5rem; color: var(--gray60); font-size: 0.92rem; font-family: 'Helvetica Neue', sans-serif; }
   .cover-stats span strong { color: var(--yellow); display: block; font-size: 1.4rem; }
 
-  /* responsive */
   @media (max-width: 900px) {
     .sidebar { display: none; }
     .main { margin-left: 0; padding: 2rem 1.5rem; }
@@ -268,12 +286,12 @@
     .p-types { grid-template-columns: 1fr; }
     .pole-grid { grid-template-columns: 1fr; }
     .mf-table { grid-template-columns: 1fr; }
+    .four-jobs { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
 
-<!-- TOP BAR -->
 <div class="topbar">
   <a href="index.html" class="logo">BELT+POLE</a>
   <nav>
@@ -284,13 +302,12 @@
   </nav>
 </div>
 
-<!-- LAYOUT -->
 <div class="layout">
 
-<!-- SIDEBAR -->
 <nav class="sidebar">
   <a href="#cover" class="sidebar-title">The Anatomy of Value Propositions</a>
   <a href="#toc">Contents</a>
+  <a href="#four-jobs">The Four Jobs</a>
   <a href="#foreword">Foreword</a>
   <a href="#ch0">Where This Applies</a>
 
@@ -301,6 +318,7 @@
   <a href="#ch4">4. L — Lock-in</a>
   <a href="#ch5">5. T — Type</a>
   <a href="#ch6">6. Segmentation</a>
+  <a href="#belt-pole-bridge">From Diagnosis to Design</a>
 
   <div class="sidebar-part">Part Two — POLE</div>
   <a href="#ch7">7. P — Destination</a>
@@ -325,7 +343,6 @@
   <a href="#appendix-a">Quick Reference</a>
 </nav>
 
-<!-- MAIN -->
 <main class="main">
 
 <!-- COVER -->
@@ -350,7 +367,8 @@
 
   <table>
     <tr><th colspan="2">Front Matter</th></tr>
-    <tr><td><a href="#foreword">Foreword</a></td><td>The problem this framework solves</td></tr>
+    <tr><td><a href="#four-jobs">The Four Jobs</a></td><td>Why every product needs four architectures, not one</td></tr>
+    <tr><td><a href="#foreword">Foreword</a></td><td>The wrong choice, made confidently</td></tr>
     <tr><td><a href="#ch0">Introduction</a></td><td>Where This Framework Applies: Utility vs Entertainment</td></tr>
     <tr><th colspan="2">Part One — BELT: Diagnosis Before Design</th></tr>
     <tr><td><a href="#ch1">Chapter 1</a></td><td>Why Diagnosis Comes First</td></tr>
@@ -359,6 +377,7 @@
     <tr><td><a href="#ch4">Chapter 4</a></td><td>L — Lock-in: Why have they not switched?</td></tr>
     <tr><td><a href="#ch5">Chapter 5</a></td><td>T — Type: Transient or Enabling?</td></tr>
     <tr><td><a href="#ch6">Chapter 6</a></td><td>Segmentation: The BELT definition</td></tr>
+    <tr><td><a href="#belt-pole-bridge">Bridge</a></td><td>From Diagnosis to Design</td></tr>
     <tr><th colspan="2">Part Two — POLE: The Four Value Propositions</th></tr>
     <tr><td><a href="#ch7">Chapter 7</a></td><td>P — The Destination</td></tr>
     <tr><td><a href="#ch8">Chapter 8</a></td><td>O — The Belief Moment</td></tr>
@@ -375,23 +394,82 @@
   </table>
 </section>
 
-<!-- FOREWORD -->
+<!-- THE FOUR JOBS — NEW SECTION -->
+<section id="four-jobs" class="chapter">
+  <div class="chapter-label">Before You Begin</div>
+  <h1>The Four Jobs</h1>
+  <h4>Why every product needs four architectures, not one</h4>
+
+  <p>Every product must do four jobs. Not four features. Four separate jobs, each done at a different moment, for a different reason, evaluated by a completely different standard.</p>
+
+  <p>Most products attempt all four jobs with one statement. They write a value proposition, optimise it, test it against competitors, and ship it everywhere. The acquisition deck, the landing page, the onboarding screen, the renewal email: one message, four jobs. This is the structural fault this book is built against.</p>
+
+  <div class="four-jobs">
+    <div class="job-card" style="border-top-color: var(--teal);">
+      <div class="job-number">1</div>
+      <div class="job-title">Give a new customer a reason to believe</div>
+      <div class="job-question">"Why should I believe this product can change anything for me?"</div>
+      <p style="font-size:0.92rem;color:var(--gray60);">Must fire in session 1. Must break a specific sceptical belief. Cannot be earned over time. If this job is not done in the first 30 seconds, the customer leaves before anything else can happen.</p>
+      <div class="job-pole">POLE: O — The Belief Moment</div>
+    </div>
+    <div class="job-card">
+      <div class="job-number">2</div>
+      <div class="job-title">Remove the specific barrier to switching</div>
+      <div class="job-question">"I am not using this because..."</div>
+      <p style="font-size:0.92rem;color:var(--gray60);">Every non-adopter has a reason. It is specific. It is structural. Generic ease of use does not address it. This job requires knowing exactly which type of lock-in is keeping them out, then removing it precisely.</p>
+      <div class="job-pole">POLE: L — Liberation</div>
+    </div>
+    <div class="job-card">
+      <div class="job-number">3</div>
+      <div class="job-title">Deliver an outcome worth staying for</div>
+      <div class="job-question">"What is permanently different in my life if this works?"</div>
+      <p style="font-size:0.92rem;color:var(--gray60);">Not a feature. Not a metric. A specific life change that a named segment cares about enough to return for. This is the destination the entire product is moving the customer toward. Everything else is in service of it.</p>
+      <div class="job-pole">POLE: P — The Destination</div>
+    </div>
+    <div class="job-card" style="border-top-color: var(--yellow); background: #fef6b3;">
+      <div class="job-number">4</div>
+      <div class="job-title">Become more valuable the longer they use it</div>
+      <div class="job-question">"What would I lose if I stopped?"</div>
+      <p style="font-size:0.92rem;color:var(--gray60);">This is the only job that compounds. Each session deposits value that did not exist before, until leaving means losing something irreplaceable. This is the moat. It is built through use, not promised at acquisition.</p>
+      <div class="job-pole">POLE: E — The Retention Arc</div>
+    </div>
+  </div>
+
+  <p>BELT is the diagnostic engine that tells you <em>which</em> version of each job your product must do, and for whom. POLE is the architecture for doing all four jobs deliberately, instead of doing one and hoping the rest follow.</p>
+
+  <div class="pullquote">"Most products fail not because they lack value, but because they design it wrong. They treat four distinct jobs as one, write one message, and wonder why acquisition converts but retention collapses."</div>
+
+  <p>Read the BELT section before writing a single POLE element. The quality of each job is entirely determined by the quality of your diagnosis. Skip the diagnosis and you are designing four architectures for the wrong customer.</p>
+</section>
+
+<!-- FOREWORD — REWRITTEN -->
 <section id="foreword" class="chapter">
   <div class="chapter-label">Foreword</div>
-  <h1>The Trap Nobody Talks About</h1>
-  <h4>You are probably solving the wrong type of problem</h4>
+  <h1>The Wrong Choice, Made Confidently</h1>
+  <h4>Why most product failure is a value selection problem, not an execution problem</h4>
 
-  <p>There is a specific way product teams fail that nobody in the industry talks about clearly. They solve the wrong type of problem. Not a bad problem. Not a fake problem. The wrong type. And the distinction is everything.</p>
-  <p>A transient problem goes away on its own or after first use. The customer needed something once. You delivered it. They left. That is not a product failure. That is the natural consequence of solving a transient problem. But most product teams treat that churn as a retention problem and spend years trying to fix it with features, notifications, and loyalty mechanics. None of it works. You cannot retain someone who never had a reason to stay.</p>
-  <p>An enduring problem persists. It recurs. The customer needs a solution every week, every month, for years. This is the only type of problem that can sustain a product. And it is rarer than most teams think.</p>
+  <p>In 2013, Robinhood launched with a clear thesis: young adults are not investing because commissions are too high. The team was not guessing. They had data. They had conviction. They removed the commission.</p>
 
-  <div class="pullquote">"If your product is solving a transient problem, you do not have a retention problem. You have a diagnosis problem. No feature will fix it."</div>
+  <p>The product grew. And then a strange thing happened. Users signed up, explored, and left. Not because the product was badly built. Not because the team shipped too slowly. Because the barrier that kept young adults out of investing was never the $9.99 commission. It was the terror of not knowing what to buy. The problem was financial confidence, not financial access. Robinhood built a frictionless door into a room the customer was still afraid to enter.</p>
 
-  <p>This book is a system for getting that diagnosis right before you design anything. It has two parts. BELT is the diagnostic engine: four questions that force you to classify the problem type before any design decision is made. POLE is the design architecture: four value propositions, each doing a different job at a different moment in the customer journey.</p>
-  <p>The sequence is non-negotiable. BELT before POLE. Diagnosis before design. The quality of everything you build in POLE is entirely determined by the quality of your BELT diagnosis. Skip the diagnosis and you design confidently toward the wrong destination.</p>
+  <p>This is not an execution failure. The engineering was good. The growth strategy was sound. The team worked hard and moved fast. The failure happened before a single line of code was written, in the moment the team chose which problem to solve and which value to build.</p>
+
+  <div class="pullquote">"Most products do not fail because teams build badly. They fail because teams choose the wrong value to build, and then execute that choice with complete confidence."</div>
+
+  <p>This is the failure mode nobody in the industry talks about clearly, because it is invisible until it is too late. A team that builds the wrong feature knows it quickly. A team that builds the wrong type of value proposition can spend years, and tens of millions, before the diagnosis becomes undeniable.</p>
+
+  <p>The root cause is almost always the same: single value proposition thinking. The assumption that one well-crafted statement, carefully worded, competitively tested, shipped everywhere, that can simultaneously explain why a customer should try your product, why they should stay, why switching is too costly, and what their life looks like after sustained use. It cannot. Each job requires its own architecture. Conflating them is how Robinhood happened. It is how most product failures happen.</p>
+
+  <div class="pullquote">"Your product does not have one value proposition. It has four. Each does a different job at a different moment. Designing one and ignoring the others is not a shortcut. It is a structural fault."</div>
+
+  <p>This book is a system for making that architecture explicit before you build. It has two parts. BELT is the diagnostic engine: four questions that force you to classify the type of problem you are solving before any design decision is made. POLE is the design architecture: four value propositions, each doing a specific job at a specific moment in the customer's journey.</p>
+
+  <p>Kingfisher had a tagline. IndiGo had a system. One competed on perception. The other competed on delivery. Only one is still flying. The difference is not budget or talent or market conditions. The difference is whether the team built a slogan or built an architecture. This book is about the architecture.</p>
 
   <h3>How to Read This Book</h3>
-  <p>Do not skip BELT to get to POLE. The sequence is the point. Do not skip the Introduction — the utility vs entertainment distinction is the first gate, not optional context. Read at least one case study in Part Six before running the framework on your own product. The 30-minute application guide at the end is where this becomes operational.</p>
+  <p>Do not skip BELT to get to POLE. The sequence is the point. Do not skip the Introduction: the utility vs entertainment distinction is the first gate, not optional context. Read at least one case study in Part Six before running the framework on your own product. The 30-minute application guide at the end is where this becomes operational.</p>
+
+  <p style="color:var(--gray60);font-size:0.95rem;border-top:1px solid var(--gray80);padding-top:1rem;margin-top:1.5rem;font-family:'Helvetica Neue',sans-serif;">A note on scope: this framework applies to utility products, which are products where a customer uses it to make progress toward a specific outcome. It applies partially to hybrid products. It does not apply to pure entertainment products where value is the experience itself and there is no destination. The Introduction covers this distinction. The framework is precise because its scope is precise.</p>
 </section>
 
 <!-- INTRODUCTION -->
@@ -407,7 +485,7 @@
   <p>An <strong>entertainment product</strong> delivers hedonic value. The customer uses it because the experience itself is enjoyable. There is no destination. There is no problem being solved. Value is measured in engagement, not progress.</p>
 
   <h3>The Test</h3>
-  <p>Ask a loyal customer: <em>"What specific outcome does this product help you achieve?"</em> A utility customer can answer this. An entertainment customer gives you consumption language: "It's entertaining," "I enjoy it," "I always have something to watch." Neither is wrong — but only one is the BELT+POLE customer.</p>
+  <p>Ask a loyal customer: <em>"What specific outcome does this product help you achieve?"</em> A utility customer can answer this. An entertainment customer gives you consumption language: "It's entertaining," "I enjoy it," "I always have something to watch." Neither is wrong, but only one is the BELT+POLE customer.</p>
 
   <table>
     <tr><th></th><th>Utility product</th><th>Entertainment product</th></tr>
@@ -424,11 +502,11 @@
   </table>
 
   <h3>The Entertainment Trap</h3>
-  <p>Many product teams build utility products but measure them like entertainment products — maximising session length, daily active users, and content consumption. When utility products optimise for engagement rather than outcome progress, they design features that move a metric without advancing P-state. Calm's streak is the most cited example: it optimises sessions opened, not felt calm. The metric is entertainment-native. The product is utility.</p>
+  <p>Many product teams build utility products but measure them like entertainment products, maximising session length, daily active users, and content consumption. When utility products optimise for engagement rather than outcome progress, they design features that move a metric without advancing P-state. Calm's streak is the most cited example: it optimises sessions opened, not felt calm. The metric is entertainment-native. The product is utility.</p>
 
   <h3>Four Diagnostic Questions Before You Begin</h3>
   <ol>
-    <li><strong>Can a loyal customer name a specific outcome?</strong> Not "I enjoy it" — a specific destination. If yes: utility framing is valid.</li>
+    <li><strong>Can a loyal customer name a specific outcome?</strong> Not "I enjoy it": a specific destination. If yes: utility framing is valid.</li>
     <li><strong>Is there a workaround?</strong> Does the bright-spot customer do something manual, effortful, and specific to solve this problem without your product? If yes: utility signal.</li>
     <li><strong>Does the hundredth use deliver more value than the first?</strong> If yes: Enabling. If no: closer to entertainment.</li>
     <li><strong>What would a customer lose by stopping?</strong> Utility: something irreplaceable they built. Entertainment: they would miss it, but nothing is lost.</li>
@@ -439,13 +517,20 @@
 <section id="ch1" class="chapter">
   <div class="chapter-label">Part One — BELT &nbsp;|&nbsp; Chapter 1</div>
   <h1>The Diagnosis That Changes Everything</h1>
+  <p class="four-jobs-callback">Diagnosis determines all four jobs.</p>
   <p>Most product failures are not execution failures. They are diagnosis failures.</p>
 
   <p>In 2013, Robinhood launched with a founding thesis that would shape every product decision for the next decade: young adults are not investing because commissions are too high. Remove the commission. The market opens up. Problem solved.</p>
   <p>The thesis was plausible. It was logical. It was wrong.</p>
   <p>Young adults were not staying out of financial markets because of $9.99 commissions. They were staying out because they did not know what to buy and were terrified of making the wrong decision. The barrier was financial confidence, not financial access. These are different problems. They require different products.</p>
 
-  <div class="pullquote">"When the obstacle thesis is wrong, every feature built on it is wrong — regardless of execution quality. The wrong diagnosis is not a small mistake. It is the entire architecture."</div>
+  <div class="pullquote">"When the obstacle thesis is wrong, every feature built on it is wrong, regardless of execution quality. The wrong diagnosis is not a small mistake. It is the entire architecture."</div>
+
+  <p>The Robinhood team did not lack data. They lacked a system for asking whether the data was answering the right question. This is the failure mode BELT is designed to prevent: not bad work, but brilliant work aimed in the wrong direction.</p>
+
+  <div class="pullquote">"Execution multiplies the quality of your decision. If the decision is wrong, execution just gets you there faster."</div>
+
+  <p>The pattern has a name: single value proposition thinking. The assumption that one clear statement can simultaneously explain why a customer should try your product, why they should stay, why switching is too costly, and what their life looks like after sustained use. It cannot. Each job requires a separate architecture. Every product that treats one statement as sufficient is building on a structural fault that no amount of execution quality can correct.</p>
 
   <h2>BELT: Four Questions That Force the Right Diagnosis</h2>
   <table>
@@ -458,9 +543,11 @@
 
   <div class="summary">
     <h3>Chapter Summary</h3>
-    <strong>Robinhood:</strong> wrong obstacle thesis → wrong E architecture → wrong features. Regardless of execution quality.<br><br>
+    <strong>Robinhood:</strong> wrong obstacle thesis. Wrong E architecture. Wrong features. Regardless of execution quality.<br><br>
     Most product failures are not execution failures. They are diagnosis failures. The team was answering the wrong question brilliantly.<br><br>
-    BELT forces four questions in sequence. Each one is designed to surface the assumption most likely to be wrong. The sequence is non-negotiable.
+    <strong>Single value proposition thinking</strong> is the structural fault. One statement cannot do four jobs. BELT forces the right diagnosis before any design decision is made. The sequence is non-negotiable.<br><br>
+    What follows BELT: the POLE architecture, which engineers four separate value propositions, one for each job the product must do. Diagnosis before design. Always.<br><br>
+    Your best growth quarter may be the quarter you validated the wrong thesis at scale.
   </div>
 </section>
 
@@ -469,6 +556,7 @@
   <div class="chapter-label">Part One — BELT &nbsp;|&nbsp; Chapter 2</div>
   <h1>B — Behaviour</h1>
   <h4>What are they doing despite friction?</h4>
+  <p class="four-jobs-callback">Confirms a job worth solving exists.</p>
 
   <p>The most reliable signal of real demand is not a survey. It is a person who has already built their own solution to the problem you are trying to solve.</p>
 
@@ -476,18 +564,19 @@
   <p>Before any product exists, some customers solve the problem themselves. They log food in Notes apps. They record Loom-like videos in Zoom and share the link. They build finance spreadsheets that track their portfolio in ways apps do not. These are bright spots.</p>
   <p><strong>B asks:</strong> "What are they doing despite the friction of doing it manually?" The answer defines your most valuable early customer.</p>
 
-  <h3>Two Bright Spots in Practice</h3>
+  <div class="pullquote">"Customers do not invent workarounds for problems they do not care about."</div>
 
+  <h3>Two Bright Spots in Practice</h3>
   <table>
     <tr><th>Product</th><th>The workaround (the bright spot)</th><th>What it confirms</th></tr>
     <tr>
       <td><strong>Calendly</strong></td>
-      <td>Professionals sending chains of 5–8 emails to schedule a single meeting. "Are you free Tuesday?" "Tuesday is bad, how about Thursday?" "Thursday works — morning or afternoon?" The workaround is elaborate, universal, and embarrassing enough that people joke about it.</td>
+      <td>Professionals sending chains of 5–8 emails to schedule a single meeting. "Are you free Tuesday?" "Tuesday is bad, how about Thursday?" "Thursday works: morning or afternoon?" The workaround is elaborate, universal, and embarrassing enough that people joke about it.</td>
       <td>The scheduling pain is real and the market is enormous. Nobody does this because they enjoy it. They do it because there is no obvious, frictionless alternative they trust.</td>
     </tr>
     <tr>
       <td><strong>Notion</strong></td>
-      <td>Teams managing knowledge across a patchwork of Google Docs, Slack threads, email chains, and personal spreadsheets — each person maintaining their own system, none of it connected. When someone new joins, they spend two weeks asking "where is the process doc for X?" and getting a different answer each time.</td>
+      <td>Teams managing knowledge across a patchwork of Google Docs, Slack threads, email chains, and personal spreadsheets, each person maintaining their own system, none of it connected. When someone new joins, they spend two weeks asking "where is the process doc for X?" and getting a different answer each time.</td>
       <td>The knowledge management pain is real and structural. Teams are not doing this by choice. They are doing it because nothing has made the alternative feel worth the switch.</td>
     </tr>
   </table>
@@ -495,7 +584,7 @@
   <h3>The Bright Spot Interview — Three Questions</h3>
   <ol>
     <li>"Walk me through the last time you dealt with [the problem]. What did you actually do?"</li>
-    <li>"What tools or workarounds are you currently using?" (Never ask <em>if</em> they have a workaround — ask <em>what</em> their workaround is.)</li>
+    <li>"What tools or workarounds are you currently using?" (Never ask <em>if</em> they have a workaround: ask <em>what</em> their workaround is.)</li>
     <li>"What would you lose if you had to stop using that workaround tomorrow?" This is the most important question. The answer reveals the E architecture in embryonic form.</li>
   </ol>
 
@@ -539,18 +628,20 @@
   </div>
 
   <div class="insight">
-    <p><strong>FUDU summary for Calendly:</strong> Frequency: HIGH (multiple times per day). Ubiquity: HIGH (every professional who schedules meetings). Depth: HIGH (15–30 minutes wasted, credibility cost). Urgency: HIGH (the thread is live, the meeting is this week — cannot be deferred).<br><br>All four dimensions high. Worth building for.</p>
+    <p><strong>FUDU summary for Calendly:</strong> Frequency: HIGH (multiple times per day). Ubiquity: HIGH (every professional who schedules meetings). Depth: HIGH (15–30 minutes wasted, credibility cost). Urgency: HIGH (the thread is live, the meeting is this week, cannot be deferred).<br><br>All four dimensions high. Worth building for.</p>
   </div>
+
+  <div class="pullquote">"A problem that is frequent but shallow creates noise. A problem that is deep but rare creates spikes. Only problems that are frequent and deep create products."</div>
 
   <p>Products with combined FUDU below 9 rarely sustain motivation long enough for E to compound. Above 18 across all four dimensions: structural demand. The problem is real, broad, painful, and urgent.</p>
 
   <div class="exercise">
     <h4>Exercise: Finding Your Bright Spots</h4>
     <ol>
-      <li>Describe the specific workaround your most valuable early customers were using before your product existed. Make it concrete — "they used spreadsheets" is not specific enough.</li>
+      <li>Describe the specific workaround your most valuable early customers were using before your product existed. Make it concrete: "they used spreadsheets" is not specific enough.</li>
       <li>Gate question: is this problem uniquely underserved? Who else is trying to solve it and how well?</li>
       <li>Score the problem on FUDU (1–3 each). Which dimensions are highest? Which is the weakest signal?</li>
-      <li>What would those customers lose if they had to abandon your product tomorrow? Is that loss the moat you designed — or a happy accident?</li>
+      <li>What would those customers lose if they had to abandon your product tomorrow? Is that loss the moat you designed, or a happy accident?</li>
     </ol>
   </div>
 
@@ -558,7 +649,7 @@
     <h3>Chapter Summary</h3>
     <strong>Bright spots</strong> are customers who solved the problem with a workaround. Most reliable signal of real demand.<br><br>
     <strong>Three interview questions.</strong> The third ("what would you lose?") is the most important.<br><br>
-    <strong>FUDU gate:</strong> before scoring, confirm the problem is uniquely underserved. Then score Frequency × Ubiquity × Depth × Urgency.<br><br>
+    <strong>FUDU gate:</strong> before scoring, confirm the problem is uniquely underserved. Then score Frequency x Ubiquity x Depth x Urgency.<br><br>
     <strong>Non-obvious truth:</strong> user feedback over-indexes on transient pain. The problem that generates the loudest complaints is almost never the enduring problem worth solving. Listen to what customers do, not what they say.
   </div>
 </section>
@@ -568,6 +659,7 @@
   <div class="chapter-label">Part One — BELT &nbsp;|&nbsp; Chapter 3</div>
   <h1>E — Enduring</h1>
   <h4>What outcome do they actually need?</h4>
+  <p class="four-jobs-callback">Defines the destination — Job 3.</p>
 
   <p>Most products are designed at feature level. The Enduring question forces the team to name the specific life change the customer is trying to produce. Everything downstream depends on getting this right.</p>
 
@@ -585,12 +677,14 @@
   <table>
     <tr><th>Loom: from feature claim to P</th><th>Level</th></tr>
     <tr><td>"One video is worth a thousand words."</td><td>Feature claim</td></tr>
-    <tr><td><em>So what?</em> → "You can explain complex things without scheduling a meeting."</td><td>Still about the product</td></tr>
-    <tr><td><em>So what?</em> → "You can communicate decisions and context to anyone, anytime, asynchronously."</td><td>Getting closer</td></tr>
-    <tr><td><em>So what?</em> → "Your team operates at full speed regardless of time zone or availability."</td><td><strong>P — answer stops mentioning Loom</strong></td></tr>
+    <tr><td><em>So what?</em>: "You can explain complex things without scheduling a meeting."</td><td>Still about the product</td></tr>
+    <tr><td><em>So what?</em>: "You can communicate decisions and context to anyone, anytime, asynchronously."</td><td>Getting closer</td></tr>
+    <tr><td><em>So what?</em>: "Your team operates at full speed regardless of time zone or availability."</td><td><strong>P — answer stops mentioning Loom</strong></td></tr>
   </table>
 
-  <p>The rule: when the so what answer stops mentioning the product, you have found P.</p>
+  <p>The rule: when the So What? answer stops mentioning the product, you have found P.</p>
+
+  <div class="pullquote">"If your value proposition still needs the product to make sense, you have not found the value."</div>
 
   <h2>P Statement Template</h2>
   <p><em>"For [specific segment], [product] delivers [specific outcome], so [life is different in this specific way]."</em></p>
@@ -598,10 +692,14 @@
 
   <table>
     <tr><th>Product</th><th>Wrong P (Feature level)</th><th>Right P (Life Change level)</th></tr>
-    <tr><td>MyFitnessPal</td><td>"Track your calories."</td><td>"For adults who have tried and failed through willpower alone, MFP delivers a complete understanding of their body — so they know what to eat without having to think about it."</td></tr>
-    <tr><td>Strava</td><td>"Track your runs and rides."</td><td>"For endurance athletes who train consistently, Strava delivers visible proof that fitness is compounding — so effort has meaning beyond completion."</td></tr>
+    <tr><td>MyFitnessPal</td><td>"Track your calories."</td><td>"For adults who have tried and failed through willpower alone, MFP delivers a complete understanding of their body, so they know what to eat without having to think about it."</td></tr>
+    <tr><td>Strava</td><td>"Track your runs and rides."</td><td>"For endurance athletes who train consistently, Strava delivers visible proof that fitness is compounding, so effort has meaning beyond completion."</td></tr>
     <tr><td>Robinhood</td><td>"Commission-free trading."</td><td>"For young adults building financial confidence, Robinhood delivers a first real investment from knowledge, not impulse."</td></tr>
   </table>
+
+  <div class="callout">
+    <strong>Transient triggers acquisition. Enduring sustains value.</strong> A product needs both. The mistake is building E architecture (compounding data, habit loops, outcome tracking) for a problem that is only transient. The features exist. The investment was real. The moat never forms. This is not a retention problem. It is a diagnosis problem. The fix is not a better retention feature. The fix is a different problem classification.
+  </div>
 
   <div class="exercise">
     <h4>Exercise: Writing Your P Statement</h4>
@@ -618,7 +716,8 @@
     <h3>Chapter Summary</h3>
     <strong>Three levels:</strong> Feature, Outcome, Life Change. P must be at Life Change level.<br><br>
     <strong>So What? technique:</strong> keep asking until the answer stops mentioning the product. That is P.<br><br>
-    If P could appear in a feature list, it is at the wrong altitude. Enduring vs Transient: not all problems sustain motivation. E architecture only works for enduring problems.
+    If P could appear in a feature list, it is at the wrong altitude.<br><br>
+    Transient vs Enduring: not all problems sustain motivation. E architecture only works for enduring problems. If your product is solving a transient problem, no retention investment will fix it. Only a different problem classification will.
   </div>
 </section>
 
@@ -627,8 +726,11 @@
   <div class="chapter-label">Part One — BELT &nbsp;|&nbsp; Chapter 4</div>
   <h1>L — Lock-in</h1>
   <h4>Why have they not switched?</h4>
+  <p class="four-jobs-callback">Identifies the barrier blocking Job 2.</p>
 
   <p>Every customer who has not yet adopted your product is paying some cost to stay where they are. L names that cost and removes it.</p>
+
+  <div class="pullquote">"Customers do not switch when a better product exists. They switch when the cost of staying becomes visible."</div>
 
   <h2>Three Lock-in Types</h2>
   <div class="pole-grid">
@@ -650,7 +752,6 @@
   </div>
 
   <h3>One Product Per Type</h3>
-
   <table>
     <tr><th>Type</th><th>Product</th><th>What the customer has already invested</th><th>What liberation must do</th></tr>
     <tr>
@@ -668,7 +769,7 @@
     <tr>
       <td><strong>Inertia</strong></td>
       <td>Calendly</td>
-      <td>Email scheduling works — badly. There is no crisis. The status quo wins by default because nothing makes the switch feel worth it.</td>
+      <td>Email scheduling works badly. There is no crisis. The status quo wins by default because nothing makes the switch feel worth it.</td>
       <td>Calendly: send one link. First use takes 30 seconds. The switch costs less than the next email thread it replaces.</td>
     </tr>
   </table>
@@ -683,7 +784,6 @@
     <tr><td><strong>Search Cost</strong></td><td>Show the outcome before commitment. Remove evaluation risk.</td><td>Migration tools. There is nothing to migrate.</td></tr>
     <tr><td><strong>Inertia</strong></td><td>Reduce the first step to near-zero. No commitment before value.</td><td>Onboarding requiring belief, goals, or commitment.</td></tr>
   </table>
-
 
   <div class="exercise">
     <h4>Exercise: Diagnosing Your Lock-in Type</h4>
@@ -705,8 +805,11 @@
   <div class="chapter-label">Part One — BELT &nbsp;|&nbsp; Chapter 5</div>
   <h1>T — Type</h1>
   <h4>Transient or Enabling?</h4>
+  <p class="four-jobs-callback">Determines whether Job 4 can exist.</p>
 
   <p>T is the most consequential question in the diagnostic. The answer determines whether an E architecture is possible at all.</p>
+
+  <div class="pullquote">"You cannot compound value in a problem that does not repeat."</div>
 
   <table>
     <tr><th>Transient</th><th>Enabling</th></tr>
@@ -719,10 +822,14 @@
   <h3>The T Test</h3>
   <p>"If a customer stopped using the product for six months and came back, would the product know them? Would the 601st session feel different from the first?" If yes: Enabling. If no: Transient.</p>
 
+  <div class="warning">
+    <strong>The cost of getting this wrong.</strong> Every month spent building compounding E architecture on a transient segment is a month the product deepens a moat that can never hold. The personalisation investment is real. The roadmap cost is real. The moat never forms because the problem does not recur with enough regularity for data to accumulate into something irreplaceable. The wise for tourists and the Wise for expats are not two points on the same spectrum. They are different products that temporarily share a UI. T forces that distinction before the investment is made, not after years of retention work that cannot possibly succeed.
+  </div>
+
   <div class="summary">
     <h3>Chapter Summary</h3>
     <strong>Enabling:</strong> the hundredth use is more valuable than the first. <strong>Transient:</strong> every session delivers the same value.<br><br>
-    Building E architecture on a Transient product is wasted investment.<br><br>
+    Building E architecture on a Transient product is wasted investment. The moat cannot form where the problem does not recur.<br><br>
     <strong>Non-obvious truth:</strong> if your product is solving a transient problem, you do not have a retention problem. You have a diagnosis problem. No feature, no onboarding improvement, and no re-engagement campaign will fix it. The only fix is a different problem.
   </div>
 </section>
@@ -732,6 +839,7 @@
   <div class="chapter-label">Part One — BELT &nbsp;|&nbsp; Chapter 6</div>
   <h1>Segmentation</h1>
   <h4>The BELT definition</h4>
+  <p class="four-jobs-callback">Defines which customer the four jobs apply to.</p>
 
   <div class="pullquote">"Two customers belong to the same segment if they share the same enduring pain and the same lock-in type."</div>
 
@@ -744,10 +852,48 @@
     <tr><td><strong>E architecture?</strong></td><td>Yes. Build the compounding layer.</td><td>No. Design for P-Salience at next transfer moment.</td></tr>
   </table>
 
+  <p>Note: Wise only qualifies for full BELT+POLE design on the expat segment. The tourist segment is structurally transient: weak P, no E, high natural churn. Any retention investment aimed at tourists is investment aimed at a problem that cannot compound. The segmentation decision (which segment gets POLE designed for them) is the most consequential product architecture decision Wise makes. Both segments use the same product. Only one warrants the full architecture.</p>
+
+  <div class="callout">
+    <strong>BELT segmentation is not a marketing exercise. It is a product architecture decision.</strong> Two customers with different BELT profiles require different P, different O, different L, and different E. The product that tries to serve both with one architecture will serve neither well, and will blame execution, growth, or UX when the real problem is an undifferentiated design. Split before designing. Always.
+  </div>
+
   <div class="summary">
     <h3>Chapter Summary</h3>
     <strong>"Two customers are in the same segment if they share the same enduring pain and the same lock-in type."</strong><br><br>
-    Same product, different segments, different designs. If BELT answers diverge within your candidate segment, you have two segments. Split before designing.
+    Same product, different segments, different designs. If BELT answers diverge within your candidate segment, you have two segments. Split before designing.<br><br>
+    BELT is now complete. What follows is POLE: the design architecture for each of the four jobs your product must do, built on the foundation the diagnosis just established.
+  </div>
+</section>
+
+<!-- BELT-POLE BRIDGE — NEW SECTION -->
+<section id="belt-pole-bridge" class="chapter">
+  <div class="chapter-label">Bridge</div>
+  <h1>From Diagnosis to Design</h1>
+  <h4>What BELT hands to POLE, and why the handoff determines everything</h4>
+
+  <div class="pullquote">"POLE is not four parts. It is a chain. When one breaks, the others lose value."</div>
+
+  <p>BELT is complete. You have named the workaround, classified the problem type, identified the specific lock-in, determined whether depth value can form, and defined the segment. You now have four outputs. Each one is a direct input into POLE.</p>
+
+  <table>
+    <tr><th>BELT output</th><th>What it hands to POLE</th></tr>
+    <tr><td><strong>B — The workaround</strong></td><td>The obstacle thesis: the specific structural reason P is not already true. O must break exactly this belief.</td></tr>
+    <tr><td><strong>E — The life change</strong></td><td>The P destination. The specific outcome that makes all four jobs worth doing. If this is at Feature level, every downstream decision is wrong.</td></tr>
+    <tr><td><strong>L — The lock-in type</strong></td><td>The liberation design. Switching Cost, Search Cost, or Inertia. Each requires a completely different L. Generic ease of use is not L.</td></tr>
+    <tr><td><strong>T — Transient or Enabling</strong></td><td>Whether E architecture is worth building. Transient: design for P-Salience. Enabling: invest in the compounding layer.</td></tr>
+  </table>
+
+  <div class="bridge-section">
+    <h2>The quality of POLE is entirely determined by the quality of BELT.</h2>
+    <p>A weak BELT produces confident POLE design in the wrong direction. Strong P articulation with a shallow obstacle thesis produces O that fires for the wrong belief. Correct lock-in type with a P still at Feature level produces L that removes the right barrier to the wrong destination. T misclassified as Enabling on a Transient problem produces E architecture that compounds toward a moat that can never hold.</p>
+    <p>The designers of POLE who skip BELT are Robinhood. Brilliant work. Wrong direction. The diagnosis comes first because there is no other sequence that produces a correct design.</p>
+  </div>
+
+  <p>The four POLE chapters that follow are not four separate topics. They are one connected architecture, designed in sequence, each element following directly from the BELT diagnosis you just completed. Read them as a system, because that is what they are.</p>
+
+  <div class="insight">
+    <p>POLE is not four parts of a framework. It is four dependencies. When one fails, the others become less valuable. A weak P means O has no clear belief to break. O without correct L means you paid to bring someone to a door that is still locked. L without a working E means you cleared the barrier to a product that cannot sustain what it promised. The sequence is not stylistic. It is structural.</p>
   </div>
 </section>
 
@@ -756,6 +902,11 @@
   <div class="chapter-label">Part Two — POLE &nbsp;|&nbsp; Chapter 7</div>
   <h1>P — The Destination</h1>
   <h4>The specific life change after sustained use</h4>
+  <p class="four-jobs-callback">Designs Job 3 — the destination.</p>
+
+  <div class="callout"><strong>POLE is not a checklist.</strong> It is a system where each element increases or decreases the value of the others. Designing one well does not compensate for another done poorly. A strong P with a weak O means the destination exists but nobody believes they can reach it. A strong O with wrong L means you paid to bring someone to a door that is still locked. The four chapters that follow are not sequential steps. They are interdependencies.</div>
+
+  <p>P follows directly from the E question in BELT. What outcome does the segment actually need? P is not a rephrasing of that question. It is the design-level answer: a precise statement of the life change that makes every other product decision evaluable. If P is right, O, L, and E have a target. If P is wrong, they have none.</p>
 
   <p>P is not a tagline. It is the specific outcome the customer experiences after sustained use. It is the destination that every other POLE element is moving the customer toward.</p>
 
@@ -766,22 +917,22 @@
     <div class="p-type" style="border-top:4px solid var(--teal);">
       <div class="p-type-name">Ongoing</div>
       <div class="p-type-def">P is delivered in every session. The customer renews because each session is worth having. The relationship is continuous.</div>
-      <div class="p-type-eg">Spotify: music finds you before you know you want it — every session.<br>IndiGo: your flight will leave on time — every flight.</div>
+      <div class="p-type-eg">Spotify: music finds you before you know you want it, every session.<br>IndiGo: your flight will leave on time, every flight.</div>
     </div>
     <div class="p-type" style="border-top:4px solid var(--black);">
       <div class="p-type-name">Terminal</div>
-      <div class="p-type-def">P is delivered once. The customer achieves a specific outcome and the relationship transitions — to advocacy, re-acquisition at the next cycle, or referral.</div>
-      <div class="p-type-eg">Hinge: "deleted the app" — P is relationship found.<br>TurboTax: refund in hand before deadline.<br>Atlys: visa approved before travel.</div>
+      <div class="p-type-def">P is delivered once. The customer achieves a specific outcome and the relationship transitions to advocacy, re-acquisition at the next cycle, or referral.</div>
+      <div class="p-type-eg">Hinge: "deleted the app": P is relationship found.<br>TurboTax: refund in hand before deadline.<br>Atlys: visa approved before travel.</div>
     </div>
     <div class="p-type" style="border-top:4px solid var(--gray60);">
       <div class="p-type-name">Intermittent</div>
       <div class="p-type-def">P recurs at natural intervals determined by external conditions. The customer returns when the condition returns.</div>
-      <div class="p-type-eg">Hipcamp: every campsite matches what was described — each trip.<br>Tax software at filing season.</div>
+      <div class="p-type-eg">Hipcamp: every campsite matches what was described, each trip.<br>Tax software at filing season.</div>
     </div>
   </div>
 
   <div class="callout">
-    <strong>Terminal P requires a different E architecture.</strong> If P is delivered once, retention is not the goal — advocacy and re-acquisition at the next cycle are. Every E investment must serve referral or the next instance of the problem, not session-to-session loyalty.
+    <strong>Terminal P requires a different E architecture.</strong> If P is delivered once, retention is not the goal: advocacy and re-acquisition at the next cycle are. Every E investment must serve referral or the next instance of the problem, not session-to-session loyalty.
   </div>
 
   <h2>Three Tests for P</h2>
@@ -799,7 +950,7 @@
     <li><strong>Ask what if that's wrong.</strong> Surface the assumed mechanism and test whether your product also assumes it.</li>
   </ol>
   <p><strong>Spotify:</strong> every platform assumed "music = something you find." Spotify: "what if music finds you?" This HOW challenge reframes P, O, and E simultaneously.</p>
-  <p><strong>TurboTax:</strong> assumed HOW was "better form-filling UX reduces the chore of tax filing." Ethnographic research revealed that for every 2–4 hours spent filing, users spent equal time collecting data. The bottleneck was not the form — it was the data. Real HOW: move the customer from data entry to data verifier. Automate collection. Let users confirm, not type.</p>
+  <p><strong>TurboTax:</strong> assumed HOW was "better form-filling UX reduces the chore of tax filing." Ethnographic research revealed that for every 2–4 hours spent filing, users spent equal time collecting data. The bottleneck was not the form. It was the data. Real HOW: move the customer from data entry to data verifier. Automate collection. Let users confirm, not type.</p>
 
   <h3>Full Derivation: Notion</h3>
   <p>Here is the complete journey from HOW Audit to P for a product the target reader almost certainly uses.</p>
@@ -814,7 +965,7 @@
     <tr>
       <td><strong>HOW challenged</strong></td>
       <td>What if that's wrong?</td>
-      <td>Beautiful UI is the O, not the mechanism. The real HOW: connected knowledge survives team change. Linkage — not aesthetics — is what retains.</td>
+      <td>Beautiful UI is the O, not the mechanism. The real HOW: connected knowledge survives team change. Linkage, not aesthetics, is what retains.</td>
     </tr>
     <tr>
       <td><strong>Obstacle thesis</strong></td>
@@ -824,7 +975,7 @@
     <tr>
       <td><strong>P — first draft</strong></td>
       <td>What is permanently different if Notion works?</td>
-      <td>"Teams that are more organised." Fails competitor test — Confluence can say this too. Too generic.</td>
+      <td>"Teams that are more organised." Fails competitor test: Confluence can say this too. Too generic.</td>
     </tr>
     <tr>
       <td><strong>P — raised</strong></td>
@@ -839,16 +990,19 @@
   </table>
 
   <div class="callout">
-    P is not a tagline. It is a design brief. Every POLE element follows from it. If P had stayed at "more organised," every downstream decision would have been weaker.
+    P is not a tagline. It is a design brief. Every POLE element follows from it. If P had stayed at "more organised," every downstream decision would have been weaker. Wrong O: no specific belief to break. Wrong L: no specific barrier to remove. Wrong E: compounding toward an undefined destination.
   </div>
 
   <div class="pullquote">"Kingfisher had a tagline. IndiGo had a system. One competed on perception. The other competed on delivery. Only one is still flying."</div>
 
+  <div class="pullquote">"A product without a clear destination does not retain. It circulates."</div>
+
   <div class="summary">
     <h3>Chapter Summary</h3>
-    <strong>Three P types:</strong> Ongoing (every session confirms P), Terminal (P delivered once — requires advocacy architecture), Intermittent (recurs at natural intervals).<br><br>
+    <strong>Three P types:</strong> Ongoing (every session confirms P), Terminal (P delivered once, requires advocacy architecture), Intermittent (recurs at natural intervals).<br><br>
     <strong>P at Feature level cascades:</strong> wrong O, wrong L, wrong E.<br><br>
-    <strong>HOW audit:</strong> challenge the assumed mechanism before writing P. TurboTax's insight — data collection was the bottleneck, not form-filling — changed the entire product direction.
+    <strong>HOW audit:</strong> challenge the assumed mechanism before writing P. TurboTax's insight: data collection was the bottleneck, not form-filling. This changed the entire product direction.<br><br>
+    P established: O now has a specific belief to break, in service of this destination.
   </div>
 </section>
 
@@ -857,9 +1011,15 @@
   <div class="chapter-label">Part Two — POLE &nbsp;|&nbsp; Chapter 8</div>
   <h1>O — The Belief Moment</h1>
   <h4>Understandable before first use. Verifiable after first use.</h4>
+  <p class="four-jobs-callback">Designs Job 1 — belief.</p>
 
-  <p>O is the moment a new customer first believes that P is possible. It must fire in session 1. If it does not, the customer leaves before E can begin.</p>
-  <p>O is not just apparent before use. It breaks the specific sceptical belief the obstacle thesis identified. If you cannot trace O back to the obstacle thesis, your O is not designed — it is a default.</p>
+  <p>O is the most underrated contribution in product thinking. Every team can tell you what their product does. Very few can tell you exactly which sceptical belief a new customer holds on arrival, and exactly which moment in session 1 breaks it. That gap is where most acquisition strategies fail: not in targeting, not in messaging, but in the absence of a designed belief-breaking moment.</p>
+
+  <div class="pullquote">"If belief does not change in the first session, behaviour will not change in the second."</div>
+
+  <p>O is the moment a new customer first believes that P is possible. It must fire in session 1. If it does not, the customer leaves before E can begin. Everything invested in E (the compounding layer, the moat, the data currency) is unreachable if O never fires. O is the gate everything else passes through.</p>
+
+  <p>O is not just apparent before use. It breaks the specific sceptical belief the obstacle thesis identified. If you cannot trace O back to the obstacle thesis, your O is not designed. It is a default: a feature that happened to create a positive first impression, not an architecture that was built to break a specific barrier.</p>
 
   <h2>O and the Obstacle Thesis</h2>
   <p>The obstacle thesis names the specific structural reason the customer has not already solved the problem. O must break exactly the belief that thesis identifies.</p>
@@ -867,7 +1027,7 @@
   <table>
     <tr><th>Product</th><th>Obstacle thesis</th><th>O that breaks it</th></tr>
     <tr><td>Wise</td><td>Banks obscure the real cost, making informed decisions impossible.</td><td>8x cheaper than your bank. Fee shown before you send. Verifiable before signup.</td></tr>
-    <tr><td>Grammarly</td><td>Writing errors appear too late — after sending — to correct without embarrassment.</td><td>Red underline in the moment of writing. In Gmail, Docs, Word. Apparent where you write.</td></tr>
+    <tr><td>Grammarly</td><td>Writing errors appear too late, after sending, to correct without embarrassment.</td><td>Red underline in the moment of writing. In Gmail, Docs, Word. Apparent where you write.</td></tr>
     <tr><td>Calendly</td><td>Scheduling requires multiple turns of back-and-forth that degrade credibility.</td><td>Send one link. The other person picks a time in 30 seconds. Experienced in first use.</td></tr>
     <tr><td>Gmail (2004)</td><td>Email storage forces constant deletion, making the inbox a chore.</td><td>1 gigabyte free. Verifiable before signup. No trust required. A hard O.</td></tr>
   </table>
@@ -878,6 +1038,8 @@
     <li><strong>Soft O:</strong> experienced in the first 30 seconds before any commitment. Suno: type a description, hear a song. The value is demonstrated, not stated.</li>
   </ul>
   <p>Both are valid. Both must fire in session 1. The test: can a prospect grasp it before committing? If you can only advertise it but not verify it, it is E in disguise, not O.</p>
+
+  <div class="pullquote">"If you can only advertise it, you do not have an O. You have a claim."</div>
 
   <h2>Three O Failure Modes</h2>
   <div class="o-failures">
@@ -917,10 +1079,11 @@
 
   <div class="summary">
     <h3>Chapter Summary</h3>
-    <strong>O breaks a specific belief</strong> — the one the obstacle thesis identified. Trace O to the obstacle thesis. If you cannot, it is a default, not a design.<br><br>
+    <strong>O breaks a specific belief</strong>: the one the obstacle thesis identified. Trace O to the obstacle thesis. If you cannot, it is a default, not a design.<br><br>
     <strong>Hard O:</strong> verifiable with a number. <strong>Soft O:</strong> verifiable in first 30 seconds. Both must fire in session 1.<br><br>
     <strong>Three failure modes:</strong> too late, wrong segment, never fires. Each has a specific fix.<br><br>
-    If you can only advertise it — not verify it — it is E in disguise.
+    If you can only advertise it, not verify it, it is E in disguise.<br><br>
+    O has now broken the barrier to believing P is possible. L removes the structural barrier to acting on that belief.
   </div>
 </section>
 
@@ -929,6 +1092,9 @@
   <div class="chapter-label">Part Two — POLE &nbsp;|&nbsp; Chapter 9</div>
   <h1>L — Liberation</h1>
   <h4>Removes the old barrier. Enables adoption without rebuild.</h4>
+  <p class="four-jobs-callback">Designs Job 2 — switching.</p>
+
+  <p>O created the belief that P is possible. L picks up where O stops. O is about breaking a belief. L is about removing the structural cost of acting on that belief. A customer can believe the product works and still not adopt it, because switching requires rebuilding something they have already invested in. L addresses that cost, precisely, based on the lock-in type BELT identified.</p>
 
   <p>L is not easy onboarding. It is the deliberate removal of the specific barrier keeping this segment out. Generic ease of use is not L.</p>
 
@@ -936,11 +1102,15 @@
     <tr><th>Lock-in type</th><th>What L must do</th><th>Example</th></tr>
     <tr><td><strong>Switching Cost</strong></td><td>Import. Data portability. "Your history comes with you."</td><td>Spotify imports Apple Music playlists. Taste model begins learning from existing history.</td></tr>
     <tr><td><strong>Search Cost</strong></td><td>Show the outcome before commitment. Reverse trial.</td><td>Warby Parker home try-on. TurboTax shows refund before filing.</td></tr>
-    <tr><td><strong>Inertia</strong></td><td>Eliminate the first-step requirement. Zero-commitment start.</td><td>"Log one meal. No calorie target required." MFP's current onboarding asks for a goal in session 1 — exactly the wrong design.</td></tr>
+    <tr><td><strong>Inertia</strong></td><td>Eliminate the first-step requirement. Zero-commitment start.</td><td>"Log one meal. No calorie target required." MFP's current onboarding asks for a goal in session 1: exactly the wrong design.</td></tr>
   </table>
 
   <h2>How O and L Work Together: Four Relationship Types</h2>
   <p>O and L often work on the same adoption barrier from different angles. Understanding the relationship type tells you whether your acquisition architecture is as powerful as it can be.</p>
+
+  <div class="pullquote">"Ease is not liberation. Ease helps once the customer has decided. Liberation is what makes the decision possible."</div>
+
+  <div class="pullquote">"Strong O with wrong L is the most expensive acquisition architecture you can build. You pay to bring someone to a door that is still locked."</div>
 
   <div class="ol-types">
     <div class="ol-type">
@@ -948,7 +1118,7 @@
       <div>
         <div class="ol-label">Convergence</div>
         <div class="ol-rule">One feature does both jobs simultaneously. O and L are the same thing. The most powerful acquisition moment.</div>
-        <div class="ol-eg">Gmail 2004: 1GB storage is O (apparent before signup, verifiable by number) and L (broke the reason to stay on existing email — no more deletion pressure) in a single feature.</div>
+        <div class="ol-eg">Gmail 2004: 1GB storage is O (apparent before signup, verifiable by number) and L (broke the reason to stay on existing email, removing the deletion pressure) in a single feature.</div>
       </div>
     </div>
     <div class="ol-type">
@@ -956,7 +1126,7 @@
       <div>
         <div class="ol-label">Near-convergence</div>
         <div class="ol-rule">Different features. Same barrier. Two angles on one wall. Very strong together.</div>
-        <div class="ol-eg">Grammarly: the red underline in Gmail (O — apparent where you write) + works inside every surface without context switch (L — zero new surface required). Both attack the friction of adopting a better writing tool.</div>
+        <div class="ol-eg">Grammarly: the red underline in Gmail (O: apparent where you write) + works inside every surface without context switch (L: zero new surface required). Both attack the friction of adopting a better writing tool.</div>
       </div>
     </div>
     <div class="ol-type">
@@ -983,7 +1153,8 @@
     <h3>Chapter Summary</h3>
     L traces directly to the lock-in type from BELT. Three types produce three completely different liberation designs. Generic ease of use is not L.<br><br>
     <strong>Four O+L relationship types:</strong> Convergence (one feature, both jobs), Near-convergence (different features, same barrier), Sequential (O then L), Independent (different axes).<br><br>
-    Convergence and near-convergence produce the most powerful acquisition moments. Design toward them.
+    Convergence and near-convergence produce the most powerful acquisition moments. Design toward them.<br><br>
+    The customer now believes P is possible and has crossed the adoption barrier. E is what that journey was always leading toward: the architecture that makes leaving increasingly costly.
   </div>
 </section>
 
@@ -992,41 +1163,45 @@
   <div class="chapter-label">Part Two — POLE &nbsp;|&nbsp; Chapter 10</div>
   <h1>E — The Retention Arc</h1>
   <h4>The architecture that makes leaving increasingly costly</h4>
+  <p class="four-jobs-callback">Designs Job 4 — compounding value.</p>
 
-  <p>E is not "the retention features." E is the architecture that ensures each session deposits value that did not exist before — until leaving means losing something irreplaceable.</p>
+  <p>P defined where the customer is going. O gave them a reason to believe they could get there. L removed the barrier to starting. E is what O and L were always leading toward: the architecture that ensures each session deposits value that did not exist before, until leaving means losing something irreplaceable.</p>
+
+  <div class="pullquote">"Retention is not a feature. It is a consequence of accumulated value."</div>
+
+  <p>E is not "the retention features." E is the architecture that ensures each session deposits value that did not exist before, until leaving means losing something irreplaceable.</p>
 
   <h2>E-Delivered and E-Accrued</h2>
-  <p>E operates in two distinct modes. Understanding which mode you are investing in — and whether E-Delivered is solid before E-Accrued begins — is the most common gap in product roadmaps.</p>
+  <p>E operates in two distinct modes. Understanding which mode you are investing in, and whether E-Delivered is solid before E-Accrued begins, is the most common gap in product roadmaps.</p>
 
   <table>
     <tr><th></th><th>E-Delivered (per session)</th><th>E-Accrued (across sessions)</th></tr>
     <tr><td><strong>What it is</strong></td><td>Value the product provides in each session. Good recommendations. Fast search. Clean UX. The product performs well.</td><td>Value that belongs to the user, built inside the product over time. Cannot be transferred. Cannot be replicated by a competitor.</td></tr>
     <tr><td><strong>What it drives</strong></td><td>Day 1 to Day 30 retention. Week-to-week habit formation.</td><td>Month 3+ retention and renewal. Real switching cost.</td></tr>
     <tr><td><strong>Can a competitor match it?</strong></td><td>Yes. Within 12 months with investment.</td><td>No. The competitor cannot replicate what the user has already built.</td></tr>
-    <tr><td><strong>Switching cost</strong></td><td>Weak alone. User leaves without losing anything they built.</td><td>Strong. Switching means losing the workspace, history, model — what the user built inside the product.</td></tr>
+    <tr><td><strong>Switching cost</strong></td><td>Weak alone. User leaves without losing anything they built.</td><td>Strong. Switching means losing the workspace, history and model: what the user built inside the product.</td></tr>
   </table>
 
   <h3>Three Products, Both Layers</h3>
-
   <table>
     <tr><th>Product</th><th>E-Delivered — what each session gives</th><th>E-Accrued — what the user has built</th><th>The moat test</th></tr>
     <tr>
       <td><strong>Stitch Fix</strong></td>
       <td>Each box has 5 well-chosen pieces. Quality improves with each delivery as the stylist uses your feedback.</td>
-      <td>After 12 months: hundreds of signals — kept, returned, why, size, occasion, budget — build a style profile that took years to develop. Each box is better than the last.</td>
+      <td>After 12 months: hundreds of signals (kept, returned, why, size, occasion, budget) that build a style profile that took years to develop. Each box is better than the last.</td>
       <td>Your style profile cannot be transferred. A competitor starts from zero.</td>
     </tr>
     <tr>
       <td><strong>Grammarly</strong></td>
       <td>Real-time underlines, tone suggestions, clarity rewrites. Consistent and useful in every session.</td>
-      <td>A style model that learns your voice — vocabulary, formality, patterns, frequent errors. Month 6 feels nothing like Month 1.</td>
+      <td>A style model that learns your voice: vocabulary, formality, patterns, frequent errors. Month 6 feels nothing like Month 1.</td>
       <td>Your personal style model cannot be exported. Switching means generic suggestions that feel foreign.</td>
     </tr>
     <tr>
       <td><strong>Substack (reader)</strong></td>
       <td>Each issue is well-written. The reader learns something. The quality of each issue is the reason they opened it.</td>
       <td>Two years of archives. A relationship with a writer whose thinking you now understand deeply. The hundredth issue lands differently from the first.</td>
-      <td>The archive and relationship are irreplaceable. Switching is not changing the source — it is starting over.</td>
+      <td>The archive and relationship are irreplaceable. Switching is not changing the source. It is starting over.</td>
     </tr>
   </table>
 
@@ -1046,15 +1221,15 @@
     <div class="ladder-step">
       <div class="ladder-n">2</div>
       <div class="ladder-content">
-        <div class="ladder-title">Set the Functional VP floor</div>
+        <div class="ladder-title">Set the Functional value proposition floor</div>
         <div class="ladder-desc">Minimum threshold per component. Below this threshold, P-state resets to zero. Spotify: if cross-device sync fails, no amount of Discover Weekly quality saves the session.</div>
       </div>
     </div>
     <div class="ladder-step">
       <div class="ladder-n">3</div>
       <div class="ladder-content">
-        <div class="ladder-title">Derive Experience VP from the obstacle thesis</div>
-        <div class="ladder-desc">Which dimension — Speed, Relevance, Clarity, Control — is load-bearing? This is the dimension the obstacle thesis named. It must be the dimension E-Delivered optimises for.</div>
+        <div class="ladder-title">Derive Experience value proposition from the obstacle thesis</div>
+        <div class="ladder-desc">Which dimension (Speed, Relevance, Clarity, Control) is load-bearing? This is the dimension the obstacle thesis named. It must be the dimension E-Delivered optimises for.</div>
       </div>
     </div>
     <div class="ladder-step">
@@ -1067,14 +1242,14 @@
     <div class="ladder-step">
       <div class="ladder-n">5</div>
       <div class="ladder-content">
-        <div class="ladder-title">E-P Alignment — Cut features that don't trace to P</div>
+        <div class="ladder-title">E-P Alignment — cut features that don't trace to P</div>
         <div class="ladder-desc">For every feature: does it trace to Step 1 via the obstacle thesis in two steps or fewer? If not, cut it. It is consuming roadmap without advancing P-state.</div>
       </div>
     </div>
   </div>
 
   <h2>The Referral Moment</h2>
-  <p>Referral is not a feature. It is the moment E-Accrued becomes perceivable and shareable. Spotify Wrapped works because it fires in December — after 12 months of E-Accrued listening history. The value was already there. Wrapped made it visible. Triggering referral at adoption (Stage 3) before E-Accrued has formed produces an empty chart and no sharing.</p>
+  <p>Referral is not a feature. It is the moment E-Accrued becomes perceivable and shareable. Spotify Wrapped works because it fires in December, after 12 months of E-Accrued listening history. The value was already there. Wrapped made it visible. Triggering referral at adoption (Stage 3) before E-Accrued has formed produces an empty chart and no sharing.</p>
   <p>The rule: referral fires when P is realised and E-Accrued is perceivable. Not before.</p>
 
   <div class="exercise">
@@ -1082,7 +1257,7 @@
     <ol>
       <li>Decompose your P into 3–5 components. What must be true in each session?</li>
       <li>Set the floor for each component.</li>
-      <li>Name the load-bearing Experience VP dimension. Which one addresses the obstacle thesis?</li>
+      <li>Name the load-bearing Experience value proposition dimension. Which one addresses the obstacle thesis?</li>
       <li>Identify the E-Accrued layer. What does the user build that they cannot export?</li>
       <li>Apply Step 5 to your three highest-engagement features. Can each be traced to Step 1 in two steps?</li>
     </ol>
@@ -1090,9 +1265,10 @@
 
   <div class="summary">
     <h3>Chapter Summary</h3>
-    <strong>E-Delivered</strong> retains week to week. A competitor can match it. <strong>E-Accrued</strong> creates real switching cost — leaving means losing what was built.<br><br>
-    <strong>5-step ladder:</strong> decompose P, set floor, derive Experience VP from obstacle thesis, identify E-Accrued layer, cut features that cannot trace to Step 1.<br><br>
-    <strong>Non-obvious truth:</strong> most PMs optimise the acquisition layer while the retention layer collapses underneath them. Strong O + weak E is a leaky bucket. Fix E-Delivered first. Then E-Accrued. Then referral.
+    <strong>E-Delivered</strong> retains week to week. A competitor can match it. <strong>E-Accrued</strong> creates real switching cost: leaving means losing what was built.<br><br>
+    <strong>5-step ladder:</strong> decompose P, set floor, derive Experience value proposition from obstacle thesis, identify E-Accrued layer, cut features that cannot trace to Step 1.<br><br>
+    <strong>Non-obvious truth:</strong> most PMs optimise the acquisition layer while the retention layer collapses underneath them. Strong O. Weak E. A leaky bucket with a very good tap. Fix E-Delivered first. Then E-Accrued. Then referral.<br><br>
+    POLE is complete. P defined the destination. O broke the belief that made adoption feel impossible. L removed the structural barrier to starting. E built the architecture that makes leaving costly. The four jobs, and how to do each one deliberately.
   </div>
 </section>
 
@@ -1108,7 +1284,7 @@
     <div class="pole-card" style="border-top-color:var(--gray60);">
       <div class="pole-letter">T</div>
       <div class="pole-name">Time — The Seed</div>
-      <div class="pole-desc">Sessions invested. Weakest alone — a competitor can buy it back with a discount. Only becomes load-bearing when it enables Data to form.<br><br><em>Spotify streams. Strava logs. Duolingo days practiced.</em></div>
+      <div class="pole-desc">Sessions invested. Weakest alone: a competitor can buy it back with a discount. Only becomes load-bearing when it enables Data to form.<br><br><em>Spotify streams. Strava logs. Duolingo days practiced.</em></div>
     </div>
     <div class="pole-card teal">
       <div class="pole-letter">D</div>
@@ -1118,18 +1294,18 @@
     <div class="pole-card yellow">
       <div class="pole-letter">M</div>
       <div class="pole-name">Money — The Lock</div>
-      <div class="pole-desc">Activates last. The customer pays to protect what has been built — the data asset they cannot rebuild elsewhere. Not a paywall; protection for the moat they have created.<br><br><em>Spotify Premium. Notion team plan. LinkedIn Recruiter.</em></div>
+      <div class="pole-desc">Activates last. The customer pays to protect what has been built: the data asset they cannot rebuild elsewhere. Not a paywall; protection for the moat they have created.<br><br><em>Spotify Premium. Notion team plan. LinkedIn Recruiter.</em></div>
     </div>
   </div>
 
   <h2>The Sequence Varies by Product</h2>
-  <p>Most products progress Time → Data → Money. But the starting currency depends on what the customer deposits first.</p>
+  <p>Most products progress Time to Data to Money. But the starting currency depends on what the customer deposits first.</p>
 
   <table>
     <tr><th>Product</th><th>Starting currency</th><th>Sequence</th></tr>
-    <tr><td>Spotify</td><td>Time</td><td>Streams seed taste model (Data) → Premium protects model (Money)</td></tr>
-    <tr><td>LinkedIn</td><td>Data</td><td>Profile = immediate deposit → connections deepen (Time) → Recruiter after data has value (Money)</td></tr>
-    <tr><td>Robinhood</td><td>Money</td><td>First deposit = stake → portfolio history (Data) → account history = switching cost (Time)</td></tr>
+    <tr><td>Spotify</td><td>Time</td><td>Streams seed taste model (Data), then Premium protects model (Money)</td></tr>
+    <tr><td>LinkedIn</td><td>Data</td><td>Profile = immediate deposit, connections deepen (Time), Recruiter after data has value (Money)</td></tr>
+    <tr><td>Robinhood</td><td>Money</td><td>First deposit = stake, portfolio history (Data), account history = switching cost (Time)</td></tr>
   </table>
 
   <h2>Currency in Research: Confirmatory vs Commitment Yes</h2>
@@ -1137,9 +1313,9 @@
 
   <table>
     <tr><th>Round</th><th>Currency asked</th><th>Signal level</th><th>What you learn</th></tr>
-    <tr><td>"Are you interested in a carpooling app that gives you extra income and good company?"</td><td>Email address — Time</td><td>Confirmatory yes</td><td>Confirms the market cares. Does not confirm they will change behaviour.</td></tr>
-    <tr><td>"We have passengers commuting your exact route every day. Are you keen to onboard right now?"</td><td>Mobile number + route — Data</td><td>Commitment signal</td><td>Pain is real enough to engage with specifics. Route data confirms actual behaviour.</td></tr>
-    <tr><td>"We're running a promotion — double earnings if you join by tomorrow."</td><td>Driving licence — Identity</td><td>Full commitment yes</td><td>Distinguishes real intent from curiosity. Drop-off here = safety or inertia. Not demand.</td></tr>
+    <tr><td>"Are you interested in a carpooling app that gives you extra income and good company?"</td><td>Email address: Time</td><td>Confirmatory yes</td><td>Confirms the market cares. Does not confirm they will change behaviour.</td></tr>
+    <tr><td>"We have passengers commuting your exact route every day. Are you keen to onboard right now?"</td><td>Mobile number + route: Data</td><td>Commitment signal</td><td>Pain is real enough to engage with specifics. Route data confirms actual behaviour.</td></tr>
+    <tr><td>"We're running a promotion: double earnings if you join by tomorrow."</td><td>Driving licence: Identity</td><td>Full commitment yes</td><td>Distinguishes real intent from curiosity. Drop-off here = safety or inertia. Not demand.</td></tr>
   </table>
 
   <p>The gap between confirmatory yes and commitment yes tells you whether the pain is real enough to change behaviour. If your validation only reaches email, you only know that the idea sounds good. You do not know if anyone will act.</p>
@@ -1165,7 +1341,7 @@
   <table>
     <tr><th>Actor</th><th>Who</th><th>Owns</th><th>Failure mode</th></tr>
     <tr><td><strong>Value Generator</strong></td><td>The company. Creates, promises, delivers, reinforces, and captures value.</td><td>Stages 1, 2, 4, 8 (shared), 9</td><td>Asks for capture before realisation. Paywall before moat.</td></tr>
-    <tr><td><strong>Value Distributor</strong></td><td>The channel. Not always a person — often the product itself. Wrapped. The weekly email. The push notification.</td><td>Stage 5. Co-owns Stage 8.</td><td>Distributes at wrong moment or wrong channel. Referral before perception.</td></tr>
+    <tr><td><strong>Value Distributor</strong></td><td>The channel. Not always a person, often the product itself. Wrapped. The weekly email. The push notification.</td><td>Stage 5. Co-owns Stage 8.</td><td>Distributes at wrong moment or wrong channel. Referral before perception.</td></tr>
     <tr><td><strong>Value Receiver</strong></td><td>Perceives, experiences, realises, and responds. The referral loop begins here.</td><td>Stages 3, 6, 7.</td><td>Receives value but cannot articulate what they got. Moat is invisible.</td></tr>
   </table>
 
@@ -1191,7 +1367,7 @@
   </ul>
 
   <div class="insight">
-    <p><strong>Spotify Wrapped fires in December — not in January when users sign up.</strong></p>
+    <p><strong>Spotify Wrapped fires in December, not in January when users sign up.</strong></p>
     <p>By December, users have 12 months of E-Accrued listening history. Wrapped makes that history visible and shareable. That perception (Stage 3) triggered referral (feeding back into Stage 5). The moat was already there at Stage 7. Wrapped made it perceivable. Triggering Wrapped in January would have produced an empty chart and no sharing.</p>
     <p>Stage 8 is not a feature. It is the Distributor's job at the right moment.</p>
   </div>
@@ -1200,12 +1376,11 @@
   <p>Stage 2 is not one promise. Each POLE element makes a different promise at a different stage, evaluated at a different moment.</p>
   <table>
     <tr><th>POLE element</th><th>Promise type</th><th>Made when</th><th>Evaluated when</th></tr>
-    <tr><td><strong>P</strong></td><td>Destination Promise: "Your life will be different in this specific way."</td><td>Before adoption</td><td>Stage 7 — Realisation</td></tr>
-    <tr><td><strong>O</strong></td><td>Belief Promise: "You will believe this is possible in session one."</td><td>Session 1</td><td>Stage 6 — Reception</td></tr>
-    <tr><td><strong>L</strong></td><td>Switching Promise: "The barrier that stopped you before is gone."</td><td>At adoption</td><td>Stage 3 — Perception</td></tr>
+    <tr><td><strong>P</strong></td><td>Destination Promise: "Your life will be different in this specific way."</td><td>Before adoption</td><td>Stage 7: Realisation</td></tr>
+    <tr><td><strong>O</strong></td><td>Belief Promise: "You will believe this is possible in session one."</td><td>Session 1</td><td>Stage 6: Reception</td></tr>
+    <tr><td><strong>L</strong></td><td>Switching Promise: "The barrier that stopped you before is gone."</td><td>At adoption</td><td>Stage 3: Perception</td></tr>
     <tr><td><strong>E</strong></td><td>Compounding Promise: "This gets better every time you use it."</td><td>Earned over time</td><td>Month 3+</td></tr>
   </table>
-
 
   <div class="exercise">
     <h4>Exercise: Lifecycle Audit</h4>
@@ -1221,7 +1396,7 @@
     <h3>Chapter Summary</h3>
     <strong>Nine stages. Three actors.</strong> Each stage has a primary owner.<br><br>
     <strong>Stage 8 (Reinforcement) is the highest-leverage gap in most roadmaps.</strong> Making E-Accrued visible before the customer considers leaving. Most products design Stages 1–7 deliberately. Stage 8 is left to chance.<br><br>
-    <strong>Value Promise (Stage 2) is four promises</strong> — P, O, L, E — each made at a different moment and evaluated at a different stage.<br><br>
+    <strong>Value Promise (Stage 2) is four promises</strong>: P, O, L, E, each made at a different moment and evaluated at a different stage.<br><br>
     <strong>Capture (Stage 9) must follow Realisation (Stage 7).</strong> Capture before Realisation is a paywall. It extracts value the customer has not yet felt.
   </div>
 </section>
@@ -1246,6 +1421,8 @@
 
   <p>The element with the lowest combined score is the Weakest Link. It is your only priority. Never fix H elements when an L exists.</p>
 
+  <div class="pullquote">"A system fails at its weakest point, but investment continues everywhere else."</div>
+
   <h2>Fix Sequence: P First. Always.</h2>
   <ul>
     <li><strong>P is L:</strong> fix P before anything else. O cannot fire for a clear belief when P is undefined. L cannot remove the right barrier. E has nothing to compound.</li>
@@ -1255,12 +1432,17 @@
   </ul>
 
   <h2>LinkedIn: A Worked Example</h2>
+
+  <div class="insight">
+    <p>The POLE elements are not independent levers. They are a chain. Strong O without correct L means you paid to bring someone to a door that is still locked. Strong P without E means you promised a destination you cannot sustain. Strong E without P means you built a moat around nothing worth staying for. Strong L without O means you removed the barrier before the customer believed crossing it was worth anything. The weakest link does not just limit its own element: it makes every other investment less valuable.</p>
+  </div>
+
   <p>900 million users. The Weakest Link is not where most product teams would look.</p>
   <table>
     <tr><th>Element</th><th>Score</th><th>Diagnosis</th></tr>
     <tr><td><strong>P</strong></td><td style="color:var(--red);font-weight:bold;">L</td><td>"Professional networking." No specific outcome for any specific segment. Cannot complete "I use LinkedIn because..." in outcome terms.</td></tr>
     <tr><td><strong>O</strong></td><td style="color:var(--red);font-weight:bold;">L</td><td>Session 1: scroll feed, see strangers' content. No moment where a career goal feels closer. O cannot fire because P is undefined.</td></tr>
-    <tr><td><strong>L</strong></td><td style="color:var(--teal);font-weight:bold;">H</td><td>Professional network was already on LinkedIn. Adoption required zero rebuild. L is High — but inherited from network effects, not designed.</td></tr>
+    <tr><td><strong>L</strong></td><td style="color:var(--teal);font-weight:bold;">H</td><td>Professional network was already on LinkedIn. Adoption required zero rebuild. L is High, but inherited from network effects, not designed.</td></tr>
     <tr><td><strong>E</strong></td><td style="font-weight:bold;">M</td><td>Feed, messaging, content exist. E-Accrued is weak: no Data currency beyond connection count. No personalisation moat.</td></tr>
   </table>
 
@@ -1291,58 +1473,68 @@
 <section id="ch14" class="chapter">
   <div class="chapter-label">Part Six — Applied &nbsp;|&nbsp; Chapter 14</div>
   <h1>Six Case Studies</h1>
-  <h4>Good. Can be great.</h4>
+  <h4>The framework applied. The gaps named. The fixes specified.</h4>
 
-  <p>Six real products. The framework applied in full. Each case surfaces something the product's own team almost certainly knows is a gap — and shows what a targeted fix would produce.</p>
+  <p>Six real products. Each case applies BELT+POLE in full and names one thing the product's own team almost certainly knows is a gap, but has not yet fixed. The question for each is not "what went wrong" but "what would a correct BELT+POLE diagnosis have changed."</p>
 
   <h2>MyFitnessPal</h2>
   <h4>P at feature level. The insight layer was always there. Nobody built it.</h4>
+
+  <div class="pullquote">"Strong product. Weak value architecture. P is defined at feature level, so the insight layer never forms — and a competitor charges $60/month for it instead."</div>
+
   <table>
     <tr><th>BELT</th><th>Finding</th></tr>
     <tr><td>B</td><td>Adults log food obsessively in Notes apps, paper notebooks. Workaround is elaborate and self-sustaining.</td></tr>
-    <tr><td>E</td><td>To understand how food choices affect how they feel — not to hit a calorie number.</td></tr>
+    <tr><td>E</td><td>To understand how food choices affect how they feel, not to hit a calorie number.</td></tr>
     <tr><td>L</td><td>Activation Inertia. Barrier is belief: "I am not the kind of person who sticks to this."</td></tr>
     <tr><td>T</td><td>Enabling. Each logged meal contributes to a personal data model.</td></tr>
   </table>
   <table>
     <tr><th>Current POLE (wrong)</th><th>Corrected POLE</th></tr>
-    <tr><td>"Track your calories." P at Feature level.</td><td>P: "For adults who tried and failed through willpower, MFP delivers insight into how food choices affect how they feel — so tracking becomes unnecessary."</td></tr>
-    <tr><td>O: calorie goal in onboarding.</td><td>O: Day 7 — "You consistently eat 400 more calories on days you skip breakfast." First insight only this product could produce.</td></tr>
+    <tr><td>"Track your calories." P at Feature level.</td><td>P: "For adults who tried and failed through willpower, MFP delivers insight into how food choices affect how they feel, so tracking becomes unnecessary."</td></tr>
+    <tr><td>O: calorie goal in onboarding.</td><td>O: Day 7. "You consistently eat 400 more calories on days you skip breakfast." First insight only this product could produce.</td></tr>
     <tr><td>L: requires calorie target before any value is felt.</td><td>L: "Log one meal. No calorie target required." Zero-commitment first action. Near-convergence with O.</td></tr>
   </table>
-  <p><strong>Weakest Link: P.</strong> Noom charged $60/month for the insight layer MFP left on the table. The data was always there. The obstacle thesis was wrong.</p>
 
   <h2>Loom</h2>
   <h4>O fires for the sender. It never fires for the recipient. The real barrier is on the receiving end.</h4>
-  <p><strong>Weakest Link: O — for the wrong actor.</strong> O exists and fires for the sender. But until the recipient's O fires ("this 90-second video replaced a meeting that would have taken 47 minutes to schedule"), async culture does not spread. Loom optimised the wrong side of the interaction.</p>
+  <p><strong>Weakest Link: O, for the wrong actor.</strong> O exists and fires for the sender. But until the recipient's O fires ("this 90-second video replaced a meeting that would have taken 47 minutes to schedule"), async culture does not spread. Loom optimised the wrong side of the interaction.</p>
+  <p><strong>The verdict:</strong> the product assumes the sender is the decision-maker for adoption. In most organisations, the constraint is the recipient's tolerance for video versus written communication. A correct BELT diagnosis would have named the recipient as a distinct segment with its own lock-in (inertia toward text) and its own O to design.</p>
   <p><strong>Fix:</strong> redesign O for the recipient. Build Stage 8 at team level: "Your team sent 43 Looms this month. 24 meetings replaced." Makes the cultural shift visible and irreversible.</p>
 
   <h2>Strava</h2>
   <h4>The moat is enormous. The customer cannot see it. Stage 8 does not exist.</h4>
+
+  <div class="pullquote">"One of the deepest E-Accrued moats in consumer fitness. The customer cannot feel it. Every churned user left without knowing what they were giving up."</div>
+
   <table>
     <tr><th>The situation</th><th>The gap</th></tr>
     <tr><td>4 years of activity data. Personal records on 67 segments. A running community of 340 followers. T is strongly Enabling.</td><td>The product never shows "4,200km since 2019." Users consider switching without realising what they would give up. Data Invisible failure mode.</td></tr>
     <tr><td>Felt switching cost: near-zero. Actual switching cost: very high.</td><td>Stage 8 (Reinforcement) does not exist. Designed for delivery. Neglected reinforcement entirely.</td></tr>
   </table>
-  <p><strong>Fix:</strong> Build Stage 8 — Annual Year in Sport: "4,200km. 67 PRs. 12 races. Your pace improved 18% since 2021." Visible before renewal and before alternatives appear. Surface the moat before the customer considers leaving.</p>
+  <p><strong>Fix:</strong> Build Stage 8. Annual Year in Sport: "4,200km. 67 PRs. 12 races. Your pace improved 18% since 2021." Visible before renewal and before alternatives appear. Surface the moat before the customer considers leaving.</p>
 
   <h2>Robinhood</h2>
-  <h4>The obstacle thesis was wrong. Every feature built on it was wrong — regardless of execution quality.</h4>
-  <p>The founding obstacle thesis: "The barrier is commissions." Actual barrier: financial confidence. Every gamification feature was directionally correct for "make more trades" and directionally wrong for "build confidence." The wrong thesis is not a small mistake — it is the architecture.</p>
+  <h4>The obstacle thesis was wrong. Every feature built on it was wrong, regardless of execution quality.</h4>
+
+  <div class="pullquote">"The obstacle thesis was wrong. Every feature built on it was wrong. Regardless of execution quality."</div>
+
+  <p>The founding obstacle thesis: "The barrier is commissions." Actual barrier: financial confidence. Every gamification feature was directionally correct for "make more trades" and directionally wrong for "build confidence." The wrong thesis is not a small mistake. It is the architecture.</p>
   <p><strong>Fix:</strong> correct the thesis before redesigning a single feature. "The barrier is not commissions. It is the fear of making the wrong decision." Redesign O to celebrate the decision, not the execution. Redesign E to build confidence over time, not trade frequency.</p>
 
   <h2>Rippling</h2>
   <h4>Strong product. P at Feature level. The compounding E layer is never shown.</h4>
   <table>
     <tr><th>Current</th><th>Should be</th></tr>
-    <tr><td>P: "HR and payroll in one place." Describes the tool category.</td><td>P: "For fast-growing companies, Rippling delivers one employee record that flows to every system — so operations overhead stops compounding with headcount."</td></tr>
+    <tr><td>P: "HR and payroll in one place." Describes the tool category.</td><td>P: "For fast-growing companies, Rippling delivers one employee record that flows to every system, so operations overhead stops compounding with headcount."</td></tr>
     <tr><td>Stage 8 absent. The moat never surfaced to customers.</td><td>"You have 14 systems connected around 230 employee records. Switching means rebuilding each integration." Surface the moat before renewal.</td></tr>
   </table>
+  <p><strong>The verdict:</strong> Rippling has strong E-Accrued (every integration deepens the switching cost) but leaves it invisible. The renewal conversation happens without the customer knowing what they would lose. A 30-minute audit of Stage 8 would produce a retention intervention that protects months of E investment.</p>
 
   <h2>GitHub Copilot</h2>
   <h4>O fires immediately. The moat never forms. Transient when it should be Enabling.</h4>
   <p>T is currently Transient. Every session starts from roughly the same baseline. The product does not learn this developer's patterns deeply enough for the experience to compound. Month 6 and Month 1 feel similar. The moat that should exist has not been designed.</p>
-  <p><strong>The Copilot lesson:</strong> strong O is not sufficient for a moat. The moat requires E-Accrued: the product must learn this developer specifically. Without personalisation, Copilot is an excellent transient product competing on features — not an enabling product competing on irreplaceability.</p>
+  <p><strong>The verdict:</strong> Copilot has the strongest O in developer tooling: type code, see a suggestion, verify immediately that it works. But strong O is not sufficient for a moat. The T classification exposes the gap: Copilot is currently an excellent transient product competing on feature quality rather than an enabling product competing on irreplaceability. The fix is a product architecture decision, not a feature decision. Once the personalisation layer is designed, T shifts from Transient to Enabling and every retention metric changes.</p>
   <p><strong>Fix:</strong> design the personalisation layer. Track per-developer: which suggestions are accepted, which patterns repeat. Build a developer fingerprint. Make Month 6 noticeably better than Month 1. Build Stage 8: "Copilot handled 2,400 lines of boilerplate this month. Your acceptance rate is 71%, up from 49% in month 1. It is learning your style."</p>
 </section>
 
@@ -1380,7 +1572,7 @@
       <div class="ladder-n">4</div>
       <div class="ladder-content">
         <div class="ladder-title">T — Validate the type <em style="font-weight:normal;color:var(--gray60);font-size:0.8rem;">(5 min)</em></div>
-        <div class="ladder-desc">If a customer stopped using your product for six months and came back, would the product know them? Would the 601st session feel different from the first? If yes: Enabling — build the E architecture. If no: Transient — do not invest in personalisation. Design for P-Salience instead.</div>
+        <div class="ladder-desc">If a customer stopped using your product for six months and came back, would the product know them? Would the 601st session feel different from the first? If yes: Enabling, build the E architecture. If no: Transient, do not invest in personalisation. Design for P-Salience instead.</div>
       </div>
     </div>
     <div class="ladder-step">
@@ -1412,7 +1604,7 @@
   <h2>BELT: The Diagnostic Sequence</h2>
   <div class="belt-row">
     <div class="belt-cell"><span class="belt-letter">B</span><span class="belt-name">Behaviour</span><span class="belt-desc">What workaround? Find the bright spot. Gate: is the problem uniquely underserved?</span></div>
-    <div class="belt-cell"><span class="belt-letter">E</span><span class="belt-name">Enduring</span><span class="belt-desc">Life Change level. Use So What? technique. Score FUDU (F×U×D×U).</span></div>
+    <div class="belt-cell"><span class="belt-letter">E</span><span class="belt-name">Enduring</span><span class="belt-desc">Life Change level. Use So What? technique. Score FUDU (F x U x D x U).</span></div>
     <div class="belt-cell"><span class="belt-letter">L</span><span class="belt-name">Lock-in</span><span class="belt-desc">Switching Cost / Search Cost / Inertia. L must trace to this type.</span></div>
     <div class="belt-cell"><span class="belt-letter">T</span><span class="belt-name">Type</span><span class="belt-desc">Transient or Enabling? Does the 100th use deliver more value than the first?</span></div>
   </div>
@@ -1464,9 +1656,9 @@
   <table>
     <tr><th>Stage</th><th>Actor</th><th>One-line definition</th></tr>
     <tr><td>1 Creation</td><td>Generator</td><td>What the product is technically capable of delivering.</td></tr>
-    <tr><td>2 Promise</td><td>Generator</td><td>P, O, L, E — four promises at four different moments.</td></tr>
+    <tr><td>2 Promise</td><td>Generator</td><td>P, O, L, E: four promises at four different moments.</td></tr>
     <tr><td>3 Perception</td><td>Receiver</td><td>Does the receiver believe the promise before trying?</td></tr>
-    <tr><td>4 Delivery</td><td>Generator</td><td>Functional VP and Experience VP, every session.</td></tr>
+    <tr><td>4 Delivery</td><td>Generator</td><td>Functional value proposition and Experience value proposition, every session.</td></tr>
     <tr><td>5 Distribution</td><td>Distributor</td><td>The channel that puts value in front of the receiver.</td></tr>
     <tr><td>6 Reception</td><td>Receiver</td><td>Receiver experiences what was delivered.</td></tr>
     <tr><td>7 Realisation</td><td>Receiver</td><td>P is met, exceeded, or not met.</td></tr>
@@ -1478,28 +1670,26 @@
   <table>
     <tr><th>Phrase</th><th>Context</th></tr>
     <tr><td>"Your product does not have one value proposition. It has four."</td><td>The core POLE insight.</td></tr>
+    <tr><td>"Most products do not fail because teams build badly. They fail because teams choose the wrong value to build."</td><td>The central thesis. Single value proposition thinking as structural fault.</td></tr>
     <tr><td>"Two customers belong to the same segment if they share the same enduring pain and the same lock-in type."</td><td>BELT segmentation definition.</td></tr>
-    <tr><td>"When the so what answer stops mentioning the product, you have found P."</td><td>So What? technique for P design.</td></tr>
+    <tr><td>"When the So What? answer stops mentioning the product, you have found P."</td><td>So What? technique for P design.</td></tr>
     <tr><td>"Shallow problems have obvious solutions. Deep problems have competing correct solutions."</td><td>POLE Tension Test.</td></tr>
     <tr><td>"The moat only protects you if the customer can feel it."</td><td>Stage 8 principle. Invisible moats do not retain.</td></tr>
     <tr><td>"Kingfisher had a tagline. IndiGo had a system."</td><td>P design. Delivery vs perception as competitive strategy.</td></tr>
     <tr><td>"Generic ease of use is not L."</td><td>Liberation must trace to lock-in type.</td></tr>
     <tr><td>"E-Delivered retains. E-Accrued protects."</td><td>Distinction between per-session and cross-session E.</td></tr>
+    <tr><td>"Transient triggers acquisition. Enduring sustains value."</td><td>T — Type. Why E architecture cannot be built on a transient problem.</td></tr>
   </table>
 </section>
 
-<!-- APPENDIX B -->
-
-
 <div style="text-align:center;padding:2rem 0 1rem;color:var(--gray60);font-family:sans-serif;font-size:0.85rem;">
-  <a href="index.html">← Back to home</a> &nbsp;·&nbsp; 
+  <a href="index.html">Back to home</a> &nbsp;·&nbsp;
   <a href="https://www.linkedin.com/in/consumerproductleader/" target="_blank">Discuss with Vivek</a>
 </div>
 
 </main>
 </div>
 
-<!-- FOOTER -->
 <footer class="footer">
   <span>The Anatomy of Value Propositions — BELT+POLE Framework. Vivek P Kumar.</span>
   <span>
