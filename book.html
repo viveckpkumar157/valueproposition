@@ -273,6 +273,7 @@
   .diag-cell.yes { border-left: 3px solid var(--teal); background: #d6f0e9; }
   .diag-cell.no { border-left: 3px solid var(--red); background: #fdecea; }
   .diag-cell.warn { border-left: 3px solid #c8a000; background: #fef6b3; }
+  .diag-cell.q { grid-column: 1 / -1; background: var(--black); color: var(--white); font-weight: bold; font-size: 0.95rem; border: none; }
 
   /* FOUR JOBS CALLBACK */
   .four-jobs-callback { font-family: 'Helvetica Neue', sans-serif; font-size: 0.78rem; color: var(--gray60); letter-spacing: 0.04em; margin-top: -0.5rem; margin-bottom: 1.5rem; border-left: 2px solid var(--gray80); padding-left: 0.75rem; }
@@ -659,18 +660,18 @@
 
   <p>If you get this wrong, everything that follows will look correct, and fail in practice. This is not a warm-up question. It is a gate. The answer determines whether the framework applies, how it applies, and where its limits are.</p>
 
-  <div style="background:var(--gray95);border-left:3px solid var(--gray80);padding:0.75rem 1rem;margin:2rem 0;font-family:'Helvetica Neue',sans-serif;font-size:0.85rem;color:var(--gray60);">
+  <div style="background:var(--gray95);border-left:3px solid var(--gray80);padding:0.75rem 1rem;margin:2rem 0;font-family:'Helvetica Neue',sans-serif;font-size:0.85rem;color:var(--gray30);">
     <strong style="color:var(--gray30);">On sources and influences.</strong> The utility vs entertainment distinction developed here draws on Ravi Mehta's framework on product types (Ravi Mehta, ex-CPO Tinder). The "Jobs to be Done" framing that underpins much of BELT's logic was originated by Clayton Christensen. The Bright Spot method draws on positive deviance research and was popularised in product and organisational thinking by Chip and Dan Heath (<em>Switch</em>, 2010). The "So What?" escalation technique is a standard consulting tool adapted here for product outcome definition. FUDU scoring, BELT+POLE, and the four-value-proposition architecture are original frameworks developed by the author. All case study analyses are the author's independent interpretations and are not endorsed by the companies discussed.
   </div>
 
   <div style="background:var(--black);color:var(--white);padding:1.5rem;margin:2rem 0;border-top:4px solid var(--yellow);">
     <h3 style="color:var(--yellow);font-family:'Helvetica Neue',sans-serif;font-size:0.85rem;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 1rem;">How to read this book</h3>
-    <p style="font-size:0.95rem;color:var(--gray80);margin-bottom:1rem;">This book is not for beginners. It assumes you have shipped something, seen a product stall, and want to understand why at a structural level. That said, where you start depends on what you are facing right now.</p>
+    <p style="font-size:0.95rem;color:var(--white);margin-bottom:1rem;">This book is not for beginners. It assumes you have shipped something, seen a product stall, and want to understand why at a structural level. That said, where you start depends on what you are facing right now.</p>
     <table style="width:100%;border-collapse:collapse;font-family:'Helvetica Neue',sans-serif;font-size:0.88rem;">
       <tr><th style="background:var(--yellow);color:var(--black);padding:0.5rem 0.75rem;text-align:left;">If you are</th><th style="background:var(--yellow);color:var(--black);padding:0.5rem 0.75rem;text-align:left;">Start here</th></tr>
-      <tr><td style="padding:0.6rem 0.75rem;border-bottom:1px solid #333;color:var(--gray80);">An experienced PM or product leader (5+ years) with a product that is underperforming despite strong execution</td><td style="padding:0.6rem 0.75rem;border-bottom:1px solid #333;color:var(--white);">Read front to back. Run the 30-minute guide on your current product immediately after Chapter 13. The gap between what you believe and what the guide surfaces is your starting point.</td></tr>
-      <tr><td style="padding:0.6rem 0.75rem;border-bottom:1px solid #333;color:var(--gray80);">A founder pre-launch or in early traction, deciding what to build next</td><td style="padding:0.6rem 0.75rem;border-bottom:1px solid #333;color:var(--white);">Start with the 30-minute guide. Then read Chapters 1 through 6 (BELT) before any design decisions are made. Return to POLE (Chapters 7 through 10) once you have early signal from customers.</td></tr>
-      <tr><td style="padding:0.6rem 0.75rem;color:var(--gray80);">A junior PM (1 to 3 years) who wants to develop sharper product judgment</td><td style="padding:0.6rem 0.75rem;color:var(--white);">Read the Introduction and Chapter 1 first. Then run the 30-minute guide on a product you know well — not the one you are building. Return to each framework chapter as you encounter its situation in real work. Do not try to apply the full system at once.</td></tr>
+      <tr><td style="padding:0.6rem 0.75rem;border-bottom:1px solid #333;color:var(--white);">An experienced PM or product leader (5+ years) with a product that is underperforming despite strong execution</td><td style="padding:0.6rem 0.75rem;border-bottom:1px solid #333;color:var(--white);">Read front to back. Run the 30-minute guide on your current product immediately after Chapter 13. The gap between what you believe and what the guide surfaces is your starting point.</td></tr>
+      <tr><td style="padding:0.6rem 0.75rem;border-bottom:1px solid #333;color:var(--black);background:var(--gray95);">A founder pre-launch or in early traction, deciding what to build next</td><td style="padding:0.6rem 0.75rem;border-bottom:1px solid #333;color:var(--black);background:var(--gray95);">Start with the 30-minute guide. Then read Chapters 1 through 6 (BELT) before any design decisions are made. Return to POLE (Chapters 7 through 10) once you have early signal from customers.</td></tr>
+      <tr><td style="padding:0.6rem 0.75rem;color:var(--white);">A junior PM (1 to 3 years) who wants to develop sharper product judgment</td><td style="padding:0.6rem 0.75rem;color:var(--white);">Read the Introduction and Chapter 1 first. Then run the 30-minute guide on a product you know well — not the one you are building. Return to each framework chapter as you encounter its situation in real work. Do not try to apply the full system at once.</td></tr>
     </table>
   </div>
   <h2>How this differs from JTBD and AARRR</h2>
@@ -777,14 +778,14 @@
 
   <div class="diag-tree">
     <div class="diag-tree-title">BELT diagnostic flow</div>
-    <div class="diag-row"><div class="diag-cell q">B: Is there an existing workaround?</div><div class="diag-cell"></div></div>
+    <div class="diag-row"><div class="diag-cell q">B: Is there an existing workaround?</div></div>
     <div class="diag-row"><div class="diag-cell yes">Yes: real demand exists. Describe the workaround concretely. Score FUDU.</div><div class="diag-cell no">No: stop. You have a hypothesis, not a problem. Do not proceed to E.</div></div>
-    <div class="diag-row"><div class="diag-cell q">E: Does the outcome persist beyond the product?</div><div class="diag-cell"></div></div>
+    <div class="diag-row"><div class="diag-cell q">E: Does the outcome persist beyond the product?</div></div>
     <div class="diag-row"><div class="diag-cell yes">Yes: define P at Life Change level. Proceed to L.</div><div class="diag-cell no">No: rewrite at higher altitude. If the problem is transient, design for P-Salience only.</div></div>
-    <div class="diag-row"><div class="diag-cell q">L: What is keeping them in the current solution?</div><div class="diag-cell"></div></div>
+    <div class="diag-row"><div class="diag-cell q">L: What is keeping them in the current solution?</div></div>
     <div class="diag-row"><div class="diag-cell yes">Switching Cost: design for migration and continuity.</div><div class="diag-cell warn">Search Cost: design for outcome before commitment.</div></div>
     <div class="diag-row"><div class="diag-cell yes">Inertia: design for zero-commitment first step.</div><div class="diag-cell no">Cannot name it: stop. Generic onboarding will not fix an unidentified barrier.</div></div>
-    <div class="diag-row"><div class="diag-cell q">T: Does the hundredth use deliver more value than the first?</div><div class="diag-cell"></div></div>
+    <div class="diag-row"><div class="diag-cell q">T: Does the hundredth use deliver more value than the first?</div></div>
     <div class="diag-row"><div class="diag-cell yes">Enabling: build E architecture. Design accumulation from day one.</div><div class="diag-cell no">Transient: do not invest in retention systems. Compete on speed, convenience, reliability.</div></div>
   </div>
 
@@ -882,12 +883,12 @@
 
   <div class="diag-tree">
     <div class="diag-tree-title">FUDU decision gate</div>
-    <div class="diag-row"><div class="diag-cell q">Gate: Is this problem uniquely underserved?</div><div class="diag-cell"></div></div>
+    <div class="diag-row"><div class="diag-cell q">Gate: Is this problem uniquely underserved?</div></div>
     <div class="diag-row"><div class="diag-cell yes">Yes: proceed to score FUDU dimensions.</div><div class="diag-cell no">No: you are entering a competition, not building a moat. Execution wins here, not architecture.</div></div>
     <div class="diag-row"><div class="diag-cell q">Score: is combined FUDU above 18?</div><div class="diag-cell q">Is Frequency AND Depth both high (score 3)?</div></div>
     <div class="diag-row"><div class="diag-cell yes">Yes: structural demand. Worth building for.</div><div class="diag-cell yes">Yes: potential Enabling product. Check T.</div></div>
     <div class="diag-row"><div class="diag-cell warn">9–18: real but narrow. Viable for a focused product. Not a platform.</div><div class="diag-cell no">No: Transient or shallow. Do not build E architecture. Compete on convenience.</div></div>
-    <div class="diag-row"><div class="diag-cell no">Below 9: insufficient demand. Do not proceed. The problem will not sustain a product.</div><div class="diag-cell"></div></div>
+    <div class="diag-row"><div class="diag-cell no">Below 9: insufficient demand. Do not proceed. The problem will not sustain a product.</div></div>
   </div>
 
   <div class="insight">
@@ -2190,7 +2191,7 @@ Identify which form (or forms) your product accumulates. Each has different impl
 
   <div style="background:var(--black);color:var(--white);padding:1.25rem 1.5rem;margin:1.5rem 0;border-top:4px solid var(--yellow);font-family:'Helvetica Neue',sans-serif;">
     <p style="font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--yellow);margin-bottom:0.6rem;font-weight:bold;">Companion worksheets</p>
-    <p style="font-size:0.92rem;color:var(--gray80);margin-bottom:0.75rem;">Download the single-page worksheets to run alongside this guide. Print them, fill them in with your team, or use them as a facilitator tool in a product review.</p>
+    <p style="font-size:0.92rem;color:var(--white);margin-bottom:0.75rem;">Download the single-page worksheets to run alongside this guide. Print them, fill them in with your team, or use them as a facilitator tool in a product review.</p>
     <div style="display:flex;gap:1.5rem;">
       <a href="BELT_Diagnostic_Worksheet.pdf" style="color:var(--yellow);font-weight:bold;font-size:0.88rem;text-decoration:none;">&#8595; BELT Diagnostic Worksheet (PDF)</a>
       <a href="POLE_Design_Worksheet.pdf" style="color:var(--teal);font-weight:bold;font-size:0.88rem;text-decoration:none;">&#8595; POLE Design Worksheet (PDF)</a>
