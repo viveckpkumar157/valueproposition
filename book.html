@@ -634,13 +634,15 @@
 
   <p>The root cause is almost always the same: single value proposition thinking. The assumption that one well-crafted statement can simultaneously explain why a customer should try your product, why they should stay, why switching is too costly, and what their life looks like after sustained use. It cannot. Each job requires its own architecture. Conflating them is how Robinhood happened.</p>
 
+  <p>There are two failure modes. The first is no value proposition at all — common in early-stage startups that have conviction but no diagnosis. The second is a single value proposition applied to all four jobs — common in teams that have done the work once and assume it covers everything. Both fail. No VP means no direction. One VP means the wrong direction for three of the four jobs.</p>
+
   <p>Every product has four value propositions. Each does a specific job. Each must be designed separately. Each can fail independently. If you design one and assume the others will follow, you will build a product that works, just enough, until it doesn't.</p>
 
   <div class="pullquote">"Your product does not have one value proposition. It has four. Each does a different job at a different moment. Designing one and ignoring the others is not a shortcut. It is a structural fault."</div>
 
   <p>This book is a system for making that architecture explicit before you build. It has two parts. BELT is the diagnostic engine: four questions that force you to classify the type of problem you are solving before any design decision is made. POLE is the design architecture: four value propositions, each doing a specific job at a specific moment in the customer's journey.</p>
 
-  <p>Kingfisher had a tagline. IndiGo had a system. One competed on perception. The other competed on delivery. Only one is still flying. The difference is not budget or talent or market conditions. The difference is whether the team built a slogan or built an architecture. This book is about the architecture.</p>
+  <p>Nokia had a brand. Apple had a system. One competed on hardware reputation. The other competed on an ecosystem architecture that made every previous device feel incomplete. The difference was not budget or talent or market conditions. The difference was whether the team built a slogan or built an architecture. This book is about the architecture.</p>
 
   <h3>How to Read This Book</h3>
   <p>Do not skip BELT to get to POLE. The sequence is the point. Do not skip the Introduction: the utility vs entertainment distinction is the first gate, not optional context. Read at least one case study in Part Six before running the framework on your own product. The 30-minute application guide at the end is where this becomes operational.</p>
@@ -1169,6 +1171,8 @@
 
   <h2>BELT across competitors: why two products in the same category serve different segments</h2>
 
+  <p>A note on scope: the comparisons in this book pair products within the same category — same problem space, same customer, same market. Wise vs banks for international transfers. PropertyGuru vs 99.co for Singapore property. Nokia vs Apple for smartphones. Comparing across categories would produce no useful signal, because different categories have different enduring problems, different lock-in types, and different T classifications. BELT comparisons are always within category.</p>
+
   <p>Segmentation is not just internal. BELT also explains why two competing products in the same category can coexist — and why the better product does not always win the more valuable segment.</p>
 
   <p>PropertyGuru and 99.co both operate in the Singapore residential property market. Both aggregate listings. Both serve buyers and sellers. From the outside, they are the same product. BELT reveals they are not.</p>
@@ -1363,7 +1367,7 @@
     P is not a tagline. It is a design brief. Every POLE element follows from it. If P had stayed at "more organised," every downstream decision would have been weaker. Wrong O: no specific belief to break. Wrong L: no specific barrier to remove. Wrong E: compounding toward an undefined destination.
   </div>
 
-  <div class="pullquote">"Kingfisher had a tagline. IndiGo had a system. One competed on perception. The other competed on delivery. Only one is still flying."</div>
+  <div class="pullquote">"Nokia had a brand. Apple had a system. One competed on hardware reputation. The other competed on an architecture that made switching impossible. The difference was not execution. It was structure."</div>
 
   <div class="pullquote">"A product without a clear destination does not retain. It circulates."</div>
 
@@ -1687,7 +1691,7 @@ Identify which form (or forms) your product accumulates. Each has different impl
     <h3>Chapter Summary</h3>
     <strong>E-Delivered</strong> retains week to week. A competitor can match it. <strong>E-Accrued</strong> creates real switching cost: leaving means losing what was built.<br><br>
     <strong>5-step ladder:</strong> decompose P, set floor, derive Experience value proposition from obstacle thesis, identify E-Accrued layer, cut features that cannot trace to Step 1.<br><br>
-    <strong>Non-obvious truth:</strong> most PMs optimise the acquisition layer while the retention layer collapses underneath them. Strong O. Weak E. A leaky bucket with a very good tap. Fix E-Delivered first. Then E-Accrued. Then referral.<br><br>
+    <strong>Non-obvious truth:</strong> the sequence is right — O before E. The failure is not the order. It is treating O as complete once acquisition is working, and never building E at all. Strong O with no E is a very good tap on a leaky bucket. Build O. Then build E. Do not stop at O.<br><br>
     POLE is complete. P defined the destination. O broke the belief that made adoption feel impossible. L removed the structural barrier to starting. E built the architecture that makes leaving costly. The four jobs, and how to do each one deliberately.
   </div>
 </section>
@@ -1841,6 +1845,8 @@ Identify which form (or forms) your product accumulates. Each has different impl
   <h4>One weak element caps everything else</h4>
 
   <p>At any point in time, one part of your system is failing more than the rest. Not two. Not three. One. Everything else is secondary.</p>
+
+  <p>When benchmarking your POLE elements against a competitor, apply the same rule as in BELT: compare within the same category and the same segment. A competitor serving a different segment with a different lock-in type will have a structurally different POLE architecture — comparing P statements or E designs across segments produces no useful signal. The comparison is only useful when the segment is the same.</p>
 
   <p>Teams try to improve everything. They build roadmaps with better onboarding, more features, improved retention, increased acquisition. Each makes sense. Together, they dilute focus. Because not all problems matter equally. A system does not fail everywhere. It fails where it is weakest. And that weakness defines the outcome.</p>
 
@@ -2408,7 +2414,7 @@ Identify which form (or forms) your product accumulates. Each has different impl
     <tr><td>"When the So What? answer stops mentioning the product, you have found P."</td><td>So What? technique for P design.</td></tr>
     <tr><td>"Shallow problems have obvious solutions. Deep problems have competing correct solutions."</td><td>POLE Tension Test.</td></tr>
     <tr><td>"The moat only protects you if the customer can feel it."</td><td>Stage 8 principle. Invisible moats do not retain.</td></tr>
-    <tr><td>"Kingfisher had a tagline. IndiGo had a system."</td><td>P design. Delivery vs perception as competitive strategy.</td></tr>
+    <tr><td>"Nokia had a brand. Apple had a system."</td><td>P design. Delivery vs perception as competitive strategy.</td></tr>
     <tr><td>"Generic ease of use is not L."</td><td>Liberation must trace to lock-in type.</td></tr>
     <tr><td>"E-Delivered retains. E-Accrued protects."</td><td>Distinction between per-session and cross-session E.</td></tr>
     <tr><td>"Transient triggers acquisition. Enduring sustains value."</td><td>T: Type. Why E architecture cannot be built on a transient problem.</td></tr>
